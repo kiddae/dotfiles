@@ -255,7 +255,7 @@ bindsym $mod+p exec mpc toggle
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots' 
 
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 
 
 #Needed for i3-gaps

@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>numix-gtk-theme-dark</name>
+    <name>1977-Black</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -271,7 +271,7 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
           <action name="Focus"/>
@@ -327,24 +327,9 @@
         <command>randomwall</command>
       </action>
     </keybind>
-    <keybind key="W-Return">
+    <keybind key="W-r">
       <action name="Execute">
-        <command>urxvt</command>
-      </action>
-    </keybind>
-    <keybind key="W-y">
-      <action name="Execute">
-        <command>firefox</command>
-      </action>
-    </keybind>
-    <keybind key="W-u">
-      <action name="Execute">
-        <command>nautilus</command>
-      </action>
-    </keybind>
-    <keybind key="W-i">
-      <action name="Execute">
-        <command>urxvt -e ncmpcpp</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->

@@ -3,18 +3,27 @@
 	<menu id="root-menu" label="Openbox 3">
 		<item label="Terminal emulator">
 			<action name="Execute">
-				<execute>x-terminal-emulator</execute>
+				<execute>urxvt</execute>
 			</action>
 		</item>
 		<item label="Web browser">
 			<action name="Execute">
-				<execute>x-www-browser</execute>
+				<execute>firefox</execute>
 			</action>
 		</item>
-		<!-- This requires the presence of the 'openbox-menu' package to work -->
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>nautilus</execute>
+			</action>
+		</item>
+		<item label="Music Player">
+			<action name="Execute">
+				<execute>urxvt -e ncmpcpp</execute>
+			</action>
+		</item>
 		<menu id="/Debian"/>
+		<!-- This requires the presence of the 'openbox-menu' package to work -->
 		<separator/>
-		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
 		<separator/>
 		<item label="ObConf">
 			<action name="Execute">
@@ -24,6 +33,11 @@
 		<item label="ObMenu">
 			<action name="Execute">
 				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="Choose Random Wallpaper">
+			<action name="Execute">
+				<execute>randomwall</execute>
 			</action>
 		</item>
 		<item label="Reconfigure">

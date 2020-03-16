@@ -46,10 +46,10 @@ color15 = ${xrdb:color15}
 width = 100%
 height = 35
 ;offset-x = 1%
-offset-y = 0.5%
+;offset-y = 0.5%
 ;radius = 10.0
 radius = 0.0
-fixed-center = false 
+fixed-center = true 
 bottom = false
 enable-ipc = true
 
