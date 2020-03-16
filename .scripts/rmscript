@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCRIPT_LOCATION="${SCRIPT_FOLDER}${1}"
+
+if [[ -f $SCRIPT_LOCATION ]]; then
+	read -p "Remove script \"$1\" ? [Y/n]" yn
+	case $yn in
+		[Yy]* ) rm $SCRIPT_LOCATION; echo "Removed script \"$1\"."; exit;;
+		[Nn]* ) exit;;
+		* ) rm $SCRIPT_LOCATION; echo "Removed script \"$1\"."; exit;; 
+	esac
+else
+	echo "Script \"$1\" at \"$SCRIPT_LOCATION\" does not exist."
+	echo "You can create it using \"mkscript $1\"."
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SCRIPT_LOCATION="${SCRIPT_FOLDER}${1}"
+
+if [[ -f $SCRIPT_LOCATION ]]; then
+	$EDITOR $SCRIPT_LOCATION
+else
+	echo "Script \"$1\" doesn't exist."
+	echo "You can create it using \"mkscript $1\"."
+fi

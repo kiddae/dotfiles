@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SCRIPT_LOCATION="${SCRIPT_FOLDER}${1}"
+
+if [[ -f "$SCRIPT_LOCATION" ]]; then
+	echo "Script \"$1\" already exists."
+	echo You can edit it using \"chscript $1\",
+	echo or delete it using \"rmscript $1\".
+else
+	echo "#!/bin/bash" > $SCRIPT_LOCATION
+	chmod +x $SCRIPT_LOCATION
+	echo "Created script \"$1\" at \"$SCRIPT_LOCATION\"."
+	while true; do
+    	read -p "Edit this script now? [Y/n]" yn
+    	case $yn in
+        	[Yy]* ) chscript $1;exit;;
+        	[Nn]* ) exit;;
+        	* ) chscript $1;exit;;
+    	esac
+	done
+fi
