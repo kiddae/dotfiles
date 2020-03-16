@@ -480,7 +480,7 @@ screenchange-reload = true
 ;compositing-background = screen
 ;compositing-foreground = source
 ;compositing-border = over
-pseudo-transparency = true
+;pseudo-transparency = true
 
 [global/wm]
 margin-top = 0
