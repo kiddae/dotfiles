@@ -121,4 +121,4 @@ fi
 
 # neofetch
 neofetch
-alias config='/usr/bin/git --git-dir=/home/nguyenleluc/.cfg/ --work-tree=/home/nguyenleluc'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
