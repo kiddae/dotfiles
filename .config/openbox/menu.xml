@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox 3">
-		<separator label="Applications"/>
 		<item label="Terminal emulator">
 			<action name="Execute">
 				<execute>urxvt</execute>
@@ -24,7 +23,8 @@
 		</item>
 		<menu id="/Debian"/>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
-		<separator label="Configuration"/>
+		<separator/>
+		<separator/>
 		<item label="ObConf">
 			<action name="Execute">
 				<execute>obconf</execute>
@@ -49,7 +49,7 @@
 		<separator/>
 		<item label="Exit">
 			<action name="Exit"/>
-			</item>
+		</item>
 		<item label="Poweroff">
 			<action name="Execute">
 				<execute>poweroff</execute>

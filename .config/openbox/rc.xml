@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>1977-Grey</name>
+    <name>colorbamboo</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -153,10 +153,10 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>75</top>
-    <bottom>20</bottom>
-    <left>20</left>
-    <right>20</right>
+    <top>0</top>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>TopLeft</position>
@@ -798,8 +798,5 @@
 
   # end of the example
 -->
-     <application class="*">
-       <decor>no</decor>
-     </application>
   </applications>
 </openbox_config>
