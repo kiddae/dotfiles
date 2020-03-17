@@ -1,3 +1,4 @@
 #!/bin/sh
 xrdb ~/.Xresources
+setxkbmap fr
 randomwall
