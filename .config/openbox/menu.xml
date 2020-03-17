@@ -21,7 +21,7 @@
 				<execute>urxvt -e ncmpcpp</execute>
 			</action>
 		</item>
-		<menu id="/Debian"/>
+		<menu id="desktop-app-menu" execute="obm-xdg /etc/xdg/menus" label="Applications"/>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
 		<separator/>
 		<separator/>
