@@ -60,7 +60,7 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 20
+border-size = 30
 border-bottom-size = 0
 border-color = #00000000
 
@@ -72,11 +72,13 @@ padding-right = 0
 
 ;font-0 = fixed:pixelsize=10;1
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-0=Terminus:size=14;1
+font-0=Fantasque Sans Mono:size=11;2
 font-1=Noto Sans CJK JP:size=11:antialias=true;2
 font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;2
 font-3=FontAwesome5Free:style=Regular:size=10:antialias=true;2
 font-4=FontAwesome5Brands:size=10:antialias=true;2
+
+dpi=96
 
 modules-left = i3 
 modules-center = 

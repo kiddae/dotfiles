@@ -259,7 +259,7 @@ for_window [class="^.*"] border pixel 0
 
 
 #Needed for i3-gaps
-set $DEFAULT_GAPS 20
+set $DEFAULT_GAPS 30
 gaps inner $DEFAULT_GAPS 
 
 bindsym $mod+Mod1+Left 		gaps outer current plus 10
