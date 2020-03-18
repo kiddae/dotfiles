@@ -323,23 +323,12 @@ type = internal/date
 interval = 10
 format-margin = 0
 
-time = %H:%M
+time = "%H:%M"
+date = "%d %b"
 
-label = %time%
+label = %date%, %time%
 label-foreground = ${colors.color8}
 label-background = ${colors.background}
-label-padding = 2
-
-[module/date]
-type = internal/date
-format-margin = 0
-
-date = "%d/%m/%Y"
-
-
-label = %date%
-label-background = ${colors.color5}
-label-foreground = ${colors.background}
 label-padding = 2
 
 
