@@ -1,0 +1,2 @@
+#!/bin/bash
+flatpak run org.gimp.GIMP//stable
