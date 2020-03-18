@@ -1,2 +1,2 @@
 #!/bin/bash
-wpg -s $1 --backend wal
+wpg -s $1 --backend wal --sat $1 1

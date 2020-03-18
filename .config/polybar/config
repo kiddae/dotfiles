@@ -74,7 +74,7 @@ padding-right = 0
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-0=Terminus:size=14;2
 ;font-0=Noto Sans Mono:size=11;1
-font-0=SF Mono:size=11:style=Medium;3
+font-0=SF Mono:size=11;3
 ;font-0=Fantasque Sans Mono:antialias=true:size=12;2
 font-1=Noto Sans CJK JP:size=11:antialias=true;3
 font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
