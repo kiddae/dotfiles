@@ -18,7 +18,7 @@
 		</item>
 		<item label="Music Player">
 			<action name="Execute">
-				<execute>rhythmbox</execute>
+				<execute>urxvt -e ncmpcpp</execute>
 			</action>
 		</item>
 		<menu execute="obm-xdg /etc/xdg/menus" id="desktop-app-menu" label="Applications"/>
