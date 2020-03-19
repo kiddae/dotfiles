@@ -77,7 +77,7 @@ font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
 font-3=FontAwesome5Free:style=Regular:size=10:antialias=true;3
 font-4=FontAwesome5Brands:size=10:antialias=true;3
 
-modules-left = i3 
+modules-left = i3 xworkspaces
 modules-center = 
 modules-right = mpd pulseaudio time powermenu
 
@@ -200,12 +200,60 @@ label-urgent-padding = 2
 ; Separator in between workspaces
 ; label-separator = |
 
-; ws-icon-0 = 1;
-; ws-icon-1 = 2;
-; ws-icon-2 = 3;
-; ws-icon-3 = 4;
-; ws-icon-4 = 5;
-; ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-9 = 10;
+ws-icon-default = 
+
+[module/xworkspaces]
+type = internal/xworkspaces
+format = <label-state> 
+;format-margin = 2
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+enable-click = true
+reverse-scroll = false
+
+
+; focused = Active workspace on focused monitor
+;label-focused = %icon%
+label-active = %index%
+label-active-background = ${colors.primary}
+label-active-foreground = ${colors.background}
+label-active-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+;label-unfocused = %icon%
+label-empty = %index%
+label-empty-padding = 2
+label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.primary}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = ${self.label-focused-background}
+; label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-9 = 10;
+ws-icon-default = 
+
 
 
 
@@ -459,7 +507,7 @@ menu-3-0 = 
 menu-3-0-exec = poweroff
 
 menu-1-0 = 
-menu-1-0-exec = i3-msg exit || kill -9 -1
+menu-1-0-exec = i3-msg exit || openbox --exit
 
 [settings]
 screenchange-reload = true
