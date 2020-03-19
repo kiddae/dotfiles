@@ -240,15 +240,15 @@ exec_always --no-startup-id udiskie -t
 
 #--apps--
 exec --no-startup-id i3-msg "workspace 1; exec firefox"
-exec --no-startup-id i3-msg "workspace 2; exec urxvt"
-exec --no-startup-id i3-msg "workspace 3; exec urxvt -e ranger"
-exec --no-startup-id i3-msg "workspace 10; exec urxvt -e ncmpcpp"
+exec --no-startup-id i3-msg "workspace 2; exec $TERMINAL"
+exec --no-startup-id i3-msg "workspace 3; exec $TERMINAL -e ranger"
+exec --no-startup-id i3-msg "workspace 10; exec $TERMINAL -e ncmpcpp"
 exec --no-startup-id i3-msg workspace 1
 
 # binds
 bindsym $mod+y exec firefox
-bindsym $mod+u exec --no-startup-id urxvt -e ranger
-bindsym $mod+i exec --no-startup-id urxvt -e ncmpcpp
+bindsym $mod+u exec --no-startup-id $TERMINAL -e ranger
+bindsym $mod+i exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots' 
