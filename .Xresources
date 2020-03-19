@@ -8,7 +8,7 @@ URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:size=11
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
-URxvt.internalBorder: 24 
+URxvt.internalBorder: 48 
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URxvt.saveline: 2048

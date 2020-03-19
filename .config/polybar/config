@@ -44,7 +44,7 @@ color15 = ${xrdb:color15}
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 50
+height = 45
 ;offset-x = 1%
 ;offset-y = 0.5%
 ;radius = 10.0
@@ -74,7 +74,7 @@ padding-right = 0
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 ;font-0=Terminus:size=14;2
 ;font-0=Noto Sans Mono:size=11;1
-font-0=SF Mono:style=Medium:size=12;3
+font-0=SF Mono:size=11:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
 ;font-0=Fantasque Sans Mono:antialias=true:size=12;2
 font-1=Noto Sans CJK JP:size=11:antialias=true;3
 font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
