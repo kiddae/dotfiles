@@ -18,13 +18,8 @@
 
 [colors]
 
-background-alpha = ${env:color0_alpha:#222}
 background = ${xrdb:background:#222}
-background-alt = ${xrdb:background:#222}
-;background = #222
 foreground = ${xrdb:foreground:#222}
-;foreground = #dfdfdf
-foreground-alt = ${xrdb:foreground:#222}
 primary = ${xrdb:color1}
 secondary = ${xrdb:color2}
 alert = ${xrdb:color3}
@@ -40,6 +35,7 @@ color12 = ${xrdb:color12}
 color13 = ${xrdb:color13}
 color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
+
 
 [bar/bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -114,7 +110,6 @@ label-padding = 2
 
 [module/xkeyboard]
 type = internal/xkeyboard
-blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
@@ -174,8 +169,8 @@ enable-click = true
 reverse-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = ${colors.background}
-label-mode-background = ${colors.secondary}
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 ;label-focused = %icon%
