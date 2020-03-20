@@ -1,11 +1,13 @@
-install xorg; xorg-server; xorg-xinit; i3-gaps
-install git
-install yay (git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si)
-install polybar compton-tryone rxvt-unicode-256
-clone dotfles git repo (git clone --bare https://github.com/ngynLk/dotfiles.git ~/.cfg; git --git-dir=.cfg --work-tree=. checkout -f)
-install otf-san-francisco-mono
-rm .bash_profile
-source .bashrc
-install wpgtk
+#!/bin/bash
+pacman -S xorg xorg-server xorg-xinit git i3-gaps mpd ncmpcpp ranger
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay -S polybar compton-tryone-git rxvt-unicode-256xresources urxvt-resize-font-git urxvt-perls otf-san-franscisco-mono ttf-font-awesome noto-fonts wpgtk vim-plug
+git clone --bare https://github.com/ngynLk/dotfiles.git
+alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
+config checkout -f
+config config --local status.showUntrackedFiles no
 wpg-install -g
-you're actually done!
+rm .bash_profile
+sudo reboot
