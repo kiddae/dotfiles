@@ -240,16 +240,16 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 ;label-focused = %icon%
 label-focused = %index%
-label-focused-background = ${colors.primary}
-label-focused-foreground = ${colors.background}
+label-focused-foreground = ${colors.primary}
+label-focused-background = ${colors.background}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 ;label-unfocused = %icon%
 label-unfocused = %index%
 label-unfocused-padding = 2
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.primary}
+label-unfocused-foreground = ${colors.background}
+label-unfocused-background = ${colors.primary}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
@@ -288,16 +288,16 @@ reverse-scroll = false
 ; focused = Active workspace on focused monitor
 ;label-focused = %icon%
 label-active = %index%
-label-active-background = ${colors.primary}
-label-active-foreground = ${colors.background}
+label-active-foreground = ${colors.primary}
+label-active-background = ${colors.background}
 label-active-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 ;label-unfocused = %icon%
 label-empty = %index%
 label-empty-padding = 2
-label-empty-background = ${colors.background}
-label-empty-foreground = ${colors.primary}
+label-empty-foreground = ${colors.background}
+label-empty-background = ${colors.primary}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
