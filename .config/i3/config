@@ -251,6 +251,7 @@ bindsym $mod+u exec --no-startup-id $TERMINAL -e ranger
 bindsym $mod+i exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
+bindsym $mod+c exec killall compton || compton &
 bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots' 
 
 
