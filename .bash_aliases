@@ -20,3 +20,5 @@ alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metad
 # pywal
 alias wal="wal -o wal-set --vte"
 
+# color cat
+alias ccat="pygmentize -g"
