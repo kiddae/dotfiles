@@ -37,7 +37,7 @@ color14 = ${xrdb:color14}
 color15 = ${xrdb:color15}
 
 
-[bar/bar]
+[bar/i3]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 45
@@ -77,7 +77,7 @@ font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
 font-3=FontAwesome5Free:style=Regular:size=10:antialias=true;3
 font-4=FontAwesome5Brands:size=10:antialias=true;3
 
-modules-left = i3 xworkspaces
+modules-left = i3
 modules-center = 
 modules-right = mpd pulseaudio time powermenu
 
@@ -100,6 +100,71 @@ scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = scroll
+
+[bar/ob]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 45
+;offset-x = 1%
+;offset-y = 0.5%
+;radius = 10.0
+radius = 0.0
+fixed-center = true 
+bottom = false
+enable-ipc = true
+
+;background = ${colors.background}
+background = #0000
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 20
+border-bottom-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+;module-margin-left = 0
+;module-margin-right = 0
+
+;font-0 = fixed:size=14;1
+;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+;font-0=Terminus:size=14;2
+;font-0=Noto Sans Mono:size=11;1
+font-0=SF Mono:size=11:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
+;font-0=Fantasque Sans Mono:antialias=true:size=12;2
+font-1=Noto Sans CJK JP:size=11:antialias=true;3
+font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
+font-3=FontAwesome5Free:style=Regular:size=10:antialias=true;3
+font-4=FontAwesome5Brands:size=10:antialias=true;3
+
+modules-left = xworkspaces
+modules-center = 
+modules-right = mpd pulseaudio time powermenu
+
+tray-position = none
+tray-maxsize = 25
+tray-padding = 2
+tray-offset-y = 5
+tray-background = ${colors.color8}
+
+;wm-restack = bspwm
+;wm-restack = i3
+
+;override-redirect = true
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = scroll
+
 
 [module/xwindow]
 type = internal/xwindow
@@ -244,18 +309,6 @@ label-visible-padding = ${self.label-focused-padding}
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
-
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-9 = 10;
-ws-icon-default = 
-
-
-
 
 [module/mpd]
 type = internal/mpd
