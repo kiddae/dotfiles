@@ -1,4 +1,5 @@
 #!/bin/bash
+# so this is for arch linux as you might have seen
 pacman -S xorg xorg-server xorg-xinit git i3-gaps mpd ncmpcpp ranger
 git clone https://aur.archlinux.org/yay.git
 cd yay
