@@ -1,0 +1,11 @@
+install xorg; xorg-server; xorg-xinit; i3-gaps
+install git
+install yay (git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si)
+install polybar compton-tryone rxvt-unicode-256
+clone dotfles git repo (git clone --bare https://github.com/ngynLk/dotfiles.git ~/.cfg; git --git-dir=.cfg --work-tree=. checkout -f)
+install otf-san-francisco-mono
+rm .bash_profile
+source .bashrc
+install wpgtk
+wpg-install -g
+you're actually done!
