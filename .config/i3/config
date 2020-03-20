@@ -239,11 +239,11 @@ exec_always --no-startup-id launchpolybar i3
 exec_always --no-startup-id udiskie -t
 
 #--apps--
-exec --no-startup-id i3-msg "workspace 1; exec firefox"
-exec --no-startup-id i3-msg "workspace 2; exec $TERMINAL"
-exec --no-startup-id i3-msg "workspace 3; exec $TERMINAL -e ranger"
-exec --no-startup-id i3-msg "workspace 10; exec $TERMINAL -e ncmpcpp"
-exec --no-startup-id i3-msg workspace 1
+# exec --no-startup-id i3-msg "workspace 1; exec firefox"
+# exec --no-startup-id i3-msg "workspace 2; exec $TERMINAL"
+# exec --no-startup-id i3-msg "workspace 3; exec $TERMINAL -e ranger"
+# exec --no-startup-id i3-msg "workspace 10; exec $TERMINAL -e ncmpcpp"
+# exec --no-startup-id i3-msg workspace 1
 
 # binds
 bindsym $mod+y exec firefox
@@ -255,6 +255,7 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 
 
 for_window [class="^.*"] border pixel 0
+focus_follows_mouse no
 
 
 #Needed for i3-gaps
