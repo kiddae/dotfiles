@@ -12,7 +12,7 @@ if [[ "$1" != "--worker" ]]; then
   export REDUCE_CONTRAST="0"
 
   # How much to dim (--dim N)
-  export DIM_STRENGTH="4"
+  export DIM_STRENGTH="0"
 
   # Dimmer
   export DIM_COLOR="#fff"
