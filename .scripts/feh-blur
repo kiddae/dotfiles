@@ -6,16 +6,16 @@ if [[ "$1" != "--worker" ]]; then
   export CACHE_DIR="/tmp/feh-blur.$$"
 
   # How much to blur (--blur N)
-  export BLUR_STRENGTH="4"
+  export BLUR_STRENGTH="10"
 
   # Contrast (--uncontrast)
   export REDUCE_CONTRAST="0"
 
   # How much to dim (--dim N)
-  export DIM_STRENGTH="32"
+  export DIM_STRENGTH="4"
 
   # Dimmer
-  export DIM_COLOR="#000"
+  export DIM_COLOR="#fff"
 
   # Where to write the final blurred image (--save-image PATH)
   export BLUR_IMAGE_SAVE_LOCATION=""
