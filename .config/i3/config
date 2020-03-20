@@ -235,7 +235,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id gnome-settings-daemon
 exec_always --no-startup-id redshift 
 exec_always --no-startup-id timemanager
-exec_always --no-startup-id launchpolybar 
+exec_always --no-startup-id launchpolybar i3
 exec_always --no-startup-id udiskie -t
 
 #--apps--
