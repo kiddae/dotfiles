@@ -796,7 +796,7 @@
 
   # end of the example
 -->
-    <application class="URxvt">
+    <application class="*">
       <decor>no</decor>
     </application>
   </applications>
