@@ -1,2 +1,3 @@
 #!/bin/bash
 wpg -s $1 --backend wal --sat $1 10
+feh --bg-fill $(cat ~/.cache/wal/wal)
