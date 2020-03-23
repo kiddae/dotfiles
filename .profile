@@ -27,6 +27,9 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 PATH="/usr/games:$PATH"
 
+# include snap packages in path
+PATH="/snap/bin:$PATH"
+
 # constants
 export TERMINAL="urxvt"
 export EDITOR="vim"
