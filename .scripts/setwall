@@ -1,3 +1,8 @@
 #!/bin/bash
-wpg -s $1 --backend wal --brt $1 255
-feh --bg-fill $(cat ~/.cache/wal/wal)
+wpg -R $1
+#wpg --sat $1 0.01
+wpg --brt $1 25
+wpg -s $1 --backend wal
+
+# remove weird cache files
+find $WALLPAPER_FOLDER -type f -name *_wal_sample.png -delete
