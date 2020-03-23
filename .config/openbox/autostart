@@ -1,3 +1,6 @@
 launchpolybar ob
+pnmixer &
+nm-applet &
 udiskie &
+feh-blur
 redshift

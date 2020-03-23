@@ -6,16 +6,16 @@ if [[ "$1" != "--worker" ]]; then
   export CACHE_DIR="/tmp/feh-blur.$$"
 
   # How much to blur (--blur N)
-  export BLUR_STRENGTH="10"
+  export BLUR_STRENGTH="16"
 
   # Contrast (--uncontrast)
   export REDUCE_CONTRAST="0"
 
   # How much to dim (--dim N)
-  export DIM_STRENGTH="0"
+  export DIM_STRENGTH="4"
 
   # Dimmer
-  export DIM_COLOR="#fff"
+  export DIM_COLOR="#000"
 
   # Where to write the final blurred image (--save-image PATH)
   export BLUR_IMAGE_SAVE_LOCATION=""
@@ -145,8 +145,15 @@ get_current_workspace() {
 
 # get_open_windows_count() => "2"
 get_open_windows_count() {
+  count=0
   workspace="$(get_current_workspace)"
-  wmctrl -l | cut -d' ' -f3 | grep -c "$workspace"
+  for id in $(wmctrl -l | cut -f1 -d' ');do
+    if [[ $(wmctrl -l | grep $id | cut -d' ' -f3) == $workspace ]]
+	then
+      xprop -id "$id" | grep -Fq 'window state: Iconic' || ((count++))
+	fi
+  done
+  echo $count
 }
 
 is_blank() {

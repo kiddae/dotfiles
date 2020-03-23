@@ -9,6 +9,5 @@ git clone --bare https://github.com/ngynLk/dotfiles.git
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 config checkout -f
 config config --local status.showUntrackedFiles no
-wpg-install -g
 rm .bash_profile
 sudo reboot

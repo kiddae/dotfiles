@@ -396,6 +396,9 @@
       <mousebind button="W-Middle" action="Press">
         <action name="Iconify"/>
       </mousebind>
+      <mousebind button="W-S-Middle" action="Press">
+        <action name="ToggleMaximize"/>
+      </mousebind>
       <mousebind button="W-S-Up" action="Click">
         <action name="SendToDesktop">
           <to>previous</to>
