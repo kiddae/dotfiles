@@ -258,20 +258,11 @@ bindsym Print exec scrot -e 'mv $f ~/Pictures/Screenshots'
 
 for_window [class="^.*"] border pixel 0
 focus_follows_mouse no
+border_radius 15
 
 
 #Needed for i3-gaps
-set $DEFAULT_GAPS 20
-gaps inner $DEFAULT_GAPS 
+gaps inner 20
+gaps outer 0 
+gaps top 65
 
-bindsym $mod+Mod1+Left 		gaps outer current plus 10
-bindsym $mod+Mod1+Down 		gaps inner current plus 10
-bindsym $mod+Mod1+Up			gaps inner current minus 10
-bindsym $mod+Mod1+Right		gaps outer current minus 10
-
-bindsym $mod+Mod1+h 			gaps outer current plus 10
-bindsym $mod+Mod1+j 			gaps inner current plus 10
-bindsym $mod+Mod1+k			gaps inner current minus 10
-bindsym $mod+Mod1+l			gaps outer current minus 10
-
-bindsym $mod+Mod1+r			gaps outer current set 0; gaps inner current set $DEFAULT_GAPS
