@@ -46,9 +46,10 @@ color15 = ${xrdb:color15}
 [bar/workspacesi3]
 height = 45
 radius = 15.0
-width = 25%
+width = 30%
 
 background = ${colors.background}
+;background = ${colors.primary}
 foreground = ${colors.foreground}
 
 
@@ -118,7 +119,7 @@ font-4=FontAwesome5Brands:size=10:antialias=true;3
                                          
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:35:...%
+label = %title:0:40:...%
 label-foreground = ${colors.primary} 
 label-background = ${colors.background} 
 label-padding = 2
@@ -173,7 +174,9 @@ label-empty-padding = 2
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-;format-margin = 2
+format-padding = 2
+format-background = ${colors.primary}
+format-foreground = ${colors.background}
 index-sort = true
 wrapping-scroll = false
 
@@ -187,17 +190,17 @@ reverse-scroll = false
 label-focused = %icon%
 ;label-focused = %index%
 label-focused-font = 3
-label-focused-background = ${colors.primary}
-label-focused-foreground = ${colors.background}
-label-focused-padding = 2
+;label-focused-background = ${colors.primary}
+;label-focused-foreground = ${colors.background}
+label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
 ;label-unfocused = %index%
 label-unfocused-font = 2
-label-unfocused-padding = 2
-label-unfocused-foreground = ${colors.background}
-label-unfocused-background = ${colors.primary}
+label-unfocused-padding = 1
+;label-unfocused-foreground = ${colors.background}
+;label-unfocused-background = ${colors.primary}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
