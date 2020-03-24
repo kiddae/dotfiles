@@ -45,7 +45,7 @@ color15 = ${xrdb:color15}
 
 [bar/workspacesi3]
 height = 45
-radius = 15.0
+radius = 22.5
 width = 30%
 
 background = ${colors.background}
@@ -77,7 +77,7 @@ cursor-scroll = ns-resize
 
 [bar/music]
 height = 45
-radius = 15
+radius = 22.5
 width = 27%
 
 background = ${colors.background}
@@ -94,7 +94,7 @@ font-4=FontAwesome5Brands:size=10:antialias=true;3
 
 [bar/tray]
 height = 45
-radius = 15
+radius = 22.5
 width = 13%
 
 padding-right = 2
