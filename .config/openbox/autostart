@@ -1,6 +1,4 @@
-launchpolybar ob
-pnmixer &
-nm-applet &
-udiskie &
-feh-blur
-redshift
+launchpolybar ob &
+feh-blur -d &
+redshift &
+tint2 &
