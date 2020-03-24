@@ -1,8 +1,13 @@
 #!/bin/bash
+# reset colorscheme
 wpg -R $1
-#wpg --sat $1 0.01
+# set brightness to colorscheme
 wpg --brt $1 25
+# set colorscheme
 wpg -s $1 --backend wal
+
+# update pywalfox
+/home/nguyenleluc/Applications/Pywalfox/daemon/pywalfox.py update
 
 # remove weird cache files
 find $WALLPAPER_FOLDER -type f -name *_wal_sample.png -delete
