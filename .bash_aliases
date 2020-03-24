@@ -8,8 +8,11 @@ alias update="sudo apt update && sudo apt upgrade -y"
 # i3 config file
 alias i3conf="vim ~/.config/i3/config"
 
-# polybar config file
-alias barconf="vim ~/.config/polybar/config"
+# polybar config file(i3)
+alias i3barconf="vim ~/.config/polybar/i3config"
+
+# polybar config file(ob)
+alias obbarconf="vim ~/.config/polybar/obconfig"
 
 # compton config file
 alias compconf="vim ~/.config/compton.conf"
