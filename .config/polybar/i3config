@@ -67,7 +67,7 @@ font-0=SF Mono:size=11:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lc
 font-1=FontAwesome5Free:style=Regular:size=10:antialias=true;3
 font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
 
-modules-left = i3 xwindow
+modules-left = i3 wsnumber xwindow
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -120,6 +120,15 @@ wm-restack = i3
 ; | | | | | | (_) | (_| | |_| | |  __/\__ \
 ; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
                                          
+[module/wsnumber]
+type = custom/script
+exec = ~/.config/polybar/get_workspace
+tail = true
+label = "  %output%:"
+interval = 0.1
+format-background = ${colors.background}
+format-foreground = ${colors.primary}
+
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:40:...%
