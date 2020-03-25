@@ -17,6 +17,9 @@ alias obbarconf="vim ~/.config/polybar/obconfig"
 # compton config file
 alias compconf="vim ~/.config/compton.conf"
 
+# termite config file
+alias termconf="vim ~/.config/termite/config"
+
 # ffmpeg convert flac=>mp3
 alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
 
