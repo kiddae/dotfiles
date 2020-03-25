@@ -31,7 +31,7 @@ PATH="/usr/games:$PATH"
 PATH="/snap/bin:$PATH"
 
 # constants
-export TERMINAL="termite"
+export TERMINAL="urxvt"
 export EDITOR="vim"
 export SCRIPT_FOLDER="$HOME/.scripts/"
 export WALLPAPER_FOLDER="$HOME/Pictures/Wallpapers/"
