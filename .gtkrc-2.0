@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/nguyenleluc/.gtkrc-2.0.mine"
-gtk-theme-name="FlatColor"
-gtk-icon-theme-name="Pop"
+gtk-theme-name="oomox-xresources-reverse"
+gtk-icon-theme-name="Numix"
 gtk-font-name="SF Mono 11"
 gtk-cursor-theme-name="DMZ-Black"
 gtk-cursor-theme-size=0
