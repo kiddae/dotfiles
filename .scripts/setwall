@@ -1,6 +1,6 @@
 #!/bin/bash
  
-wal -i $1
+wal -i $1 --vte
 
 # update gtk
 oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse &
