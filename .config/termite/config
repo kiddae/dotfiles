@@ -7,7 +7,6 @@
 #clickable_url = true
 #dynamic_title = true
 font = Noto Sans Mono CJK JP 11
-font = FontAwesomeFree 11
 font = SF Mono 11
 #fullscreen = true
 #icon_name = terminal
