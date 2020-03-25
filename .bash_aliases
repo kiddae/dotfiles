@@ -3,7 +3,7 @@ alias lsscript="ls -R1 $SCRIPT_FOLDER"
 
 
 # apt update && upgrade
-alias update="sudo apt update && sudo apt upgrade -y"
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
 # i3 config file
 alias i3conf="vim ~/.config/i3/config"
