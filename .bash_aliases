@@ -21,7 +21,7 @@ alias compconf="vim ~/.config/compton.conf"
 alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
 
 # pywal
-alias wal="wal -o wal-set --vte"
+alias wal="wal --vte"
 
 # color cat
 alias ccat="pygmentize -g"
