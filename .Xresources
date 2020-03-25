@@ -39,7 +39,7 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
-URxvt.font-size.step: 2
+URxvt.font-size.step: 1
 
 Xft.antialias: 1
 Xft.dpi: 96
