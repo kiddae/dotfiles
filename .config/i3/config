@@ -248,8 +248,8 @@ exec_always --no-startup-id udiskie -t
 
 # binds
 bindsym $mod+y exec firefox
-bindsym $mod+u exec $TERMINAL -e ranger
-bindsym $mod+i exec --no-startup-id $TERMINAL -e ncmpcpp
+bindsym $mod+u exec "$TERMINAL -e ranger & sleep 0.1 ; wal -R --vte"
+bindsym $mod+i exec --no-startup-id "$TERMINAL -e ncmpcpp & sleep 0.1 ; wal -R --vte"
 bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
 bindsym $mod+c exec killall compton || compton &
