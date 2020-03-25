@@ -23,8 +23,5 @@ alias termconf="vim ~/.config/termite/config"
 # ffmpeg convert flac=>mp3
 alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
 
-# pywal
-alias wal="wal --vte"
-
 # color cat
 alias ccat="pygmentize -g"
