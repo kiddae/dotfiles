@@ -1,4 +1,5 @@
 launchpolybar ob &
 feh-blur -d &
+picom &
 redshift &
 tint2 &
