@@ -126,3 +126,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # set cursor to ibeam
 printf '\033[5 q\r'
+
+# Xresources
+xrdb -merge .Xresources
