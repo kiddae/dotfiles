@@ -1,0 +1,14 @@
+#!/bin/bash
+# kill other instances
+script_name=${BASH_SOURCE[0]}
+for pid in $(pidof -x $script_name); do
+    if [ $pid != $$ ]; then
+        kill -9 $pid
+		echo "Killed other instance"
+    fi
+done
+
+while [[ true ]]; do
+		sleep 10m
+		randomwall
+		done	
