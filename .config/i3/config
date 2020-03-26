@@ -230,9 +230,8 @@ client.placeholder		$color1	$background	$color1		$color1			$color8
 
 #--misc--
 exec_always --no-startup-id dunst
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 exec_always --no-startup-id ~/.config/i3/autotiling.py 
-exec_always --no-startup-id nm-applet
 exec_always --no-startup-id gnome-settings-daemon
 exec_always --no-startup-id redshift 
 exec_always --no-startup-id timemanager
@@ -252,7 +251,7 @@ bindsym $mod+u exec "$TERMINAL -e ranger & sleep 0.1 ; wal -R --vte"
 bindsym $mod+i exec --no-startup-id "$TERMINAL -e ncmpcpp & sleep 0.1 ; wal -R --vte"
 bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
-bindsym $mod+c exec killall compton || compton &
+bindsym $mod+c exec killall picom || picom &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
 
 
