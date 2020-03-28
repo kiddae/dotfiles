@@ -254,6 +254,7 @@ bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
 bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
+bindsym $mod+shift+e exec powermenu
 
 
 for_window [class="^.*"] border pixel 0
