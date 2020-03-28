@@ -129,3 +129,6 @@ printf '\033[5 q\r'
 
 # Xresources
 xrdb -merge .Xresources
+
+# vim mode
+set -o vi
