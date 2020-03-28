@@ -215,9 +215,10 @@ label-unfocused-padding = 1
 ;label-unfocused-background = ${colors.primary}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %icon%
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent = 
+label-urgent-font = 2
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.alert}
 
 ; Separator in between workspaces
 ; label-separator = |
