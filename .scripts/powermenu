@@ -1,0 +1,10 @@
+#!/bin/bash
+choices="Logout\nShutdown\nReboot"
+chosen=$(echo -e $choices | rofi -dmenu -i -p "Power Menu")
+echo "$chosen"
+
+case "$chosen" in
+		Logout) i3-msg exit || openbox --exit ;;
+		Shutdown) poweroff ;;
+		Reboot) reboot ;; 
+esac
