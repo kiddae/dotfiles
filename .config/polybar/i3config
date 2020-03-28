@@ -1,4 +1,4 @@
-;==========================================================
+==========================================================
 ;
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
@@ -72,8 +72,6 @@ modules-left = i3 wsnumber xwindow
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
-cursor-click = pointer
-cursor-scroll = ns-resize
 wm-restack = i3
 
 [bar/music]
@@ -203,7 +201,7 @@ label-focused = %icon%
 ;label-focused = %index%
 label-focused-font = 3
 ;label-focused-background = ${colors.primary}
-;label-focused-foreground = ${colors.background}
+label-focused-foreground = ${colors.background}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
@@ -211,7 +209,7 @@ label-unfocused = %icon%
 ;label-unfocused = %index%
 label-unfocused-font = 2
 label-unfocused-padding = 1
-;label-unfocused-foreground = ${colors.background}
+label-unfocused-foreground = ${colors.background}
 ;label-unfocused-background = ${colors.primary}
 
 ; urgent = Workspace with urgency hint set
