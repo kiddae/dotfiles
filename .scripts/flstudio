@@ -1,3 +1,0 @@
-#!/bin/bash
-
-wine "/home/nguyenleluc/.wine/drive_c/Program Files/Image-Line/FL Studio 20/fl64.exe"
