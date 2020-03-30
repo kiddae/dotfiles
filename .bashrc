@@ -132,3 +132,4 @@ xrdb -merge .Xresources
 
 # vim mode
 set -o vi
+
