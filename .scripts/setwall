@@ -1,7 +1,7 @@
 #!/bin/bash
  
 wpg -R $1
-#wpg -z $1
+wpg -z $1
 wpg --brt $1 25
 wpg -s $1
 

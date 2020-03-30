@@ -9,6 +9,6 @@ for pid in $(pidof -x $script_name); do
 done
 
 while [[ true ]]; do
-		sleep 10m
+		sleep 5m
 		randomwall
 		done	
