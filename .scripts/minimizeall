@@ -1,0 +1,4 @@
+#!/bin/bash
+for w in $(xdotool search --name --desktop $(xdotool get_desktop) '.*'); do
+    xdotool windowminimize "$w"
+done
