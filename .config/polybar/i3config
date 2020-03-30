@@ -384,7 +384,7 @@ format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage:3:3%%
 format-volume-background = ${colors.color3}
 format-volume-foreground = ${colors.background}
-format-volume-padding = 3
+format-volume-padding = 2
 use-ui-max = false
 interval = 5
 

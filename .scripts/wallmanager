@@ -1,6 +1,7 @@
 #!/bin/bash
 # kill other instances
-script_name=${BASH_SOURCE[0]}
+script_name=wallmanager
+echo $$
 for pid in $(pidof -x $script_name); do
     if [ $pid != $$ ]; then
         kill -9 $pid
@@ -9,6 +10,6 @@ for pid in $(pidof -x $script_name); do
 done
 
 while [[ true ]]; do
-		sleep 5m
+		sleep 10m
 		randomwall
 		done	

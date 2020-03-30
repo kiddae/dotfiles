@@ -6,13 +6,13 @@ if [[ "$1" != "--worker" ]]; then
   export CACHE_DIR="/tmp/feh-blur.$$"
 
   # How much to blur (--blur N)
-  export BLUR_STRENGTH="16"
+  export BLUR_STRENGTH="32"
 
   # Contrast (--uncontrast)
   export REDUCE_CONTRAST="0"
 
   # How much to dim (--dim N)
-  export DIM_STRENGTH="4"
+  export DIM_STRENGTH="8"
 
   # Dimmer
   export DIM_COLOR="#000"
@@ -147,11 +147,11 @@ get_current_workspace() {
 get_open_windows_count() {
   count=0
   workspace="$(get_current_workspace)"
-  for id in $(wmctrl -l | cut -f1 -d' ');do
+  for id in $(wmctrl -l | cut -d' ' -f1);do
     if [[ $(wmctrl -l | grep $id | cut -d' ' -f3) == $workspace ]]
-	then
+    then
       xprop -id "$id" | grep -Fq 'window state: Iconic' || ((count++))
-	fi
+    fi
   done
   echo $count
 }
@@ -417,4 +417,3 @@ trap finish SIGHUP
 trap finish SIGINT
 trap finish SIGTERM
 main "$@"
-
