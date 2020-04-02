@@ -23,7 +23,7 @@
 		</item>
 		<item label="Application Menu">
 			<action name="Execute">
-				<execute>rofi -show drun</execute>
+				<execute>rofi -show run</execute>
 			</action>
 		</item>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->

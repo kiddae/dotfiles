@@ -229,15 +229,15 @@ client.placeholder		$color1	$background	$color1		$color1			$color8
 
 
 #--misc--
-exec_always --no-startup-id dunst
 exec_always --no-startup-id compton
-exec_always --no-startup-id ~/.config/i3/autotiling.py 
-exec_always --no-startup-id gnome-settings-daemon
-exec_always --no-startup-id redshift 
-exec_always --no-startup-id timemanager
-exec_always --no-startup-id launchpolybar i3
 exec --no-startup-id wallmanager
-exec_always --no-startup-id udiskie -t
+exec --no-startup-id timemanager
+exec_always --no-startup-id dunst
+exec --no-startup-id redshift
+exec_always --no-startup-id udiskie -n
+exec_always --no-startup-id feh-blur -d
+exec_always --no-startup-id ~/.config/i3/autotiling.py 
+exec_always --no-startup-id launchpolybar i3
 
 #--apps--
 # exec --no-startup-id i3-msg "workspace 1; exec firefox"
@@ -248,22 +248,24 @@ exec_always --no-startup-id udiskie -t
 
 # binds
 bindsym $mod+y exec firefox
-bindsym $mod+u exec "$TERMINAL -e ranger & sleep 0.1 ; wal -R --vte"
-bindsym $mod+i exec --no-startup-id "$TERMINAL -e ncmpcpp & sleep 0.1 ; wal -R --vte"
+bindsym $mod+u exec $TERMINAL -e ranger
+bindsym $mod+i exec --no-startup-id $TERMINAL -e ncmpcpp
 bindsym $mod+w exec --no-startup-id randomwall
 bindsym $mod+p exec mpc toggle
 bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
 bindsym $mod+shift+e exec powermenu
 
-
 for_window [class="^.*"] border pixel 0
-focus_follows_mouse no
-border_radius 23
+# focus_follows_mouse no
+# border_radius 23
 
 
 #Needed for i3-gaps
+set $outer 40
+set $top 105
 gaps inner 20
-gaps outer 0 
-gaps top 65
-
+gaps outer $outer
+gaps top $top
+bindsym $mod+g gaps outer all set $outer; gaps top all set $top
+bindsym $mod+Shift+g gaps outer all set 0; gaps top all set 65

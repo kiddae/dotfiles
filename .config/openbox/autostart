@@ -1,6 +1,6 @@
 launchpolybar ob &
 feh-blur -d &
-compton -i 0.7 --active-opacity 1 -m 0.8 &
 picom &
 redshift &
+compton --config ~/.config/obcompton.conf &
 tint2 &

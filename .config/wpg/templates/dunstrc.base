@@ -1,6 +1,6 @@
 [colors]
-	background = "{color8}"
-	foreground = "{color15}"
+	background = "{color1}"
+	foreground = "{color0}"
 
 [global]
     ### Display ###
@@ -8,17 +8,18 @@
     monitor = 0
     follow = mouse
 
-    geometry = "540x5-10+32"
+    geometry = "540x5-20+85"
     indicate_hidden = yes
     shrink = yes
     transparency = 20
+	opacity = 0.7
     notification_height = 0
     separator_height = 0
     padding = 12
     horizontal_padding = 12
     frame_width = 0
 
-    frame_color = "{active}"
+    frame_color = colors.background
     separator_color = auto
     sort = yes
     idle_threshold = 120
@@ -60,7 +61,7 @@
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/rofi -show run -p dunst:
-    browser = /usr/bin/google-chrome-stable
+    browser = /usr/bin/firefox
     always_run_script = true
     title = Dunst
     class = Dunst

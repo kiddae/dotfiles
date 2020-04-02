@@ -10,7 +10,7 @@ configuration {
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
-	show-icons: true;
+/*	show-icons: false;*/
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
@@ -19,7 +19,7 @@ configuration {
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "xkill -id {window}";*/
 /*	window-match-fields: "all";*/
-	drun-icon-theme: "Pop";
+/*	drun-icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories";*/
 /*	disable-history: false;*/
 /*	sort: false;*/

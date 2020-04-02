@@ -3,7 +3,7 @@
 
 include "/home/nguyenleluc/.gtkrc-2.0.mine"
 gtk-theme-name="FlatColor"
-gtk-icon-theme-name="flattrcolor"
+gtk-icon-theme-name="flattrcolor-dark"
 gtk-font-name="SF Mono 11"
 gtk-cursor-theme-name="DMZ-Black"
 gtk-cursor-theme-size=0

@@ -25,7 +25,7 @@
        mouse into it, also raise the window -->
   </focus>
   <placement>
-    <policy>Smart</policy>
+    <policy>UnderMouse</policy>
     <!-- 'Smart' or 'UnderMouse' -->
     <center>yes</center>
     <!-- whether to place windows in the center of the free area found or
@@ -43,7 +43,7 @@
   </placement>
   <theme>
     <name>colorbamboo</name>
-    <titleLayout>LIMC</titleLayout>
+    <titleLayout/>
     <!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -55,7 +55,7 @@
       D: omnipresent (on all desktops).
   -->
     <keepBorder>yes</keepBorder>
-    <animateIconify>yes</animateIconify>
+    <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
       <name>SF Mono</name>
       <size>11</size>
@@ -93,7 +93,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="ActiveOnScreenDisplay">
-      <name>SF Mono Semi-Bold</name>
+      <name>SF Mono</name>
       <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -102,7 +102,7 @@
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="InactiveOnScreenDisplay">
-      <name>SF Mono Semi-Bold</name>
+      <name>SF Mono</name>
       <size>11</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -134,7 +134,7 @@
   </desktops>
   <resize>
     <drawContents>yes</drawContents>
-    <popupShow>Nonpixel</popupShow>
+    <popupShow>Never</popupShow>
     <!-- 'Always', 'Never', or 'Nonpixel' (xterms and such) -->
     <popupPosition>Center</popupPosition>
     <!-- 'Center', 'Top', or 'Fixed' -->
@@ -159,12 +159,12 @@
     <right>20</right>
   </margins>
   <dock>
-    <position>TopLeft</position>
+    <position>Top</position>
     <!-- (Top|Bottom)(Left|Right|)|Top|Bottom|Left|Right|Floating -->
     <floatingX>0</floatingX>
     <floatingY>0</floatingY>
     <noStrut>no</noStrut>
-    <stacking>Below</stacking>
+    <stacking>Above</stacking>
     <!-- 'Above', 'Normal', or 'Below' -->
     <direction>Vertical</direction>
     <!-- 'Vertical' or 'Horizontal' -->
@@ -268,7 +268,14 @@
       </action>
     </keybind>
     <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+      <action name="Execute">
+        <execute>minimizeall</execute>
+      </action>
+    </keybind>
+    <keybind key="W-S-d">
+      <action name="Execute">
+        <execute>raiseall</execute>
+      </action>
     </keybind>
     <keybind key="W-t">
       <action name="ToggleDecorations"/>
@@ -352,7 +359,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>rofi -show drun</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
@@ -415,7 +422,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action name="ToggleMaximizeFull"/>
       </mousebind>
       <mousebind button="Up" action="Click">
         <action name="if">
@@ -800,7 +807,7 @@
   # end of the example
 -->
     <application class="*">
-      <decor>no</decor>
+      <decor>yes</decor>
     </application>
   </applications>
 </openbox_config>
