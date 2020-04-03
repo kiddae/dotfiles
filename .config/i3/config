@@ -219,11 +219,11 @@ bindsym $mod+Control+Right resize grow width $RESIZEPX px or $RESIZEPT ppt
 # My colors
 client.background	$background
 
-client.focused         	$color1 $color1		$background	$color1		$color1	
-client.unfocused       	$color1	$background	$color1		$color0			$color0
-client.focused_inactive	$color1	$background	$color1		$color0			$color0
-client.urgent			$color1	$background	$color1		$color1			$color8
-client.placeholder		$color1	$background	$color1		$color1			$color8
+client.focused         	$color1 $color1		$color0		$color1			$color1	
+client.unfocused       	$color0	$color0		$color1		$color0			$color0
+client.focused_inactive	$color1	$color0	$color1		$color0			$color0
+client.urgent			$color1	$color0	$color1		$color1			$color8
+client.placeholder		$color1	$color0	$color1		$color1			$color8
 
 #  EXEC
 
@@ -235,9 +235,10 @@ exec --no-startup-id timemanager
 exec_always --no-startup-id dunst
 exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
-exec_always --no-startup-id feh-blur -d
+#exec_always --no-startup-id feh-blur -d
 exec_always --no-startup-id ~/.config/i3/autotiling.py 
 exec_always --no-startup-id launchpolybar i3
+
 
 #--apps--
 # exec --no-startup-id i3-msg "workspace 1; exec firefox"
@@ -262,10 +263,10 @@ for_window [class="^.*"] border pixel 0
 
 
 #Needed for i3-gaps
-set $outer 40
-set $top 105
+set $outer 45
+set $top 110
 gaps inner 20
 gaps outer $outer
 gaps top $top
-bindsym $mod+g gaps outer all set $outer; gaps top all set $top
-bindsym $mod+Shift+g gaps outer all set 0; gaps top all set 65
+bindsym $mod+Shift+g gaps outer current set $outer; gaps top current set $top
+bindsym $mod+g gaps outer current set 0; gaps top current set 65
