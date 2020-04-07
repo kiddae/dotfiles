@@ -1,11 +1,11 @@
 ! Set depth to make transparency work.
 URxvt*depth: 32
 ! URxvt Appearance
-URxvt.font: xft:SF Mono:style=Regular:size=11, xft:Noto Sans Mono CJK JP:style=Regular:size=11
-URxvt.boldFont: xft:SF Mono:style=Bold:size=11
-URxvt.italicFont: xft:SF Mono:style=Italic:size=11
-URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:size=11
-URxvt.letterSpace: -1
+URxvt.font: xft:Terminus:style=Regular:size=12, xft:Noto Sans Mono CJK JP:style=Regular:size=12
+URxvt.boldFont: xft:Terminus:style=Bold:size=12
+URxvt.italicFont: xft:Terminus:style=Italic:size=12
+URxvt.boldItalicFont: xft:Terminus:style=Bold Italic:size=12
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 48 

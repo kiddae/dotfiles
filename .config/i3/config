@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:SF Mono 11
+font pango:Terminus 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -220,7 +220,7 @@ bindsym $mod+Control+Right resize grow width $RESIZEPX px or $RESIZEPT ppt
 client.background	$background
 
 client.focused         	$color1 $color1		$color0		$color1			$color1	
-client.unfocused       	$color0	$color0		$color1		$color0			$color0
+client.unfocused       	$color1	$color0		$color1		$color0			$color0
 client.focused_inactive	$color1	$color0	$color1		$color0			$color0
 client.urgent			$color1	$color0	$color1		$color1			$color8
 client.placeholder		$color1	$color0	$color1		$color1			$color8
@@ -230,13 +230,13 @@ client.placeholder		$color1	$color0	$color1		$color1			$color8
 
 #--misc--
 exec_always --no-startup-id compton
+exec --no-startup-id randomwall
 exec --no-startup-id wallmanager
 exec --no-startup-id timemanager
 exec_always --no-startup-id dunst
 exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
 #exec_always --no-startup-id feh-blur -d
-exec_always --no-startup-id ~/.config/i3/autotiling.py 
 exec_always --no-startup-id launchpolybar i3
 
 
@@ -257,16 +257,18 @@ bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
 bindsym $mod+shift+e exec powermenu
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 # focus_follows_mouse no
 # border_radius 23
 
 
 #Needed for i3-gaps
-set $outer 45
+set $outer 40
 set $top 110
-gaps inner 20
+gaps inner 15
 gaps outer $outer
-gaps top $top
-bindsym $mod+Shift+g gaps outer current set $outer; gaps top current set $top
-bindsym $mod+g gaps outer current set 0; gaps top current set 65
+#gaps top $top
+#bindsym $mod+Shift+g gaps outer current set $outer ; gaps top current set $top
+#bindsym $mod+g gaps outer current set 0 ; gaps top current set 65
+bindsym $mod+Shift+g gaps outer current set $outer
+bindsym $mod+g gaps outer current set 0 

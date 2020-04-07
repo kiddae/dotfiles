@@ -1,6 +1,7 @@
-launchpolybar ob &
+randomwall &
 feh-blur &
-picom &
+pnmixer &
 redshift &
+dunst &
 compton &
 tint2 &

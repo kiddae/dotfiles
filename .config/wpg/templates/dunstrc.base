@@ -8,7 +8,7 @@
     monitor = 0
     follow = mouse
 
-    geometry = "540x5-20+85"
+    geometry = "540x5-25+25"
     indicate_hidden = yes
     shrink = yes
     transparency = 20
@@ -25,7 +25,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = SF Mono 11
+    font = Terminus 12
     line_height = 0
 
     markup = full

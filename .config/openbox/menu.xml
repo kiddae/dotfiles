@@ -34,6 +34,11 @@
 				<execute>obconf</execute>
 			</action>
 		</item>
+		<item label="LXappearance">
+			<action name="Execute">
+				<execute>lxappearance</execute>
+			</action>
+		</item>
 		<item label="ObMenu">
 			<action name="Execute">
 				<execute>obmenu</execute>

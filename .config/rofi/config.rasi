@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "SF Mono 11";
+	font: "Terminus 12";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/

@@ -3,7 +3,7 @@
 rounded = 15
 border_width = 0
 border_sides = TBLR
-background_color = {color0} 00
+background_color = {color0} 100
 border_color = {color15} 100
 background_color_hover = #202020 100
 border_color_hover = {color15} 100
@@ -34,15 +34,15 @@ border_color_pressed = {color15} 100
 
 #-------------------------------------
 # Panel
-panel_items = T
-panel_size = 100% 45
-panel_shrink = 1
-panel_margin = 20 20
+panel_items = TS:C
+panel_size = 100% 30
+panel_shrink = 0
+panel_margin = 0 0
 panel_padding = 0 0 0
 panel_background_id = 1
 wm_menu = 0
 panel_dock = 0
-panel_position = top left horizontal
+panel_position = bottom left horizontal
 panel_layer = top
 panel_monitor = all
 primary_monitor_first = 0
@@ -71,12 +71,12 @@ taskbar_always_show_all_desktop_tasks = 0
 taskbar_name_padding = 10 5
 taskbar_name_background_id = 3
 taskbar_name_active_background_id = 2
-taskbar_name_font = SF Mono 11
+taskbar_name_font = Terminus 12
 taskbar_name_font_color = {color0} 100
 taskbar_name_active_font_color = {color0} 100
 taskbar_distribute_size = 0
 taskbar_sort_order = none
-task_align = center
+task_align = left
 
 
 #-------------------------------------
@@ -87,7 +87,7 @@ task_centered = 1
 urgent_nb_of_blink = 7
 task_maximum_size = 200 45
 task_padding = 20 5 20
-task_font = SF Mono 11
+task_font = Terminus 12
 task_tooltip = 0
 task_font_color = {color1} 100
 task_active_font_color = {color0} 100
@@ -109,7 +109,7 @@ mouse_scroll_down = none
 
 #-------------------------------------
 # System tray (notification area)
-systray_padding = 7 0 5
+systray_padding = 20 0
 systray_background_id = 3
 systray_sort = ascending
 systray_icon_size = 24
@@ -131,13 +131,13 @@ launcher_tooltip = 0
 # Clock
 time1_format = %I:%M %d %b
 time2_format = 
-time1_font = SF Mono 11
+time1_font = Terminus 12
 time1_timezone = 
 time2_timezone = 
-time2_font = SF Mono 11
-clock_font_color = {color15} 100
-clock_padding = 6 0
-clock_background_id = 2
+time2_font = Terminus 12
+clock_font_color = {color3} 100
+clock_padding = 20 0
+clock_background_id = 3
 clock_tooltip = 
 clock_tooltip_timezone = 
 clock_lclick_command = notify-send "$(cal)"
@@ -151,8 +151,8 @@ clock_dwheel_command =
 battery_tooltip = 0
 battery_low_status = 15
 battery_low_cmd = notify-send "battery low" "connect to power source"
-bat1_font = SF Mono 11
-bat2_font = SF Mono 11
+bat1_font = Terminus 12
+bat2_font = Terminus 12
 battery_font_color = {color15} 100
 battery_padding = 10 5
 battery_background_id = 3
@@ -172,5 +172,5 @@ tooltip_hide_timeout = 0
 tooltip_padding = 8 8
 tooltip_background_id = 3
 tooltip_font_color = {color15} 100
-tooltip_font = SF Mono 11
+tooltip_font = Terminus 12
 

@@ -18,10 +18,10 @@
 
 [colors]
 
-background = ${xrdb:color0:#222}
-color1 = ${xrdb:color1}
-color2 = ${xrdb:color6}
-color3 = ${xrdb:color8}
+background = ${xrdb:color0:#000000}
+color1 = ${xrdb:color1:#ff5555}
+color2 = ${xrdb:color6:#8BE9FD}
+color3 = ${xrdb:color8:#4D4D4D}
 
 ;  _                    
 ; | |__   __ _ _ __ ___ 
@@ -30,30 +30,35 @@ color3 = ${xrdb:color8}
 ; |_.__/ \__,_|_|  |___/
 
 [bar/i3]
-height = 45
+height = 35
 ;radius = 22.5
-width = 30%
+width = 100%
 
 background = ${colors.background}
 ;background = ${colors.primary}
 foreground = ${colors.color1}
-
+bottom = true
 
 padding-left = 0
 padding-right = 0
 
-override-redirect=true
+line-size = 2
+
+override-redirect=false
 offset-x = 20
 offset-y = 20
 
 ;module-margin-left = 0
 ;module-margin-right = 0
 
-font-0=SF Mono:size=11:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
-font-1=FontAwesome5Free:style=Regular:size=10:antialias=true;3
-font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
+font-0=Terminus:size=12:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
+;font-1=FontAwesome5Free:style=Regular:size=10:antialias=true;3
+;font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
+font-1=siji:size=12;3
 
-modules-left = wsnumber xwindow
+modules-left = i3 
+modules-center = mpd
+modules-right = cpu memory time pulseaudio power
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -71,7 +76,7 @@ offset-y = 20
 offset-x = 56.5%
 
 modules-left = mpd
-font-0=SF Mono:size=11:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
+font-0=SF Mono:size=12:dpi=96:rgba=rgb:hinting=0:hintstyle=hintnone:lcdfilter=lcddefault:antialias=true;3
 font-1=Noto Sans CJK JP:size=11:antialias=true;3
 font-2=FontAwesome5Free:style=Solid:size=10:antialias=true;3
 font-3=FontAwesome5Free:style=Regular:size=10:antialias=true;3
@@ -144,8 +149,9 @@ interval = 25
 mount-0 = /
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted-foreground = ${colors.color3}
+;label-unmounted = %mountpoint% not mounted
+;label-unmounted-foreground = ${colors.color3}
 
 [module/bspwm]
 type = internal/bspwm
@@ -171,10 +177,10 @@ label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
-format-padding = 1
-format-background = ${colors.color1}
-format-foreground = ${colors.background}
+format =   <label-state> <label-mode>
+format-padding = 2
+;format-background = ${colors.color1}
+;format-foreground = ${colors.background}
 index-sort = true
 wrapping-scroll = false
 
@@ -185,26 +191,29 @@ enable-click = true
 reverse-scroll = false
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%
-;label-focused = %index%
-label-focused-font = 3
-;label-focused-background = ${colors.primary}
-label-focused-foreground = ${colors.background}
-label-focused-padding = 1
+;label-focused = %icon%
+label-focused = %index%
+;label-focused-font = 3
+;label-focused-background = ${colors.color1}
+label-focused-foreground = ${xrdb:color7:#fff}
+label-focused-overline = ${xrdb:color7:#fff}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %icon%
-;label-unfocused = %index%
-label-unfocused-font = 2
-label-unfocused-padding = 1
-label-unfocused-foreground = ${colors.background}
-;label-unfocused-background = ${colors.primary}
+;label-unfocused = %icon%
+label-unfocused = %index%
+;label-unfocused-font = 2
+label-unfocused-padding = 2
+;label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.color1}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = 
+label-urgent = 
+;label-urgent = %index%
+label-urgent-padding = 2
+label-urgent-foreground = ${colors.background}
+label-urgent-background = ${colors.color2}
 label-urgent-font = 2
-label-urgent-padding = 1
-label-urgent-foreground = ${colors.color3}
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -255,18 +264,19 @@ icon-default = 
 
 [module/power]
 type = custom/text
-content = 
+content = 
 content-foreground = ${colors.color3}
 click-left = powermenu
+content-padding = 2
 
 [module/mpd]
 type = internal/mpd
 host = 127.0.0.1
 port = 6600
-format-online =  <icon-prev>  <toggle>  <icon-next>  <label-song><label-time>
+format-online = <icon-prev> <toggle> <icon-next> <label-song> <label-time>
 format-online-padding = 2
-format-online-background = ${colors.color2}
-format-online-foreground = ${colors.background}
+format-online-foreground = ${colors.color2}
+format-online-background = ${colors.background}
 label-song-foreground = ${colors.color2}
 label-song-background = ${colors.background}
 label-song-padding = 2
@@ -285,11 +295,16 @@ bar-progress-indicator = |
 bar-progress-fill = ─
 bar-progress-empty = ─
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = 
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
 
 label-song-maxlen = 27
 label-song-ellipsis = true
@@ -320,13 +335,17 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-label = %percentage:2%%
+format-prefix = " "
+format-padding = 2
+format-foreground = ${colors.color3}
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-padding = 2
+format-prefix = " "
+format-foreground = ${colors.color3}
 label = %percentage_used%%
 
 [module/wlan]
@@ -373,7 +392,7 @@ format-margin = 0
 time = "%H:%M"
 date = "%d %b"
 
-label = %date%, %time%
+label =  %date%, %time%
 label-foreground = ${colors.color3}
 label-background = ${colors.background}
 label-padding = 2
@@ -383,20 +402,20 @@ label-padding = 2
 type = internal/pulseaudio
 
 format-margin = 1
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume><label-volume>
 label-volume = %percentage:3:3%%
-format-volume-background = ${colors.color3}
-format-volume-foreground = ${colors.background}
+format-volume-foreground = ${colors.color3}
+format-volume-background = ${colors.background}
 format-volume-padding = 2
 use-ui-max = false
 interval = 5
 
-ramp-volume-0 = ""
-ramp-volume-1 = ""
-ramp-volume-2 = ""
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
 
 
-label-muted = "    "   
+label-muted = "     "   
 label-muted-background = ${colors.background}
 label-muted-foreground = ${colors.color3}
 label-muted-padding = 2

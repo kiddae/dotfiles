@@ -1,4 +1,3 @@
 #!/bin/sh
-setxkbmap fr
 xrdb ~/.Xresources
-randomwall &
+lock-screen-timer &

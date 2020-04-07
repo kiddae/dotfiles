@@ -8,10 +8,10 @@ def_key "j"
 def_key "k"
     scroll_up
 
-def_key "ctrl-b"
+def_key "ctrl-u"
     page_up
 #push_characters "kkkkkkkkkkkkkkk"
-def_key "ctrl-f"
+def_key "ctrl-d"
     page_down
 #push_characters "jjjjjjjjjjjjjjj"
 
