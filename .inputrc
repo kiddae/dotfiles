@@ -2,3 +2,6 @@
 # matches what was already written
 "\e[A":history-search-backward
 "\e[B":history-search-forward
+
+# Disable bell
+set bell-style none

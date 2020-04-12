@@ -1,6 +1,3 @@
 #!/bin/sh
-xrdb ~/.Xresources
-randomwall
-setxkbmap fr
-
+[[ -f ~/.xprofile ]] && . .xprofile
 exec i3

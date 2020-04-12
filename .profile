@@ -39,6 +39,5 @@ export WALLPAPER_FOLDER="$HOME/Pictures/Wallpapers/"
 # add scripts to path
 PATH="$SCRIPT_FOLDER:$PATH"
 
-# MPD daemon start (if no other user instance exists)
-[ ! -s ~/.config/mpd/pid ] && mpd
+[[ -d $HOME/.local/bin ]] && PATH="$HOME/.local/bin:$PATH"
 
