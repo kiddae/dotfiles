@@ -40,23 +40,9 @@ set_from_resource	$background	background
 set_from_resource	$foreground	foreground
 set_from_resource	$color0		color0
 set_from_resource 	$color1 	color1
-set_from_resource 	$color2 	color2
-set_from_resource 	$color3 	color3
-set_from_resource 	$color4 	color4
-set_from_resource 	$color5 	color5
-set_from_resource 	$color6		color6
-set_from_resource	$color7		color7
-set_from_resource	$color8		color8
-set_from_resource	$color9		color9
-set_from_resource	$color10	color10
-set_from_resource	$color11	color11
-set_from_resource	$color12	color12
-set_from_resource	$color13	color13
-set_from_resource	$color14	color14
-set_from_resource	$color15	color15
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec rofi -show run
+bindsym $mod+r exec launcher # Script on scripts repo : https://github.com/ngynLk/scripts
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -233,7 +219,7 @@ exec_always --no-startup-id compton
 exec --no-startup-id wallmanager
 exec --no-startup-id timemanager
 exec --no-startup-id dunst
-exec --no-startup-id redshift
+#exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
 #exec_always --no-startup-id feh-blur -d
 exec_always --no-startup-id launchpolybar i3
@@ -256,7 +242,7 @@ bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
 bindsym $mod+shift+e exec powermenu
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 # focus_follows_mouse no
 # border_radius 23
 

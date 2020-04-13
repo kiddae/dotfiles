@@ -37,7 +37,7 @@ width = 100%
 background = ${colors.background}
 ;background = ${colors.primary}
 foreground = ${colors.color1}
-;bottom = true
+bottom = true
 
 padding-left = 0
 padding-right = 0
@@ -59,7 +59,7 @@ font-3=Font Awesome 5 Brands:size=11;3
 font-4=font\-logos:size=11;3
 font-5=Noto Sans CJK JP:size=11:antialias=true;3
 
-modules-left = logo i3 
+modules-left = launcher i3 
 modules-center = mpd
 modules-right = cpu memory time pulseaudio power
 
@@ -74,12 +74,14 @@ wm-restack = i3
 ; | | | | | | (_) | (_| | |_| | |  __/\__ \
 ; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
                                          
-[module/logo]
+[module/launcher]
 type=custom/text
 content = 
 content-font=5
 content-foreground=${colors.color1}
-content-padding=2
+content-padding=3
+click-left=launcher
+;The script above is to be found here : https://github.com/ngynLk/scripts
 
 [module/wsnumber]
 type = custom/script
@@ -171,6 +173,7 @@ type = custom/text
 content = 
 content-foreground = ${colors.color3}
 click-left = powermenu
+;The script above is to be found here : https://github.com/ngynLk/scripts
 content-padding = 2
 
 [module/mpd]
@@ -296,7 +299,7 @@ ramp-volume-1 = ""
 ramp-volume-2 = ""
 
 
-label-muted = "     "   
+label-muted = ""   
 label-muted-background = ${colors.background}
 label-muted-foreground = ${colors.color3}
 label-muted-padding = 2
@@ -325,7 +328,7 @@ expand-right = true
 format-spacing = 1
 format-margin = 0
 format-background = ${colors.background}
-format-color1 = ${colors.color8}
+format-foreground = ${colors.color3}
 format-padding = 2
 
 label-open = 

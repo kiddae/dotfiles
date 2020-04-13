@@ -1,6 +1,6 @@
 #!/bin/sh
 xrdb -merge ~/.Xresources
-randomwall 
+randomwall &
 lock-screen-timer &
 setxkbmap fr
 xset b off
