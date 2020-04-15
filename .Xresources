@@ -1,8 +1,8 @@
 ! Set depth to make transparency work.
 URxvt*depth: 32
 ! URxvt Appearance
-URxvt.font: xft:Iosevka:style=Regular:size=11, xft:Noto Sans Mono CKJ JP:style=Regular:size=11
-URxvt.boldFont: xft:Iosevka:style=Bold:size=11
+URxvt.font: xft:Iosevka:style=Regular:size=11,xft:IPAGothic:style=Regular:size=12
+URxvt.boldFont: xft:Iosevka:style=Bold:size=11,xft:IPAGothic:style=Bold:size=12
 URxvt.italicFont: xft:Iosevka:style=Italic:size=11
 URxvt.boldItalicFont: xft:Iosevka:style=Bold Italic:size=11
 URxvt.letterSpace: 0
@@ -41,7 +41,12 @@ URxvt.underlineURLs: true
 URxvt.urlButton: 1
 URxvt.font-size.step: 1
 
-
+Xft.antialias: 1
+Xft.dpi: 96
+Xft.hinting: 0
+Xft.hintstyle: hintnone
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
 !#define S_base03        #002b36
 !#define S_base02        #073642
@@ -99,4 +104,4 @@ URxvt.font-size.step: 1
 !!! white dark/light
 !*color7:                S_base2
 !*color15:               S_base3
-!
+
