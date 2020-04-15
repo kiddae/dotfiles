@@ -23,3 +23,5 @@ alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metad
 # color cat
 alias ccat="pygmentize -g"
 
+# launchpolybar
+alias launchpolybar="~/.config/polybar/launch.sh"

@@ -206,7 +206,7 @@ bindsym $mod+Control+Right resize grow width $RESIZEPX px or $RESIZEPT ppt
 client.background	$background
 
 client.focused         	$color1 $color1		$color0		$color1			$color1	
-client.unfocused       	$color1	$color0		$color1		$color0			$color0
+client.unfocused       	$color0	$color0		$color1		$color0			$color0
 client.focused_inactive	$color1	$color0	$color1		$color0			$color0
 client.urgent			$color1	$color0	$color1		$color1			$color8
 client.placeholder		$color1	$color0	$color1		$color1			$color8
@@ -222,7 +222,7 @@ exec --no-startup-id dunst
 #exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
 #exec_always --no-startup-id feh-blur -d
-exec_always --no-startup-id launchpolybar i3
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 #--apps--
@@ -246,14 +246,19 @@ for_window [class="^.*"] border pixel 1
 # focus_follows_mouse no
 # border_radius 23
 
-
 #Needed for i3-gaps
-set $outer 40
-set $top 110
-gaps inner 15
-gaps outer $outer
-#gaps top $top
-#bindsym $mod+Shift+g gaps outer current set $outer ; gaps top current set $top
-#bindsym $mod+g gaps outer current set 0 ; gaps top current set 65
-bindsym $mod+Shift+g gaps outer current set $outer
-bindsym $mod+g gaps outer current set 0 
+set $DEFAULT_GAPS 10
+gaps inner $DEFAULT_GAPS 
+
+#used for some specific polybar theme
+#gaps top 85
+
+bindsym $mod+Mod1+Left 		gaps outer current plus $DEFAULT_GAPS
+bindsym $mod+Mod1+Down 		gaps inner current plus $DEFAULT_GAPS
+bindsym $mod+Mod1+Up			gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+Right		gaps outer current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+h 			gaps outer current plus $DEFAULT_GAPS
+bindsym $mod+Mod1+j 			gaps inner current plus $DEFAULT_GAPS
+bindsym $mod+Mod1+k			gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+l			gaps outer current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+r			gaps outer current set 0; gaps inner current set $DEFAULT_GAPS

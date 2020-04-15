@@ -10,7 +10,6 @@ syntax enable
 set laststatus=2
 set noshowmode
 set so=7
-set wildmenu
 ""set ruler
 set cmdheight=1
 set hid
@@ -41,5 +40,4 @@ call plug#end()
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
-
 
