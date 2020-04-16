@@ -219,19 +219,20 @@ exec_always --no-startup-id compton
 exec --no-startup-id wallmanager
 exec --no-startup-id timemanager
 exec --no-startup-id dunst
-exec --no-startup-id ~/.scripts/spotify/launchlistener.sh
+exec_always --no-startup-id ~/.scripts/spotify/launchlistener.sh
 #exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
 #exec_always --no-startup-id feh-blur -d
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id autotiling
 
 
 #--apps--
 # exec --no-startup-id i3-msg "workspace 1; exec firefox"
 # exec --no-startup-id i3-msg "workspace 2; exec $TERMINAL"
 # exec --no-startup-id i3-msg "workspace 3; exec $TERMINAL -e ranger"
-exec --no-startup-id i3-msg "workspace 10; exec spotify"
-exec --no-startup-id i3-msg workspace 1
+exec spotify
+for_window [class="Spotify"] move to workspace $ws10
 
 # binds
 bindsym $mod+y exec firefox
