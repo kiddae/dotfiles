@@ -219,6 +219,7 @@ exec_always --no-startup-id compton
 exec --no-startup-id wallmanager
 exec --no-startup-id timemanager
 exec --no-startup-id dunst
+exec --no-startup-id ~/.scripts/spotify/launchlistener.sh
 #exec --no-startup-id redshift
 exec_always --no-startup-id udiskie -n
 #exec_always --no-startup-id feh-blur -d
@@ -229,20 +230,21 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # exec --no-startup-id i3-msg "workspace 1; exec firefox"
 # exec --no-startup-id i3-msg "workspace 2; exec $TERMINAL"
 # exec --no-startup-id i3-msg "workspace 3; exec $TERMINAL -e ranger"
-# exec --no-startup-id i3-msg "workspace 10; exec $TERMINAL -e ncmpcpp"
-# exec --no-startup-id i3-msg workspace 1
+exec --no-startup-id i3-msg "workspace 10; exec spotify"
+exec --no-startup-id i3-msg workspace 1
 
 # binds
 bindsym $mod+y exec firefox
-bindsym $mod+u exec $TERMINAL -e ranger
-bindsym $mod+i exec --no-startup-id $TERMINAL -e ncmpcpp
+bindsym $mod+i exec i3-msg '[class="Spotify"] focus' || spotify
+bindsym $mod+u exec --no-startup-id $TERMINAL -e ranger
 bindsym $mod+w exec --no-startup-id randomwall
-bindsym $mod+p exec mpc toggle
+bindsym $mod+p exec playerctl play-pause
 bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
 bindsym $mod+shift+e exec powermenu
 
 for_window [class="^.*"] border pixel 1
+#for_window [class="^.*"] floating toggle
 # focus_follows_mouse no
 # border_radius 23
 
@@ -254,11 +256,11 @@ gaps inner $DEFAULT_GAPS
 #gaps top 85
 
 bindsym $mod+Mod1+Left 		gaps outer current plus $DEFAULT_GAPS
-bindsym $mod+Mod1+Down 		gaps inner current plus $DEFAULT_GAPS
-bindsym $mod+Mod1+Up			gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+Down 		gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+Up			gaps inner current plus $DEFAULT_GAPS
 bindsym $mod+Mod1+Right		gaps outer current minus $DEFAULT_GAPS
 bindsym $mod+Mod1+h 			gaps outer current plus $DEFAULT_GAPS
-bindsym $mod+Mod1+j 			gaps inner current plus $DEFAULT_GAPS
-bindsym $mod+Mod1+k			gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+j 			gaps inner current minus $DEFAULT_GAPS
+bindsym $mod+Mod1+k			gaps inner current plus $DEFAULT_GAPS
 bindsym $mod+Mod1+l			gaps outer current minus $DEFAULT_GAPS
 bindsym $mod+Mod1+r			gaps outer current set 0; gaps inner current set $DEFAULT_GAPS
