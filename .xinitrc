@@ -1,3 +1,3 @@
 #!/bin/sh
-[[ -f ~/.xprofile ]] && . .xprofile
+/bin/bash: q: command not found
 exec i3

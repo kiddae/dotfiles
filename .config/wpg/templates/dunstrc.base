@@ -1,6 +1,6 @@
 [colors]
-	background = "{color1}"
-	foreground = "{color0}"
+	background = "{background}"
+	foreground = "{foreground}"
 
 [global]
     ### Display ###
@@ -25,7 +25,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = Iosevka 12
+    font = SF Pro Display 11
     line_height = 0
 
     markup = full

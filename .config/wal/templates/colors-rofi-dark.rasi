@@ -1,23 +1,23 @@
 * {{
     active-background: {color2};
-    active-foreground: {color1};
+    active-foreground: {foreground};
     normal-background: @background;
-    normal-foreground: {color1};
-    urgent-background: {color1};
-    urgent-foreground: {color1};
+    normal-foreground: {foreground};
+    urgent-background: {foreground};
+    urgent-foreground: {foreground};
 
     alternate-active-background: @background;
     alternate-active-foreground: @foreground;
     alternate-normal-background: @background;
-    alternate-normal-foreground: {color1};
+    alternate-normal-foreground: {foreground};
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: {color1};
+    selected-active-background: {foreground};
     selected-active-foreground: {color0};
-    selected-normal-background: {color1};
+    selected-normal-background: {foreground};
     selected-normal-foreground: {color0};
-    selected-urgent-background: {color1};
+    selected-urgent-background: {foreground};
     selected-urgent-foreground: {color0};
 
     background-color: @background;
