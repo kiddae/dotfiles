@@ -27,7 +27,6 @@ set mat=2
 set noerrorbells
 set visualbell
 
-colorscheme desert
 set background=dark
 set encoding=utf8
 
@@ -35,9 +34,7 @@ set encoding=utf8
 
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
+colorscheme desert

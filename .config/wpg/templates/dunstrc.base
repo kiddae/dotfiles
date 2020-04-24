@@ -1,6 +1,6 @@
 [colors]
 	background = "{background}"
-	foreground = "{foreground}"
+	foreground = "{color7}"
 
 [global]
     ### Display ###
@@ -8,24 +8,23 @@
     monitor = 0
     follow = mouse
 
-    geometry = "540x5-25+55"
+    geometry = "540x5-20+80"
     indicate_hidden = yes
     shrink = yes
-    transparency = 20
-	opacity = 0.7
+    transparency = 0
     notification_height = 0
-    separator_height = 0
+    separator_height = 3
     padding = 12
     horizontal_padding = 12
-    frame_width = 0
+    frame_width = 3
 
-    frame_color = colors.background
+    frame_color = "{background}"
     separator_color = auto
     sort = yes
     idle_threshold = 120
 
     ### Text ###
-    font = SF Pro Display 11
+    font = SF mono 10
     line_height = 0
 
     markup = full
@@ -61,7 +60,7 @@
 
     ### Misc/Advanced ###
     dmenu = /usr/bin/rofi -show run -p dunst:
-    browser = /usr/bin/firefox
+    browser = /usr/lib/firefox/firefox
     always_run_script = true
     title = Dunst
     class = Dunst

@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "SF Pro Display 11";
+	font: "SF Mono 10";
 /*	bw: 1;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -11,7 +11,7 @@ configuration {
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
 /*	show-icons: false;*/
-/*	terminal: "rofi-sensible-terminal";*/
+	terminal: "urxvt";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host}";*/
 /*	run-command: "{cmd}";*/
@@ -50,7 +50,8 @@ configuration {
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "~/.cache/wal/colors-rofi-dark.rasi";
+/*  theme: "~/.cache/wal/colors-rofi-dark.rasi"; */
+	theme: "~/.config/rofi/fullscreen.rasi";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/

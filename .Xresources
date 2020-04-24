@@ -1,22 +1,23 @@
-! Set depth to make transparency work.
-URxvt*depth: 32
 ! URxvt Appearance
-URxvt.font: xft:SF Mono:style=Regular:size=10,xft:IPAGothic:size=11
-URxvt.boldFont: xft:SF Mono:style=Bold:size=10,xft:IPAGothic:size=11
-URxvt.italicFont: xft:SF Mono:style=Italic:size=10
-URxvt.boldItalicFont: xft:SF Mono:style=Bold Italic:size=10
-URxvt.letterSpace: -1
+#define FONT SF Mono 
+#define FONT_SIZE 10
+URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE,xft:IPAGothic:size=11
+URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE,xft:IPAGothic:size=11
+URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE
+URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-URxvt.geometry: 92x24
-URxvt.internalBorder: 48 
+URxvt.geometry: 92x26
+URxvt.internalBorder: 30
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
-URxvt.depth: 24
+URxvt.depth: 32
 URxvt.iso14755: false
+
 
 !! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
