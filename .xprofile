@@ -2,4 +2,5 @@
 xrdb -merge ~/.Xresources
 lock-screen-timer &
 setxkbmap fr
+xsetroot -cursor_name left_ptr
 xset b off

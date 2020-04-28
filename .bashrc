@@ -116,12 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# auto launch fortune to cowsay
-# fortune | cowsay -f tux
 
-# neofetch
-clear
-neofetch
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
@@ -131,3 +126,13 @@ printf '\033[5 q\r'
 # vim mode
 set -o vi
 
+export QT_STYLE_OVERRIDE=kvantum
+export PF_INFO="ascii title os host wm kernel uptime pkgs memory"
+
+# auto launch fortune to cowsay
+# fortune | cowsay -f tux
+
+# neofetch
+clear
+pfetch
+panes

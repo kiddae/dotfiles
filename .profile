@@ -41,3 +41,5 @@ PATH="$SCRIPT_FOLDER:$PATH"
 
 [[ -d $HOME/.local/bin ]] && PATH="$HOME/.local/bin:$PATH"
 
+
+export QT_STYLE_OVERRIDE=kvantum
