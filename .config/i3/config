@@ -37,7 +37,7 @@ bindsym $mod+Shift+q kill
 
 # Colors set from ~/.Xresources
 set_from_resource	$background	color1
-set_from_resource	$foreground	color6
+set_from_resource	$foreground	color7
 
 # start dmenu (a program launcher)
 bindsym $mod+r exec launcher # Script on scripts repo : https://github.com/ngynLk/scripts
@@ -179,7 +179,7 @@ bindsym $mod+Control+Left resize shrink width $RESIZEPX px or $RESIZEPT ppt
 bindsym $mod+Control+Down resize shrink height $RESIZEPX px or $RESIZEPT ppt
 bindsym $mod+Control+Up resize grow height $RESIZEPX px or $RESIZEPT ppt
 bindsym $mod+Control+Right resize grow width $RESIZEPX px or $RESIZEPT ppt
-
+#
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
@@ -241,10 +241,12 @@ bindsym $mod+shift+less exec mpc next
 bindsym $mod+shift+e exec powermenu
 bindsym $mod+c exec killall compton || compton &
 bindsym Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/Screenshots' 
+bindsym $mod+w exec randomwall
 
 
-for_window [class="^.*"] border pixel 4
-#for_window [class="^.*"] floating enable
+
+for_window [class="^.*"] border pixel 2
+# for_window [class="^.*"] floating enable
 # focus_follows_mouse no
 #border_radius 10
 
@@ -253,7 +255,7 @@ set $DEFAULT_GAPS 10
 set $OUTER_GAPS 0
 #set $TOP 55
 set $TOP 0
-set $BOTTOM 68
+set $BOTTOM 64
 #set $BOTTOM 0
 gaps inner $DEFAULT_GAPS 
 gaps outer $OUTER_GAPS 

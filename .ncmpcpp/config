@@ -1,5 +1,6 @@
  % egrep -v '^#' .ncmpcpp/config
 mpd_music_dir = "~/Music/"
+lyrics_directory = "~/.ncmpcpp/lyrics"
 
 mpd_host = "127.0.0.1"
 mpd_port = "6600"
@@ -60,10 +61,7 @@ color2 = "black"
 
 song_list_format = " $5%l  $7%t $R$5%a "
 
-#uncomment both statement's below if you want to display the albumart
-
-#execute_on_song_change="~/.ncmpcpp/art.sh"
-#song_list_format = "                               $2%t $R$5%a "
+execute_on_song_change="~/.ncmpcpp/art.sh && notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png"
 
 song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 song_window_title_format = " {%a} - {%t}"

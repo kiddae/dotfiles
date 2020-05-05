@@ -27,7 +27,7 @@ wal -R
 ~/.fehbg
 dunst &
 feh-blur -d &
-# xflux -l 43.36 -g 1.26
+xflux -l 43.36 -g 1.26
 
 # source pywal colors
 . "$HOME/.cache/wal/colors.sh"

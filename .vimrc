@@ -5,6 +5,7 @@ set tabstop=4
 set ai
 set si
 set wrap
+set nu
 
 syntax enable 
 set laststatus=2
@@ -34,7 +35,12 @@ set encoding=utf8
 
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
-Plug 'mhinz/vim-startify'
+Plug 'arcticicestudio/nord-vim'
+Plug 'dylanaraps/wal'
 call plug#end()
 
-colorscheme desert
+colorscheme nord
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }

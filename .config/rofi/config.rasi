@@ -1,7 +1,5 @@
 configuration {
     location: 1;
-    xoffset: 10;
-    yoffset: 45;
-    show-icons: false;
-    icon-theme: "Papirus";
+    xoffset: 192;
+    yoffset: 50;
 }
