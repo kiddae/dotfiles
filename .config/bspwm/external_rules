@@ -1,0 +1,2 @@
+#!/bin/sh
+[[ "$(xprop -id "$1" WM_NAME | cut -d\" -f2)" = "music" ]] && echo 'desktop=^8'

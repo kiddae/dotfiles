@@ -1,0 +1,145 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	urxvt
+
+# program launcher
+super + r
+	launcher
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + shift + r
+	bspc wm -r
+
+# close and kill
+super + shift + q
+	bspc node -c || bspc node -k
+
+# Toggle floating
+super + shift + space
+    bspc node -t tiled || bspc node -t floating
+
+# Toggle horizontal/vertical
+super + e
+    bspc node @parent -R 90
+
+# Set preselection
+super + {v,b}
+    bspc node -p {south,east}
+
+# Toggle monocle
+super + m
+    bspc desktop -l next
+
+# Focus on monocle
+super + {_,shift + }c
+    bspc node -f {prev,next}.local
+
+#Fullscreen
+super + f
+    bspc node -t \~fullscreen
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+    bspc node -{f,s} {west,south,north,east}
+
+
+# focus or send to the given desktop
+# french layout
+super + {_,shift + }ampersand
+	bspc {desktop -f,node -d} ^1
+super + {_,shift + }eacute
+	bspc {desktop -f,node -d} ^2
+super + {_,shift + }quotedbl
+	bspc {desktop -f,node -d} ^3
+super + {_,shift + }apostrophe
+	bspc {desktop -f,node -d} ^4
+super + {_,shift + }parenleft
+	bspc {desktop -f,node -d} ^5
+super + {_,shift + }minus
+	bspc {desktop -f,node -d} ^6
+super + {_,shift + }egrave
+	bspc {desktop -f,node -d} ^7
+super + {_,shift + }underscore
+	bspc {desktop -f,node -d} ^8
+# us layout
+# super + {_,shift + }{1-8}
+#   bspc {desktop -f, node -d} '^{1-8}'
+
+# focus next/prev desktop
+super + {_,shift + }Tab
+    bspc desktop -f {next,prev}
+
+
+
+#
+# move/resize
+#
+
+super + control + {h,j,k,l}
+    ~/.config/sxhkd/scripts/bspwm_resize {west,south,north,east} 40
+
+super + {Left,Down,Up,Right}
+    bspc node -v {-40 0,0 40,0 -40,40 0}
+
+
+#
+# gaps
+#
+
+# inner
+super + alt + j
+    g="$(bspc config -d focused  window_gap)"; [[ $g -gt 0  ]] && bspc config -d focused window_gap $(( $g-10 )) 
+super + alt + k
+    g="$(bspc config -d focused  window_gap)"; bspc config -d focused window_gap $(( $g+10 )) 
+
+# outer
+super + alt + {h,l}
+    ~/.config/sxhkd/scripts/outer_gaps {+,-} 10
+
+# reset
+super + alt + r
+    ~/.config/sxhkd/scripts/gaps_reset 10
+#
+# apps
+#
+
+super + y
+    firefox
+
+super + u
+    urxvt -e ranger
+
+super + i
+    urxvt -e music
+
+super + o
+    discord
+
+super + {p,less,greater}
+    mpc {toggle,prev,next}
+
+super + shift + e
+    powermenu
+
+Print
+    scrot -e 'mv $f ~/Pictures/Screenshots'
+
+# super + w
+#     randomwall
+
