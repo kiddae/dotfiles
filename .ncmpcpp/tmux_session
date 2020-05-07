@@ -1,0 +1,7 @@
+neww
+set -g status off
+send-keys '~/.ncmpcpp/cover.sh' C-m
+split-window -h
+resize-pane -t 0 -x 35
+select-pane -t 1
+send-keys 'ncmpcpp' C-m
