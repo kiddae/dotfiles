@@ -17,4 +17,6 @@ alias wal="wal -o wal-set -n"
 # Xresources (for file inclusion)
 alias xrdb="xrdb -I$HOME"
 
-alias music='tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"' # Tmux session with ncmpcpp and cover art
+
+alias lsorphans='yay -Qqdt'
+alias rmorphans='yay -Rns $(yay -Qqdt)'

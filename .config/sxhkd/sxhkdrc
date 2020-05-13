@@ -77,6 +77,10 @@ super + {_,shift + }egrave
 	bspc {desktop -f,node -d} ^7
 super + {_,shift + }underscore
 	bspc {desktop -f,node -d} ^8
+super + {_,shift + }ccedilla
+	bspc {desktop -f,node -d} ^9
+super + {_,shift + }agrave
+	bspc {desktop -f,node -d} ^10
 # us layout
 # super + {_,shift + }{1-8}
 #   bspc {desktop -f, node -d} '^{1-8}'
@@ -92,7 +96,7 @@ super + {_,shift + }Tab
 #
 
 super + control + {h,j,k,l}
-    ~/.config/sxhkd/scripts/bspwm_resize {west,south,north,east} 40
+    bspwm_resize {west,south,north,east} 40
 
 super + {Left,Down,Up,Right}
     bspc node -v {-40 0,0 40,0 -40,40 0}
@@ -108,13 +112,10 @@ super + alt + j
 super + alt + k
     g="$(bspc config -d focused  window_gap)"; bspc config -d focused window_gap $(( $g+10 )) 
 
-# outer
-super + alt + {h,l}
-    ~/.config/sxhkd/scripts/outer_gaps {+,-} 10
-
 # reset
 super + alt + r
-    ~/.config/sxhkd/scripts/gaps_reset 10
+    bspc config -d focused window_gap 20
+
 #
 # apps
 #

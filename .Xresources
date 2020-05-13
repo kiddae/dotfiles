@@ -1,13 +1,11 @@
-!#include ".colors/nord.Xresources"
-
 ! URxvt Appearance
-#define FONT Iosevka
+#define FONT Iosevka Nerd Font
 #define FONT_SIZE 11
 URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE,xft:IPAGothic:size=11
 URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE,xft:IPAGothic:size=11
 URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE
 URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
 URxvt.internalBorder: 24
@@ -43,7 +41,7 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
-URxvt.font-size.step: 1
+URxvt.font-size.step: 2
 
 Xft.antialias: 1
 Xft.dpi: 96
@@ -51,5 +49,3 @@ Xft.hinting: 0
 Xft.hintstyle: hintnone
 Xft.lcdfilter: lcddefault
 Xft.rgba: rgb
-
-

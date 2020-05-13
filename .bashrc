@@ -121,7 +121,7 @@ fi
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # set cursor to ibeam
-printf '\033[5 q\r'
+# printf '\033[5 q\r'
 
 # vim mode
 set -o vi

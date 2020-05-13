@@ -6,12 +6,13 @@ set ai
 set si
 set wrap
 set nu
+set rnu
+set cursorline
 
 syntax enable 
-set laststatus=2
 set noshowmode
 set so=7
-""set ruler
+set ruler
 set cmdheight=1
 set hid
 set foldcolumn=1
@@ -28,19 +29,23 @@ set mat=2
 set noerrorbells
 set visualbell
 
-set background=dark
 set encoding=utf8
+set termguicolors
 
 
 
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'dylanaraps/wal'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-colorscheme nord
+let g:gruvbox_italic=1
+colorscheme gruvbox
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'gruvbox'
+
+
+set timeout timeoutlen=1000 ttimeoutlen=10
+inoremap jk <Esc>
