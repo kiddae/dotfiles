@@ -1,5 +1,3 @@
 configuration {
-    location: 1;
-    xoffset: 192;
-    yoffset: 50;
+    font: "Cozette 9";
 }

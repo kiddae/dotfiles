@@ -1,6 +1,7 @@
+#include ".colors/gruvbox/gruvbox-dark.xresources"
 ! URxvt Appearance
-#define FONT Iosevka Nerd Font
-#define FONT_SIZE 11
+#define FONT Cozette
+#define FONT_SIZE 9
 URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE,xft:IPAGothic:size=11
 URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE,xft:IPAGothic:size=11
 URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE

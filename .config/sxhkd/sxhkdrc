@@ -2,9 +2,6 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-super + Return
-	urxvt
 
 # program launcher
 super + r
@@ -127,10 +124,7 @@ super + u
     urxvt -e ranger
 
 super + i
-    urxvt -e music
-
-super + o
-    discord
+	urxvt
 
 super + {p,less,greater}
     mpc {toggle,prev,next}

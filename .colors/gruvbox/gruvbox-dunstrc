@@ -1,11 +1,9 @@
 [colors]
-	background = "{background}"
-	foreground = "{color6}"
+	background = "#282828"
+	foreground = "#689d6a"
 
 [global]
     ### Display ###
-
-    monitor = 0
     follow = mouse
 
     geometry = "540x5-10-10"
@@ -13,19 +11,18 @@
     shrink = yes
     transparency = 0
     notification_height = 0
-    separator_height = 3
+    separator_height = 2
     padding = 12
     horizontal_padding = 12
-    frame_width = 0
-    # corner_radius = 7.5
+    frame_width = 2
 
-    frame_color = "{color6}"
-    separator_color = auto
+    frame_color = "#689d6a"
+    separator_color = foreground
     sort = yes
     idle_threshold = 120
 
     ### Text ###
-    font = Iosevka 11
+    font = Cozette 9
     line_height = 0
 
     markup = full
@@ -52,7 +49,7 @@
 
     ### Icons ###
     icon_position = left
-    max_icon_size = 200
+    max_icon_size = 100
     icon_path = .icons/flattrcolor/status/24:.icons/flattrcolor/devices/48:.icons/flattrcolor/apps/scalable:.icons/flattrcolor/actions/scalable
 
     ### History ###
@@ -60,7 +57,7 @@
     history_length = 20
 
     ### Misc/Advanced ###
-    dmenu = /usr/bin/rofi -show run -p dunst:
+    dmenu = /usr/bin/rofi -show run
     browser = /usr/bin/firefox
     always_run_script = true
     title = Dunst
@@ -68,27 +65,18 @@
     startup_notification = false
     force_xinerama = false
 
-[experimental]
-    per_monitor_dpi = false
-
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
     context = ctrl+shift+period
 
 [urgency_low]
-    background = colors.background
-    foreground = colors.foreground
     timeout = 10
 
 [urgency_normal]
-    background = colors.background
-    foreground = colors.foreground
     timeout = 10
 
 [urgency_critical]
-    background = colors.background
-    foreground = colors.foreground
-    frame_color = "{color9}"
+    frame_color = "#fb4934"
     timeout = 0
 

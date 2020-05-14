@@ -1,0 +1,49 @@
+@import "~/.cache/wal/rofi-colors.rasi"
+
+* {
+    text-color: @foreground;
+    background-color: @background;
+	font: "cherry 10";
+}
+
+window {
+	fullscreen: true;
+}
+
+prompt { enabled: false; }
+
+entry  {
+	padding: 5px 0 5px 0;
+	horizontal-align: 0.5;
+    background-color: @foreground;
+    text-color: @background;
+	margin: 3% 10% 0% 10%;
+	font: "cherry bold 10";
+	placeholder: "Search...";
+}
+
+listview {
+	columns: 3;
+	margin: 10% 10% 10% 10%;
+}
+
+element {
+	padding: 1.0%;
+	margin: 0.5%;
+}
+
+element selected {
+	text-color: @background;
+	background-color: @foreground;
+	orientation: vertical;
+}
+
+element-icon {
+	size: 40;
+}
+
+element-text {
+	horizontal-align: 0.5;
+}
+
+/* vim:ft=css
