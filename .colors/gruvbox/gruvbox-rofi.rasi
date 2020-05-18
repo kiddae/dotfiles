@@ -22,14 +22,14 @@
 
     background-color: @background;
     background: #282828;
-    foreground: #8ec07c;
+    foreground: #a89984;
     border-color: @foreground;
     spacing: 2;
 }
 
 #window {
     background-color: @background;
-    border: 2;
+    border: 0;
     padding: 2.5ch;
 }
 

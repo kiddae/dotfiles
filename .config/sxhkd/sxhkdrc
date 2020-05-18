@@ -129,6 +129,9 @@ super + i
 super + {p,less,greater}
     mpc {toggle,prev,next}
 
+#  super + {p,less,greater}
+#     playerctl {play-pause,previous,next}
+
 super + shift + e
     powermenu
 
