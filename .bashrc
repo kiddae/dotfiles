@@ -10,13 +10,12 @@ printf '\033[5 q\r'
 # vim mode
 set -o vi
 
-export QT_STYLE_OVERRIDE=kvantum
 export PF_INFO="ascii title os wm kernel uptime pkgs memory"
 
 # neofetch
 clear
 pfetch
-panes
+# panes
 
 #export PS1="\w \[$(tput sgr0)\]"
-export PS1="\[\033[34m\]\w \[$(tput sgr0)\]"
+export PS1="\[\033[34m\]\w \[$(tput sgr0)\]> " 

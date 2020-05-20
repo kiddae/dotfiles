@@ -1,6 +1,6 @@
 #include ".colors/gruvbox/gruvbox-dark.xresources"
 ! URxvt Appearance
-#define FONT Cozette
+#define FONT CozetteVector
 #define FONT_SIZE 9
 URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE,xft:IPAGothic:size=11
 URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE,xft:IPAGothic:size=11
@@ -8,8 +8,9 @@ URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE
 URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-URxvt.geometry: 92x24
-URxvt.internalBorder: 20
+! URxvt.geometry: 92x24
+URxvt.geometry: 75x20
+URxvt.internalBorder: 30
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: false
 URxvt.saveline: 2048

@@ -52,9 +52,14 @@ super + f
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-    bspc node -{f,s} {west,south,north,east}
+super + {h,j,k,l}
+    bspc node -f {west,south,north,east}
 
+super + shift + alt + {h,j,k,l}
+    bspc node -v {-40 0,0 40,0 -40,40 0}
+
+super + shift + {h,j,k,l}
+    ~/.config/sxhkd/move {west,south,north,east}
 
 # focus or send to the given desktop
 # french layout
@@ -93,7 +98,7 @@ super + {_,shift + }Tab
 #
 
 super + control + {h,j,k,l}
-    bspwm_resize {west,south,north,east} 40
+    ~/.config/sxhkd/resize {west,south,north,east} 40
 
 super + {Left,Down,Up,Right}
     bspc node -v {-40 0,0 40,0 -40,40 0}
@@ -118,7 +123,7 @@ super + alt + r
 #
 
 super + y
-    firefox
+    qutebrowser
 
 super + u
     urxvt -e ranger
