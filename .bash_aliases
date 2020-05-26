@@ -12,7 +12,7 @@ alias xrdb="xrdb -I$HOME"
 
 alias lsorphans='yay -Qqdt'
 alias rmorphans='yay -Rns $(yay -Qqdt)'
-alias lsexplicit="yay -Qqe"
+alias lsexplicit="yay -Qqe | less"
 
 # colors
 alias grep="grep --color=auto"

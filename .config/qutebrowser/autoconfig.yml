@@ -6,9 +6,5 @@
 
 config_version: 2
 settings:
-  bindings.commands:
-    global:
-      normal:
-        sc: config-source
   content.notifications:
     https://www.reddit.com: true

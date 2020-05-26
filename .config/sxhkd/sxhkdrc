@@ -35,13 +35,9 @@ super + e
 super + {v,b}
     bspc node -p {south,east}
 
-# Toggle monocle
+# Equalize nodes
 super + m
-    bspc desktop -l next
-
-# Focus on monocle
-super + {_,shift + }c
-    bspc node -f {prev,next}.local
+    bspc node @parent -E
 
 #Fullscreen
 super + f
@@ -109,9 +105,9 @@ super + {Left,Down,Up,Right}
 #
 
 # inner
-super + alt + j
+super + alt + {j,h}
     g="$(bspc config -d focused  window_gap)"; [[ $g -gt 0  ]] && bspc config -d focused window_gap $(( $g-10 )) 
-super + alt + k
+super + alt + {k,l}
     g="$(bspc config -d focused  window_gap)"; bspc config -d focused window_gap $(( $g+10 )) 
 
 # reset
@@ -141,8 +137,10 @@ super + shift + e
     powermenu
 
 Print
-    scrot -e 'mv $f ~/Pictures/Screenshots'
+    maim ~/Pictures/Screenshots/$(date +%s).png
 
+super + Print
+    maim -s ~/Pictures/Screenshots/$(date +%s).png
 # super + w
 #     randomwall
 

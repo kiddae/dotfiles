@@ -33,6 +33,7 @@ PATH="/snap/bin:$PATH"
 # constants
 export TERMINAL="urxvt"
 export EDITOR="vim"
+export BROWSER="qutebrowser"
 export SCRIPT_FOLDER="$HOME/.scripts/"
 export WALLPAPER_FOLDER="$HOME/Pictures/Wallpapers/"
 
