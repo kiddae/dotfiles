@@ -1,5 +1,6 @@
 # temporary zathura config
 set recolor "true"
+set font "SF Pro Text 10"
 
 set completion-bg "{bg}"
 set completion-fg "{fg}"

@@ -284,8 +284,8 @@ c.colors.tabs.selected.even.bg = base0D
 c.colors.webpage.bg = base07
 
 # Set the colors of duckduckgo
-c.url.default_page = "https://start.duckduckgo.com/?kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}"
-c.url.start_pages = "https://start.duckduckgo.com/?kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}"
-c.url.searchengines = { "DEFAULT": "https://duckduckgo.com/?q={}&kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}" }
+c.url.default_page = "https://start.duckduckgo.com/?kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}&kt=SF+Pro+Text"
+c.url.start_pages = "https://start.duckduckgo.com/?kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}&kt=SF+Pro+Text"
+c.url.searchengines = { "DEFAULT": "https://duckduckgo.com/?q={}&kak=-1&kal=-1&kao=-1&kaq=-1&k7={bg}&kae=d&kj={bg}&k21={bg}&k9={color6}&kaa={color4}&k8={color7}&kx={color2}&kt=SF+Pro+Text" }
 
 

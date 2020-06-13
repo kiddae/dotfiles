@@ -46,7 +46,7 @@ statusbar_visibility = "no"
 statusbar_color = "white"
 visualizer_color = "white"
 titles_visibility = "no"
-enable_window_title = "no"
+enable_window_title = "yes"
 
 now_playing_prefix = "$b"
 now_playing_suffix = "$8$/b"
@@ -54,14 +54,15 @@ now_playing_suffix = "$8$/b"
 #now_playing_prefix = "$u$2"
 #now_playing_suffix = "$2$/u$2"
 
-song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b} (4)[blue]{l}"
+#song_columns_list_format = "(6)[]{} (23)[red]{a} (26)[yellow]{t|f} (40)[green]{b} (4)[blue]{l}"
+song_columns_list_format = "(15)[6]{a} (45)[4]{t} (5)[2]{l}"
 
 color1 = "white"
 color2 = "black"
 
-song_list_format = " $5%l  $7%t $R$5%a "
+song_list_format = " $5%a  $7%t $R$5%l "
 
-execute_on_song_change="~/.ncmpcpp/art.sh && notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png"
+execute_on_song_change="~/.ncmpcpp/ncmpcpp_cover_art.sh && notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png"
 
 song_status_format = "$b$7♫ $2%a $4⟫$3⟫ $8%t $4⟫$3⟫ $5%b "
 song_window_title_format = " {%a} - {%t}"

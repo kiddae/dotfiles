@@ -1,16 +1,17 @@
 #include ".cache/colorer/Xresources"
+
 ! URxvt Appearance
 #define FONT CozetteVector
 #define FONT_SIZE 9
-URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE,xft:IPAGothic:size=11
-URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE,xft:IPAGothic:size=11
-URxvt.italicFont: xft:FONT:style=Italic:size=FONT_SIZE
-URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE
-URxvt.letterSpace: 0
+URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
+URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
+URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true
+URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 ! URxvt.geometry: 92x24
 URxvt.geometry: 75x20
-URxvt.internalBorder: 48
+URxvt.internalBorder: 45
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true
 URxvt.saveline: 2048
@@ -27,11 +28,11 @@ URxvt.keysym.M-k: command:\033]720;1\007
 URxvt.keysym.M-j: command:\033]721;1\007
 
 !! Copy Paste & Other Extensions
-URxvt.perl-ext-common: default,clipboard,url-select,resize-font
+URxvt.perl-ext-common: default,clipboard,resize-font
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.urlLauncher: qutebrowser
 URxvt.underlineURLs: true
 URxvt.urlButton: 1

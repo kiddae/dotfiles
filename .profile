@@ -17,21 +17,12 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-PATH="/usr/games:$PATH"
-
-# include snap packages in path
-PATH="/snap/bin:$PATH"
 
 # constants
-export TERMINAL="urxvt"
+export TERMINAL="termite"
 export EDITOR="vim"
 export BROWSER="qutebrowser"
 export SCRIPT_FOLDER="$HOME/.scripts/"
@@ -40,7 +31,4 @@ export WALLPAPER_FOLDER="$HOME/Pictures/Wallpapers/"
 # add scripts to path
 PATH="$SCRIPT_FOLDER:$PATH"
 
-[[ -d $HOME/.local/bin ]] && PATH="$HOME/.local/bin:$PATH"
-
-
-export QT_STYLE_OVERRIDE=kvantum
+export QT_QPA_PLATFORMTHEME=gtk2

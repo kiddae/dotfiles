@@ -1,3 +1,3 @@
 #!/bin/sh
 [ -f ~/.xprofile ] && . ~/.xprofile
-exec i3
+exec bspwm

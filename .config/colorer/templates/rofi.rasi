@@ -30,7 +30,9 @@
 #window {
     background-color: {bg};
     border: 0;
-    padding: 2.5ch;
+    padding: 48;
+    width: 460;
+    height: 260;
 }
 
 #mainbox {

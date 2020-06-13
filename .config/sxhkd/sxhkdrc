@@ -87,6 +87,9 @@ super + {_,shift + }agrave
 super + {_,shift + }Tab
     bspc desktop -f {next,prev}
 
+super + w
+    bspc node -f next.local
+
 
 
 #
@@ -121,15 +124,17 @@ super + alt + r
 super + y
     qutebrowser
 
-super + u
-    urxvt -e ranger
+super + Return
+    urxvt
 
-super + i
-	urxvt
+super + {u,i,o}
+    urxvt -e {ranger,ncmpcpp-ueberzug,vim}
 
 super + {p,less,greater}
     mpc {toggle,prev,next}
 
+super + shift + p
+    notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png
 #  super + {p,less,greater}
 #     playerctl {play-pause,previous,next}
 
@@ -137,10 +142,10 @@ super + shift + e
     powermenu
 
 Print
-    maim ~/Pictures/Screenshots/$(date +%s).png
+    screen
 
 super + Print
-    maim -s ~/Pictures/Screenshots/$(date +%s).png
+    screen -s
 # super + w
 #     randomwall
 

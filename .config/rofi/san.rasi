@@ -1,4 +1,4 @@
-@import "~/.cache/wal/rofi-colors.rasi"
+@import "~/.cache/colorer/rofi.rasi"
 
 * {
     text-color: @foreground;
@@ -9,7 +9,7 @@
 window {
 	fullscreen: false;
     xoffset: 10;
-    yoffset: 45;
+    yoffset: 50;
 	width: 450;
 	height: 700;
     border-radius: 15px;
