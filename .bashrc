@@ -10,14 +10,14 @@
 # printf '\033[5 q\r'
 
 # vim mode
-# set -o vi
+set -o vi
 
 # fetch
 fetch
 
 # export PS1="\w \[$(tput sgr0)\]"
-# export PS1="\[\033[34m\]\W > \[$(tput sgr0)\]" 
-export PS1="\e[36m→ \W \$(tput sgr0)\]\e[0m" 
+export PS1="\[\033[34m\]\W > \[$(tput sgr0)\]" 
+# export PS1="\e[36m→ \W \$(tput sgr0)\]\e[0m" 
 
 #fzf
 . /usr/share/fzf/key-bindings.bash
@@ -63,6 +63,8 @@ alias ls="ls --color=auto"
 # vimmm
 alias :q="exit"
 alias :e="vim"
+alias vi="vim"
+alias vim="nvim"
 
 # dots management
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -73,3 +75,5 @@ alias xclip='xclip -selection c'
 # misc
 alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-candy/'
 
+# shortcuts
+alias vimconf='nvim ~/.config/nvim/init.vim'

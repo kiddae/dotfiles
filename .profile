@@ -23,7 +23,7 @@ fi
 
 # constants
 export TERMINAL="termite"
-export EDITOR="vim"
+export EDITOR="nvim"
 export BROWSER="qutebrowser"
 export SCRIPT_FOLDER="$HOME/.scripts/"
 export WALLPAPER_FOLDER="$HOME/Pictures/Wallpapers/"

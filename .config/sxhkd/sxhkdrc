@@ -133,13 +133,21 @@ super + {u,i,o}
 super + {p,less,greater}
     mpc {toggle,prev,next}
 
+super + control + {less,greater}
+    pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
+
 super + shift + p
     notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png
+
+super + t
+   bspc config top_padding 0 && polybar-msg cmd toggle 
+
 #  super + {p,less,greater}
 #     playerctl {play-pause,previous,next}
 
 super + shift + e
     powermenu
+
 
 Print
     screen

@@ -22,7 +22,7 @@
     idle_threshold = 120
 
     ### Text ###
-    font = SF Pro Text 10
+    font = CozetteVector 9
     line_height = 0
 
     markup = full
