@@ -6,18 +6,25 @@
 #                                 
 
 
-# set cursor to ibeam
-# printf '\033[5 q\r'
 
 # vim mode
-set -o vi
+# set -o vi
 
 # fetch
-fetch
+pfetch
+
+# cycle autocompletion
+bind "TAB:menu-complete"
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
 
 # export PS1="\w \[$(tput sgr0)\]"
-export PS1="\[\033[34m\]\W > \[$(tput sgr0)\]" 
+# export PS1="\[\033[34m\]\W > \[$(tput sgr0)\]" 
+export PS1="\[\e[34m\]\W \[\e[0m\]" 
 # export PS1="\e[36m→ \W \$(tput sgr0)\]\e[0m" 
+
+# set cursor to ibeam
+export PS1="\[\e[5 q\r\]$PS1"
 
 #fzf
 . /usr/share/fzf/key-bindings.bash
@@ -60,9 +67,7 @@ lsdepends () { pacman -Qi $1 | grep Depends; }
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
-# vimmm
-alias :q="exit"
-alias :e="vim"
+# vim
 alias vi="vim"
 alias vim="nvim"
 
@@ -77,3 +82,28 @@ alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-c
 
 # shortcuts
 alias vimconf='nvim ~/.config/nvim/init.vim'
+# Emulate an MS-DOS prompt in your Linux shell.
+# Laszlo Szathmary (jabba.laci@gmail.com), 2011
+# Project home page:
+# https://ubuntuincident.wordpress.com/2011/02/08/emulate-the-ms-dos-prompt/
+#
+#
+# Modified by Soldier of Fortran
+#
+# Add to you ~/.bashrc file with: 'source ~/.themes/95/bashrc'
+
+# function msdos_pwd
+# {
+#     local dir="`pwd`"
+# 
+#     echo $dir | tr '/' '\\'
+# }
+# 
+# export PS1='C:`msdos_pwd`> '
+# 
+# echo 
+# echo
+# echo "Microsoft(R) Windows 95"
+# echo "   (C)Copyright Microsoft Corp 1981-1996."
+# echo
+

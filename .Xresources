@@ -1,24 +1,24 @@
 #include ".cache/colorer/Xresources"
 
 ! URxvt Appearance
-#define FONT CozetteVector
-#define FONT_SIZE 9
+#define FONT SF Mono
+#define FONT_SIZE 10
 URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
 URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
 URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 ! URxvt.geometry: 92x24
 URxvt.geometry: 75x20
-URxvt.internalBorder: 45
+URxvt.internalBorder: 32
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true
 URxvt.saveline: 2048
 URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
-URxvt.depth: 32
+! URxvt.depth: 32
 URxvt.iso14755: false
 URxvt.transparent: false
 
@@ -38,9 +38,10 @@ URxvt.underlineURLs: true
 URxvt.urlButton: 1
 URxvt.font-size.step: 1
 
-Xft.antialias: 1
 Xft.dpi: 96
-Xft.hinting: 0
-Xft.hintstyle: hintnone
-Xft.lcdfilter: lcddefault
+Xft.antialias: 1
 Xft.rgba: rgb
+Xft.hinting: 1
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcdnone
+Xft:autohint: 0

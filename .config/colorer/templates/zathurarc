@@ -1,6 +1,6 @@
 # temporary zathura config
 set recolor "true"
-set font "CozetteVector 9"
+set font "SF Pro Text 10"
 
 set completion-bg "{bg}"
 set completion-fg "{fg}"
@@ -33,3 +33,5 @@ set render-loading-fg "{fg}"
 set window-title-home-tilde true
 set statusbar-basename true
 set selection-clipboard clipboard
+
+map b toggle_statusbar

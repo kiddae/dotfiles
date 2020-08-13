@@ -1,4 +1,4 @@
-$bgDarker: mix({bg}, #000, 90%);
+$bgDarker: mix({bg}, #000000, 90%);
 
 .messages-3amgkR {
   background-color: {bg} !important;
@@ -8,7 +8,7 @@ $bgDarker: mix({bg}, #000, 90%);
 .scrollableContainer-2NUZem,
 .scroller-2TZvBN,
 .searchBar-3dMhjb {
-  background-color: $bgDarker !important;
+  background-color: {bg} !important;
 }
 
 .theme-dark {
@@ -325,7 +325,7 @@ $bgDarker: mix({bg}, #000, 90%);
 .guilds-wrapper,
 .guildsWrapper-5TJh6A,
 .wrapper-1Rf91z {
-  background-color: $bgDarker !important;
+  background-color: {fg} !important;
 }
 .guilds-add,
 .circleIconButton-jET_ig {

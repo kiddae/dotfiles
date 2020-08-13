@@ -3,16 +3,15 @@
 * {
     text-color: @foreground;
     background-color: @background;
-	font: "SF Pro Display 12";
+	font: "SF Pro Text 12";
 }
 
 window {
-	fullscreen: false;
     xoffset: 10;
     yoffset: 50;
 	width: 450;
 	height: 700;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 prompt { enabled: false; }
@@ -20,19 +19,19 @@ prompt { enabled: false; }
 entry  {
 	padding: 5px 0 5px 0;
 	horizontal-align: 0.5;
-	margin: 3% 1% 0% 1%;
-	font: "SF Pro Display Semibold 14";
+	margin: 1% 1% 0% 1%;
+	font: "SF Pro Text Semibold 14";
 	border-radius: 10px;
 	placeholder: "Search...";
 }
 
 listview {
 	columns: 2;
-	margin: 3% 0% 3% 0%;
+	margin: 1% 0% 1% 0%;
 }
 
 element {
-	padding: 1.0%;
+	padding: 0.5%;
 	margin: 0.5%;
 }
 
