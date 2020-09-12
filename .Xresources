@@ -9,8 +9,8 @@ URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hi
 URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-! URxvt.geometry: 92x24
-URxvt.geometry: 75x20
+URxvt.geometry: 80x24
+! URxvt.geometry: 75x20
 URxvt.internalBorder: 32
 URxvt.cursorBlink: true
 URxvt.cursorUnderline: true

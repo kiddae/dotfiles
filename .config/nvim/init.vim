@@ -9,3 +9,4 @@ source ~/.config/nvim/plug-config/airline.vim
 source ~/.config/nvim/plug-config/coc.vim
 source ~/.config/nvim/plug-config/fzf.vim
 source ~/.config/nvim/plug-config/asyncrun.vim
+source ~/.config/nvim/plug-config/bufferline.vim

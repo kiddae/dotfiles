@@ -6,23 +6,23 @@
     ### Display ###
     follow = mouse
 
-    geometry = "460x10-10-10"
+    geometry = "460x60-60+120"
     indicate_hidden = yes
     shrink = no
     transparency = 0
     notification_height = 0
     separator_height = 2
-    padding = 12
-    horizontal_padding = 12
-    frame_width = 4
+    padding = 32
+    horizontal_padding = 32
+    frame_width = 0
 
-    frame_color = "{fg}"
+    frame_color = "{bg}"
     separator_color = none
     sort = yes
     idle_threshold = 120
 
     ### Text ###
-    font = Google Sans 10
+    font = Google Sans 11
     line_height = 0
 
     markup = full

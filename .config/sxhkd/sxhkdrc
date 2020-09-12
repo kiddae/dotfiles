@@ -24,24 +24,24 @@ super + shift + q
 	bspc node -c || bspc node -k
 
 # Toggle floating
-super + shift + space
-    bspc node -t tiled || bspc node -t floating
+# super + shift + space
+#     bspc node -t tiled || bspc node -t floating
 
 # Toggle horizontal/vertical
 super + e
     bspc node @parent -R 90
-
-# Set preselection
-super + {v,b}
-    bspc node -p {south,east}
 
 # Equalize nodes
 super + m
     bspc node @parent -E
 
 #Fullscreen
-super + f
+super + shift + f
     bspc node -t \~fullscreen
+
+#Toggle between tiled/floating mode
+super + shift + t
+    ~/.config/sxhkd/toggle_state {floating,tiled}
 
 #
 # focus/swap
@@ -84,11 +84,17 @@ super + {_,shift + }agrave
 #   bspc {desktop -f, node -d} '^{1-9,10}'
 
 # focus next/prev desktop
-super + {_,shift + }Tab
-    bspc desktop -f {next,prev}
+super + Tab
+    bspc desktop next.occupied -f
+
+super + shift + Tab
+    bspc desktop any.!occupied -f
 
 super + w
     bspc node -f next.local
+
+super + button{4,5}
+    bspc desktop -f {next,prev}
 
 
 
@@ -97,10 +103,10 @@ super + w
 #
 
 super + control + {h,j,k,l}
-    ~/.config/sxhkd/resize {west,south,north,east} 40
+    ~/.config/sxhkd/resize {west,south,north,east} 60
 
 super + {Left,Down,Up,Right}
-    bspc node -v {-40 0,0 40,0 -40,40 0}
+    bspc node -v {-60 0,0 60,0 -60,60 0}
 
 
 #
@@ -140,7 +146,7 @@ super + shift + p
     notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png
 
 super + t
-   bspc config top_padding 0 && bspc config bottom_padding 0 && polybar-msg cmd toggle 
+    bspc config top_padding 0 && bspc config bottom_padding 0 && polybar-msg cmd toggle 
 
 #  super + {p,less,greater}
 #     playerctl {play-pause,previous,next}

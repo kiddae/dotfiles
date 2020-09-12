@@ -57,6 +57,7 @@ alias xrdb="xrdb -I$HOME"
 # ncmpcpp + tmux
 alias music='tmux new-session "tmux source-file ~/.ncmpcpp/tmux_session"'
 
+
 # Package management
 alias lsorphans='yay -Qqdt'
 alias rmorphans='yay -Rns $(yay -Qqdt)'
