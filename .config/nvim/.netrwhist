@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/me/.config/colorer/colorschemes'
+let g:netrw_dirhist_5='/home/me/.config/polybar'
+let g:netrw_dirhist_4='/home/me/.config'
+let g:netrw_dirhist_3='/home/me/.config/gtk-3.0'
+let g:netrw_dirhist_2='/home/me/Documents/Code Notes/python/ml'
+let g:netrw_dirhist_1='/home/me/.config/polybar'
+let g:netrw_dirhist_0='/home/me/.config/polybar/themes'
+let g:netrw_dirhist_9='/home/me/.config/polybar'
+let g:netrw_dirhist_8='/home/me/.config/nvim'
+let g:netrw_dirhist_7='/home/me/.config/nvim/plug-config'

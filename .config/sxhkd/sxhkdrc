@@ -143,7 +143,7 @@ super + control + {less,greater}
     pactl set-sink-volume @DEFAULT_SINK@ {-,+}5%
 
 super + shift + p
-    notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png
+    killall -HUP mpd-notification
 
 super + t
     bspc config top_padding 0 && bspc config bottom_padding 0 && polybar-msg cmd toggle 

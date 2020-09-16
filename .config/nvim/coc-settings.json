@@ -1,0 +1,14 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "rmd",
+        "python",
+        "json"
+    ],
+    // python
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    // explorer
+    "explorer.width": 30,
+    "explorer.previewAction.onHover": false,
+    "explorer.icon.enableVimDevicons": true
+}
