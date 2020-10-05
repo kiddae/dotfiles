@@ -29,7 +29,7 @@
 
 #window {
     background-color: {bg};
-    border: 0;
+    border: 2;
     padding: 48;
     width: 460;
     height: 260;

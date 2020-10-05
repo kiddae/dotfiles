@@ -43,5 +43,5 @@ main_window_color = "default"
 centered_cursor = "yes"
 enable_window_title = "yes"
 external_editor = "vim"
-execute_on_song_change="~/.ncmpcpp/ncmpcpp_cover_art.sh && notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png"
+# execute_on_song_change="~/.ncmpcpp/ncmpcpp_cover_art.sh && notify-send "Now Playing" "$(mpc current)" -i /tmp/cover.png"
 follow_now_playing_lyrics = yes

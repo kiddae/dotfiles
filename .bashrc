@@ -20,7 +20,9 @@ bind "set completion-ignore-case on"
 
 # export PS1="\w \[$(tput sgr0)\]"
 # export PS1="\[\033[34m\]\W > \[$(tput sgr0)\]" 
-export PS1="\[\e[34m\]\W \[\e[0m\]" 
+# export PS1="\[\e[34m\]\W \[\e[0m\]" 
+export PS1="\[\e[1;34m\]\n\w\n\[\e[32m\]→ \[\e[0m\]" 
+# export PS1="\[\e[37m\]\n╭╴╴╴ \[\e[33m\]\W\n\[\e[37m\]╰╴> \[\e[36m\]" 
 # export PS1="\e[36m→ \W \$(tput sgr0)\]\e[0m" 
 
 # set cursor to ibeam
@@ -108,3 +110,4 @@ alias vimconf='nvim ~/.config/nvim/init.vim'
 # echo "   (C)Copyright Microsoft Corp 1981-1996."
 # echo
 
+# source ~/.scripts/fancy-bash-prompt.sh

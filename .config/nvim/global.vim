@@ -1,3 +1,4 @@
+
 syntax on
 
 set hidden
@@ -32,6 +33,7 @@ set noshowmode
 set cmdheight=1
 set termguicolors
 "set cursorline
+set showtabline=2
 autocmd BufEnter * silent! lcd %:p:h
 
 set foldmethod=indent
@@ -42,7 +44,7 @@ set foldlevel=99
 set background=dark
 let g:gruvbox_italic=1
 ""let g:gruvbox_termcolors=16
-colorscheme mountaineer-gray
+colorscheme mountaineer_light
 
 "set terminal automatically in insert mode
 autocmd TermOpen * startinsert

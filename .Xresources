@@ -38,6 +38,12 @@ URxvt.underlineURLs: true
 URxvt.urlButton: 1
 URxvt.font-size.step: 1
 
+!! Xterm
+xterm*faceName: FONT
+xterm*faceSize: FONT_SIZE
+xterm*internalBorder: 32
+xterm*font: 9x15
+
 Xft.dpi: 96
 Xft.antialias: 1
 Xft.rgba: rgb
