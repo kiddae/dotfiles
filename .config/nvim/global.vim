@@ -43,8 +43,9 @@ set foldlevel=99
 ""colorscheme
 set background=dark
 let g:gruvbox_italic=1
+let g:ayucolor="mirage"
 ""let g:gruvbox_termcolors=16
-colorscheme mountaineer_light
+colorscheme iceberg
 
 "set terminal automatically in insert mode
 autocmd TermOpen * startinsert

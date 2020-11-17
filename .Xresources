@@ -2,7 +2,7 @@
 
 ! URxvt Appearance
 #define FONT SF Mono
-#define FONT_SIZE 10
+#define FONT_SIZE 9
 URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
 URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
 URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true
@@ -43,11 +43,12 @@ xterm*faceName: FONT
 xterm*faceSize: FONT_SIZE
 xterm*internalBorder: 32
 xterm*font: 9x15
+xterm*termName: xterm-256color
 
-Xft.dpi: 96
+Xft.autohint: 0
 Xft.antialias: 1
-Xft.rgba: rgb
-Xft.hinting: 1
+Xft.hinting: true
 Xft.hintstyle: hintslight
-Xft.lcdfilter: lcdnone
-Xft:autohint: 0
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault

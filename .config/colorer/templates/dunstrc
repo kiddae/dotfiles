@@ -6,7 +6,7 @@
     ### Display ###
     follow = mouse
 
-    geometry = "460x60-10+60"
+    geometry = "450x60-10-60"
     indicate_hidden = yes
     shrink = no
     transparency = 0
@@ -14,7 +14,7 @@
     separator_height = 2
     padding = 32
     horizontal_padding = 32
-    frame_width = 8
+    frame_width = 0
 
     frame_color = "{fg}"
     separator_color = none

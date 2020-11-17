@@ -1,2 +1,0 @@
-state=$1
-bspc rule -a '*' state=$1 && bspc query -N | xargs -n1 -I '{}' bspc node {} -t $1

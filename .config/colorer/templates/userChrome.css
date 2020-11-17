@@ -12,7 +12,7 @@
   --mff-tab-border-radius: 0px;
   --mff-tab-color: {fg};
   /*--mff-tab-font-family: "terminus (ttf)";*/
-  --mff-tab-font-family: "SF Pro Text";
+  --mff-tab-font-family: "Google Sans";
   --mff-tab-font-size: 10pt;
   --mff-tab-font-weight: 400;
   --mff-tab-height: 30px;
@@ -21,12 +21,12 @@
   --mff-tab-soundplaying-bg: {color13};
   --mff-urlbar-color: {fg};
   --mff-urlbar-focused-color: {fg};
-  --mff-urlbar-font-family: "SF Pro Text";
-  --mff-urlbar-font-size: 12pt;
+  --mff-urlbar-font-family: "Google Sans";
+  --mff-urlbar-font-size: 11pt;
   --mff-urlbar-font-weight: normal;
   --mff-urlbar-results-color: {fg};
-  --mff-urlbar-results-font-family: "SF Pro Text";
-  --mff-urlbar-results-font-size: 12pt;
+  --mff-urlbar-results-font-family: "Google Sans";
+  --mff-urlbar-results-font-size: 11pt;
   --mff-urlbar-results-font-weight: normal; /*700;*/
   --mff-urlbar-results-url-color: {color14};
   /*   --mff-tab-selected-bg: linear-gradient(90deg, rgba(232,74,95,1) 0%, rgba(255,132,124,1) 50%, rgba(254,206,168,1) 100%); */

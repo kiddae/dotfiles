@@ -12,6 +12,9 @@
 
 # fetch
 pfetch
+# bunnyfetch
+
+echo -e "\e[2;3m« `fortune -s` »\e[0m"
 
 # cycle autocompletion
 bind "TAB:menu-complete"
@@ -111,3 +114,7 @@ alias vimconf='nvim ~/.config/nvim/init.vim'
 # echo
 
 # source ~/.scripts/fancy-bash-prompt.sh
+
+if [ -f /etc/bash.command-not-found ]; then
+        . /etc/bash.command-not-found
+fi

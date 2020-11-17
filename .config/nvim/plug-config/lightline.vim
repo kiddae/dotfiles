@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'mountaineer_light',
+      \ 'colorscheme': 'iceberg',
       \ 'tabline': {
       \   'left': [ ['buffers'] ]
       \ },

@@ -11,6 +11,8 @@ Plug 'dracula/vim', { 'as': 'dracula'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'Jorengarenar/vim-darkness'
 Plug 'sainnhe/forest-night'
+Plug 'ayu-theme/ayu-vim'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 "status lines
 "Plug 'bling/vim-bufferline'

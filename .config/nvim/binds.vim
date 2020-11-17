@@ -34,6 +34,6 @@ autocmd FileType cpp nnoremap <buffer> <F4> :w<CR>:!make<CR>
 autocmd FileType java nnoremap <buffer> <F4> :w<CR>:!javac %<CR>
 
 autocmd FileType {rmd,tex} nnoremap <buffer> <F5> :w<CR>:!setsid -f zathura '%:p:r.pdf'<CR>
-autocmd FileType python nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e python3 %<CR>
-autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e java %<CR>
-autocmd FileType cpp nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e make run<CR>
+autocmd FileType python nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e python3 % & disown<CR>
+autocmd FileType java nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e java % & disown<CR>
+autocmd FileType cpp nnoremap <buffer> <F5> :w<CR>:!xterm -hold -e make run & disown<CR>
