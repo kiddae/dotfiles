@@ -3,11 +3,12 @@
 ! URxvt Appearance
 #define FONT SF Mono
 #define FONT_SIZE 9
-URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
-URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11
-URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true
-URxvt.letterSpace: 0
+URxvt.font: xft:FONT:style=Regular:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11,xft:Typicons:minspace=False:size=FONT_SIZE
+!URxvt.font: xft:Typicons:style=Book:minspace=False:size=11,xft:FONT:style=Regular,size=FONT_SIZE
+URxvt.boldFont: xft:FONT:style=Bold:size=FONT_SIZE:antialias=true:hinting=true,xft:IPAGothic:size=11,xft:Typicons:size=FONT_SIZE
+URxvt.italicFont: xft:FONT:style=Regular Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Typicons:size=FONT_SIZE
+URxvt.boldItalicFont: xft:FONT:style=Bold Italic:size=FONT_SIZE:antialias=true:hinting=true,xft:Typicons:size=FONT_SIZE
+!URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 80x24
 ! URxvt.geometry: 75x20
@@ -41,8 +42,10 @@ URxvt.font-size.step: 1
 !! Xterm
 xterm*faceName: FONT
 xterm*faceSize: FONT_SIZE
-xterm*internalBorder: 32
-xterm*font: 9x15
+xterm*internalBorder: 36
+!xterm*font: 10x16
+xterm*scaleHeight: 0.99
+!xterm*letterSpace: -2
 xterm*termName: xterm-256color
 
 Xft.autohint: 0

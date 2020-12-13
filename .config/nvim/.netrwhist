@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/me/.config/polybar'
+let g:netrw_dirhist_9='/home/me/.config/colorer/templates'
+let g:netrw_dirhist_8='/home/me'
 let g:netrw_dirhist_7='/home/me/.config/polybar/themes'
 let g:netrw_dirhist_6='/home/me/.config/mpDris2'
 let g:netrw_dirhist_5='/home/me/.config/bspwm'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_4='/home/me/.config/nvim'
 let g:netrw_dirhist_3='/home/me/.config/nvim/plug-config'
 let g:netrw_dirhist_2='/home/me/.config/nvim'
 let g:netrw_dirhist_1='/home/me/.config/nvim/plug-config'
-let g:netrw_dirhist_0='/home/me/Music/Classical/Igor Stravinsky/The Rite of the Spring'
-let g:netrw_dirhist_9='/home/me/.config/nvim'
-let g:netrw_dirhist_8='/home/me/.config/nvim/plug-config'

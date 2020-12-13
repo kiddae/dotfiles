@@ -8,13 +8,14 @@
 
 
 # vim mode
-# set -o vi
+set -o vi
+bind '"jk":vi-movement-mode'
 
 # fetch
-pfetch
-# bunnyfetch
+# pfetch
+bunnyfetch
 
-echo -e "\e[2;3m« `fortune -s` »\e[0m"
+# echo -e "\e[2;3m“ `fortune -s` ”\e[0m"
 
 # cycle autocompletion
 bind "TAB:menu-complete"
@@ -41,6 +42,7 @@ export FZF_CTRL_T_COMMAND="find . 2>/dev/null"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 export FZF_ALT_C_COMMAND="find . -type d 2>/dev/null"
 
+
 # set the colors from colorer
 # cat ~/.cache/colorer/sequences
 
@@ -49,6 +51,9 @@ export FZF_ALT_C_COMMAND="find . -type d 2>/dev/null"
 ###########
 # list my scripts
 alias lsscript="ls -R1 $SCRIPT_FOLDER"
+
+# ranger
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 # ffmpeg convert flac=>mp3
 alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
@@ -88,33 +93,6 @@ alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-c
 
 # shortcuts
 alias vimconf='nvim ~/.config/nvim/init.vim'
-# Emulate an MS-DOS prompt in your Linux shell.
-# Laszlo Szathmary (jabba.laci@gmail.com), 2011
-# Project home page:
-# https://ubuntuincident.wordpress.com/2011/02/08/emulate-the-ms-dos-prompt/
-#
-#
-# Modified by Soldier of Fortran
-#
-# Add to you ~/.bashrc file with: 'source ~/.themes/95/bashrc'
 
-# function msdos_pwd
-# {
-#     local dir="`pwd`"
-# 
-#     echo $dir | tr '/' '\\'
-# }
-# 
-# export PS1='C:`msdos_pwd`> '
-# 
-# echo 
-# echo
-# echo "Microsoft(R) Windows 95"
-# echo "   (C)Copyright Microsoft Corp 1981-1996."
-# echo
-
-# source ~/.scripts/fancy-bash-prompt.sh
-
-if [ -f /etc/bash.command-not-found ]; then
-        . /etc/bash.command-not-found
-fi
+# rsync for my USB
+alias usb_sync='rsync -aPu /run/media/me/3A89-86CE/ ~/Documents/School/ && rsync -aPu ~/Documents/School/ /run/media/me/3A89-86CE/'

@@ -45,7 +45,7 @@ set background=dark
 let g:gruvbox_italic=1
 let g:ayucolor="mirage"
 ""let g:gruvbox_termcolors=16
-colorscheme iceberg
+colorscheme mountaineer_gray
 
 "set terminal automatically in insert mode
 autocmd TermOpen * startinsert
@@ -54,4 +54,8 @@ autocmd TermOpen * startinsert
 autocmd VimLeave * call set guicursor=a:ver100-blinkon
 
 "spell
-autocmd FileType {tex,rmd,md} setlocal spell spelllang=fr,en_us
+autocmd FileType {tex,rmd,markdown} setlocal spell spelllang=fr,en_us
+
+"fix for fzf
+let &t_TI = ""
+let &t_TE = ""

@@ -1,6 +1,6 @@
 #!/bin/bash
 state=$(bspc query -T -n | jq '.client.state' | sed 's/\"//g')
-interval=101
+interval=40
 
 if [[ "$state" == "tiled" ]]; then
     echo $state

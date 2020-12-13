@@ -3,6 +3,10 @@
 "\e[A":history-search-backward
 "\e[B":history-search-forward
 
+"\C-?": backward-kill-word
+"\e[3;5~": kill-word
+
 # Disable bell
 set bell-style none
 
+# set show-mode-in-prompt on

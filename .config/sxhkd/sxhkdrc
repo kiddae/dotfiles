@@ -57,15 +57,15 @@ super + shift + {h,j,k,l}
 # focus or send to the given desktop
 # french layout
 super + {_,shift + }ampersand
-	bspc {desktop -f,node -d} ^1
+	{bspc desktop -f,move_ws} ^1
 super + {_,shift + }eacute
-	bspc {desktop -f,node -d} ^2
+	{bspc desktop -f,move_ws} ^2
 super + {_,shift + }quotedbl
-	bspc {desktop -f,node -d} ^3
+	{bspc desktop -f,move_ws} ^3
 super + {_,shift + }apostrophe
-	bspc {desktop -f,node -d} ^4
+	{bspc desktop -f,move_ws} ^4
 super + {_,shift + }parenleft
-	bspc {desktop -f,node -d} ^5
+	{bspc desktop -f,move_ws} ^5
 # super + {_,shift + }minus
 # 	bspc {desktop -f,node -d} ^6
 # super + {_,shift + }egrave
@@ -100,7 +100,7 @@ super + button{4,5}
 #
 
 super + control + {h,j,k,l}
-    ~/.config/sxhkd/resize {west,south,north,east} 101
+    ~/.config/sxhkd/resize {west,south,north,east} 40
 
 
 
@@ -122,14 +122,14 @@ super + alt + r
 # apps
 #
 
-super + y
-    firefox
+super + {u,y}
+    {nautilus -n,firefox}
 
 super + Return
-    xterm
+    kitty
 
-super + {u,i,o}
-    xterm -e {ranger,ncmpcpp,nvim}
+super + {i,o}
+    kitty -e {ncmpcpp,nvim}
 
 # super + {p,less,greater}
 #     mpc {toggle,prev,next}
@@ -141,9 +141,9 @@ super + shift + p
     killall -HUP mpd-notification
 
 super + t
-    {polybar-msg cmd hide && bspc config -m focused bottom_padding 0,polybar-msg cmd show && bspc config -m focused bottom_padding $(polybar --dump=height base)}
-    # {polybar-msg cmd hide && bspc config -m focused top_padding 0,polybar-msg cmd show && bspc config -m focused top_padding $(($(polybar --dump=height base)+10))}
-    # toggle_bar & disown
+    toggle_bar & disown
+    # {polybar-msg cmd hide && bspc config -m focused top_padding 0,polybar-msg cmd show && bspc config -m focused top_padding $(polybar --dump=height base)}
+    # {polybar-msg cmd hide && bspc config -m focused bottom_padding 0,polybar-msg cmd show && bspc config -m focused bottom_padding $(polybar --dump=height base)}
     # bspc config top_padding 0 && bspc config bottom_padding 0 && polybar-msg cmd toggle 
 
 
@@ -166,3 +166,5 @@ Print
 super + Print
     screen -s
 
+super + shift + x
+    betterlockscreen -l

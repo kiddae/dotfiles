@@ -721,3 +721,31 @@ $bgDarker: mix({bg}, #000000, 90%);
   color: {color6} !important;
 }
 
+.channel-textarea-inner textarea{
+    color:#000;
+    font-size: 14;
+    font-family: 'SF Pro Text', sans-serif;
+}
+
+.message-group .comment .markup{
+    color: #353535;
+    font-size: 14px;
+    font-family: 'SF Pro Text', sans-serif;
+}
+
+input, textarea {
+    color: #111!Important;
+    font-size: 14px!Important;
+    font-weight: 400!Important;
+    font-family: 'SF Pro Text', sans-serif!Important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #6f6d6d!Important;
+    font-size: 14px!Important;
+    font-family: 'SF Pro Text', sans-serif!Important;
+}
+
+.message-group h2 .timestamp {
+    color: #6a6b6b;
+}

@@ -3,13 +3,13 @@ mpd_music_dir = "~/Music/"
 mpd_host = "localhost"
 mpd_port = "6600"
 
-[visualizer]
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_in_stereo = "no"
-visualizer_type = "spectrum"
-visualizer_output_name = "my_fifo"
-visualizer_look = "●┃"
-visualizer_color = "default"
+# [visualizer]
+# visualizer_fifo_path = "/tmp/mpd.fifo"
+# visualizer_in_stereo = "no"
+# visualizer_type = "spectrum"
+# visualizer_output_name = "my_fifo"
+# visualizer_look = "●┃"
+# visualizer_color = "default"
 
 [header]
 header_visibility = "no"
