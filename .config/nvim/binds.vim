@@ -19,9 +19,10 @@ nnoremap <leader>> :vertical resize >5<CR>
 nnoremap <leader>< :vertical resize <5<CR>
 nnoremap <leader>= :winc =<CR>
 
-nnoremap <S-tab> :bprev<CR>
-nnoremap <tab> :bnext<CR>
-nnoremap <leader>q :bdelete<CR>
+nnoremap <S-tab> :BufferPrevious<CR>
+nnoremap <tab> :BufferNext<CR>
+nnoremap <leader>q :BufferClose<CR>
+nnoremap <silent> <C-s> :BufferPick<CR>
 nnoremap <leader>n :enew<CR>
 
 nnoremap Y y$

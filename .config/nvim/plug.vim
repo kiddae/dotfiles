@@ -17,11 +17,12 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 "status lines
+Plug 'romgrk/barbar.nvim'
 "Plug 'bling/vim-bufferline'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/lightline.vim'
-Plug 'mengelbrecht/lightline-bufferline'
+"Plug 'mengelbrecht/lightline-bufferline'
 
 "completion
 "Plug 'ycm-core/YouCompleteMe'
@@ -30,6 +31,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "misc
 Plug 'thaerkh/vim-indentguides'
 Plug 'jiangmiao/auto-pairs'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'ryanoasis/vim-devicons'
