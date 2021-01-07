@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'mountaineer_gray',
+      \ 'colorscheme': 'elly',
       \ 'tabline': {
       \   'left': [ ['buffers'] ]
       \ },
@@ -8,5 +8,7 @@ let g:lightline = {
       \ },
       \ 'component_type': {
       \   'buffers': 'tabsel'
-      \ }
+      \ },
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }

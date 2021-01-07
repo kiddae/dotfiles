@@ -7,8 +7,10 @@
     // python
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "python.jediEnabled": true,
     "python.linting.pylintArgs": [
-        "--generate-members"
+        // fix for pygame
+        "--unsafe-load-any-extensions=y"
     ],
     // explorer
     "explorer.width": 30,

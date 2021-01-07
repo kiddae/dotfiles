@@ -10,10 +10,14 @@
 # vim mode
 set -o vi
 bind '"jk":vi-movement-mode'
+bind -m vi-command 'Control-l: clear-screen'
+bind -m vi-insert 'Control-l: clear-screen'
 
 # fetch
 # pfetch
 bunnyfetch
+
+colorscript -e bars
 
 # echo -e "\e[2;3m“ `fortune -s` ”\e[0m"
 
@@ -49,14 +53,18 @@ export FZF_ALT_C_COMMAND="find . -type d 2>/dev/null"
 ###########
 # Aliases #
 ###########
+
 # list my scripts
 alias lsscript="ls -R1 $SCRIPT_FOLDER"
 
 # ranger
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias r='ranger'
 
-# ffmpeg convert flac=>mp3
-alias allflactomp3="find . -name "*.flac" -exec ffmpeg -i {} -ab 320k -map_metadata 0 -id3v2_version 3 {}.mp3 \;"
+# nvim
+alias v='nvim'
+alias vi="vim"
+alias vim="nvim"
 
 # launchpolybar
 alias launchpolybar="~/.config/polybar/launch.sh"
@@ -78,10 +86,6 @@ lsdepends () { pacman -Qi $1 | grep Depends; }
 alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 
-# vim
-alias vi="vim"
-alias vim="nvim"
-
 # dots management
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
@@ -91,8 +95,6 @@ alias xclip='xclip -selection c'
 # misc
 alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-candy/'
 
-# shortcuts
-alias vimconf='nvim ~/.config/nvim/init.vim'
-
-# rsync for my USB
+# rsync for my USB/Music
 alias usb_sync='rsync -aPu /run/media/me/3A89-86CE/ ~/Documents/School/ && rsync -aPu ~/Documents/School/ /run/media/me/3A89-86CE/'
+alias music_sync='rsync -aPu phone:/sdcard/Music/ ~/Music/ && rsync -aPu ~/Music/ phone:/sdcard/Music/'

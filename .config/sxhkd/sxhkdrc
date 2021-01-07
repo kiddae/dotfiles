@@ -109,10 +109,10 @@ super + control + {h,j,k,l}
 #
 
 # inner
-super + alt + {j,h}
-    g="$(bspc config -d focused  window_gap)"; [[ $g -gt 0  ]] && bspc config -d focused window_gap $(( $g-10 )) 
-super + alt + {k,l}
-    g="$(bspc config -d focused  window_gap)"; bspc config -d focused window_gap $(( $g+10 )) 
+super + alt + {j,k}
+    inner_gaps {-10,+10}
+super + alt + {h,l}
+    outer_gaps {-10,+10}
 
 # reset
 super + alt + r
@@ -122,14 +122,14 @@ super + alt + r
 # apps
 #
 
-super + {u,y}
-    {nautilus -n,firefox}
+super + y
+    firefox
 
 super + Return
-    kitty
-
-super + {i,o}
-    kitty -e {ncmpcpp,nvim}
+    alacritty
+ 
+super + {u,i,o}
+     alacritty -e {ranger,ncmpcpp,nvim}
 
 # super + {p,less,greater}
 #     mpc {toggle,prev,next}
