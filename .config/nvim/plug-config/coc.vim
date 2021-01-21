@@ -53,4 +53,4 @@ xmap ac <Plug>(coc-classobj-a)
 omap ac <Plug>(coc-classobj-a)
 
 " Toggle explorer
-nmap <leader>e :execute 'CocCommand explorer' fnameescape(getcwd())<CR>
+nmap <leader>e :execute 'CocCommand explorer' getcwd()<CR>

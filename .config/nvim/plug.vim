@@ -17,10 +17,11 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
 "status lines
-Plug 'romgrk/barbar.nvim'
 "Plug 'bling/vim-bufferline'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-web-devicons' "dependency of barbar
 Plug 'itchyny/lightline.vim'
 "Plug 'mengelbrecht/lightline-bufferline'
 
@@ -29,35 +30,28 @@ Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "misc
+Plug 'ryanoasis/vim-devicons'
 Plug 'thaerkh/vim-indentguides'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'ryanoasis/vim-devicons'
 Plug 'tpope/vim-fugitive'
-"Plug 'wfxr/minimap.vim'
-Plug 'sheerun/vim-polyglot'
-"Plug 'Xuyuanp/scrollbar.nvim'
+Plug 'powerman/vim-plugin-AnsiEsc'
 Plug 'lilydjwg/colorizer'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } }
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'glepnir/dashboard-nvim'
 "Plug 'mhinz/vim-startify'
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'}
+Plug 'glepnir/dashboard-nvim'
 "Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
-"Plug 'skywind3000/asyncrun.vim'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()
 
 "Misc options
 let g:limelight_paragraph_span = 1
-"augroup ScrollbarInit
-"  autocmd!
-"  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-"  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-"  autocmd WinLeave,BufLeave,FocusLost    * silent! lua require('scrollbar').clear()
-"augroup end
-let g:minimap_auto_start = 1
 let g:colorizer_nomap = 1
+let bufferline = {}
+let bufferline.auto_hide = v:true
+"let bufferline.icons = v:false

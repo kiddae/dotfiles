@@ -1,3 +1,4 @@
+
 syntax on
 
 set hidden
@@ -26,7 +27,7 @@ set exrc
 set secure
 
 set wildmenu
-set so=20
+set so=12
 set showcmd
 set noshowmode
 set cmdheight=1
@@ -38,15 +39,13 @@ autocmd BufEnter * silent! lcd %:p:h
 set foldmethod=indent
 set foldlevel=99
 
-""remove tilde in empty lines
-let &fcs='eob: '
 
 ""colorscheme
 set background=dark
 let g:gruvbox_italic=1
 let g:ayucolor="mirage"
 ""let g:gruvbox_termcolors=16
-colorscheme elly
+colorscheme material
 
 "set terminal automatically in insert mode
 autocmd TermOpen * startinsert
@@ -55,8 +54,10 @@ autocmd TermOpen * startinsert
 autocmd VimLeave * call set guicursor=a:ver100-blinkon
 
 "spell
-autocmd FileType {tex,rmd,pandoc,markdown} setlocal spell spelllang=fr,en_us
+autocmd FileType {tex,rmd,markdown,pandoc} setlocal spell spelllang=fr,en_us
 
-"fix for fzf
-let &t_TI = ""
-let &t_TE = ""
+"remove tilde in empty lines
+let &fcs='eob: '
+
+"command
+command -nargs=1 Run :sp | :wincmd j | :resize 10 | :terminal <args> 

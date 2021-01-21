@@ -19,7 +19,7 @@ bunnyfetch
 
 # colorscript -e bars
 
-echo -e "\e[2;3m“ `fortune -s` ”\e[0m"
+# echo -e "\e[2;3m“ `fortune -s` ”\e[0m"
 
 # cycle autocompletion
 bind "TAB:menu-complete"

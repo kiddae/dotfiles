@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'elly',
+      \ 'colorscheme': 'material',
       \ 'tabline': {
       \   'left': [ ['buffers'] ]
       \ },

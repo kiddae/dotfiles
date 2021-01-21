@@ -112,11 +112,11 @@ super + control + {h,j,k,l}
 super + alt + {j,k}
     inner_gaps {-10,+10}
 super + alt + {h,l}
-    outer_gaps {-10,+10}
+    outer_gaps {-10,+10} -d focused
 
 # reset
 super + alt + r
-    bspc config -d focused window_gap 20
+    bspc config -d focused window_gap 10 && outer_gaps = 30
 
 #
 # apps
@@ -156,7 +156,7 @@ super + b
 super + shift + e
     powermenu
 
-super + n
+Super_L
     flash_window
 
 
@@ -167,4 +167,5 @@ super + Print
     screen -s
 
 super + shift + x
-    betterlockscreen -l
+    lock
+    # betterlockscreen -l

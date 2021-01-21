@@ -2,19 +2,26 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "rmd",
         "python",
+        "ocaml",
         "json"
     ],
     // python
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "python.jediEnabled": true,
     "python.linting.pylintArgs": [
-        // fix for pygame
-        "--unsafe-load-any-extensions=y"
+        "--generate-members"
     ],
+    // ocaml
+    "languageserver": {
+      "ocaml-lsp": {
+        "command": "opam",
+        "args": ["config", "exec", "--", "ocamllsp"],
+        "filetypes": ["ocaml", "reason"]
+      }
+    },
     // explorer
     "explorer.width": 30,
     "explorer.previewAction.onHover": false,
     "explorer.icon.enableVimDevicons": false,
-    "clangd.path": "/home/me/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd"
+    "clangd.path": "/home/me/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
 }
