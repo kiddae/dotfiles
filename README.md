@@ -1,4 +1,8 @@
-# Dotfiles!
+# Dotfiles (*・ω・)ﾉ
+
+*Welcome! These are my dotfiles, the configuration files needed to customize a desktop like mine!*
+
+## 📓 Installation/Usage
 
 More details on the respective theme folders, but in general:
 
@@ -14,18 +18,16 @@ To install the themes,
 
 The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae/wallpapers)
 
-This was made over my older and messier dotfiles repository that you can still access on the `old` branch.
-
-# Included scripts
+## 💻 Included scripts
 
 To make the usage and switching of themes easier, I have included (mostly for me):
 
 + `switch_theme` which takes the name of the theme as argument
 + `update_theme`, which copies files from my home directory to the repository and shows diffs per directory. The flag `-n` does a dry-run.
 
-# Screenshots
+## ✨Screenshots
 
-## `doublechic`
+### `doublechic`
 
 ![screenshot1](doublechic/screenshot1.png)
 ![screenshot2](doublechic/screenshot2.png)
