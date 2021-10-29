@@ -15,6 +15,13 @@ The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae
 
 This was made over my older and messier dotfiles repository that you can still access on the `old` branch.
 
+# Included scripts
+
+To make the usage and switching of themes easier, I have included (mostly for me):
+
++ `switch_theme` which takes the name of the theme as argument
++ `update_theme`, which copies files from my home directory to the repository and shows diffs per directory. The flag `-n` does a dry-run.
+
 # Screenshots
 
 ## `doublechic`
