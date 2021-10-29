@@ -8,7 +8,8 @@ To install the themes,
 
 + make sure you have installed `colorer`.
 + copy/link the files to their respective location starting from the home directory (`cp -r <theme-name>/. ~`)
-+ run `colorer <colorscheme-name>`, with a colorscheme from the folder `.config/colorer/coloschemes/` to generate config files in `.config/colorer/out`. They will automatically be linked/copied according to the script `commands` from `colorer`'s configuration folder.
++ choose a colorscheme: browse [the repo](https://github.com/kiddae/colorer-colorschemes) or make your own, and then put it in the folder `~/.config/colorer/coloschemes/`.
++ run `colorer <colorscheme-name>`, with the filename of the colorscheme chosen in the folder to generate config files in `.config/colorer/out`. They will automatically be linked/copied according to the script `commands` from `colorer`'s configuration folder.
 + tweak some stuff; some of these elements (keybinds, aliases...) are quite personal and might not fit your needs. Play around, remove what's useless and find something that suits you!
 
 The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae/wallpapers)
