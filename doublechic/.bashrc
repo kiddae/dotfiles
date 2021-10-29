@@ -84,7 +84,7 @@ lsdepends () { pacman -Qi $1 | grep Depends; }
 
 # colors
 alias grep="grep --color=auto"
-alias ls="ls --color=auto -F -a"
+alias ls="ls --color=auto -F"
 
 # dots management
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -5,7 +5,7 @@ sed -E "s/'colorscheme': '[a-zA-Z]*-?_?[a-zA-Z]*',$/'colorscheme': '$colorscheme
 echo -e $(cat ~/.config/colorer/out/sequences) | tee /dev/pts/[0-9]*
 cp {wp} /usr/share/sddm/themes/sugar-candy/Backgrounds/Wall.png
 cp ~/.config/colorer/out/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
-cp  ~/.config/colorer/out/dunst ~/.config/dunst/dunstrc
+cp  ~/.config/colorer/out/dunstrc ~/.config/dunst/dunstrc
 cp  ~/.config/colorer/out/kitty ~/.config/kitty/colors
 cp  ~/.config/colorer/out/userChrome.css ~/.mozilla/firefox/5rg3vfkm.default-release/chrome/userChrome.css
 cp  ~/.config/colorer/out/zathurarc ~/.config/zathura/zathurarc
