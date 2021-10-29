@@ -1,14 +1,18 @@
 #!/bin/bash
-files=$(find ~/Configuration/$1 -type f -exec bash -c "echo {} | sed 's/.*\($1\)\///g'" \;)
+script_dir=$(dirname $0)
+theme=$1
+files=$(find $script_dir/$theme -type f -exec bash -c "echo {} | sed 's/.*\($theme\)\///g'" \;)
+files_to_treat=$(echo "$files" | xargs -I FILE bash -c "test -f ~/FILE && { cmp ~/FILE $script_dir/$theme/FILE >/dev/null || echo FILE; }")
 
-if [ "${2}" == "-n" ]; then
-    echo -e "\033[1mDry run.\033[0m"
-    echo "$files" | xargs -I FILE bash -c "echo cp ~/FILE ~/Configuration/$1/FILE"
-else
+echo -e "\033[1mFiles to be copied:\033[0m"
+echo "$files_to_treat" | xargs -I FILE bash -c "echo ~/FILE -\> $script_dir/$theme/FILE"
+if [ "${2}" != "-n" ]; then
     echo -e "\033[1mCopying files...\033[0m"
-    echo "$files" | xargs -I FILE bash -c "echo '~/FILE -> ~/Configuration/$1/FILE' && cp ~/FILE ~/Configuration/$1/FILE"
+    echo "$files_to_treat" | xargs -I FILE bash -c "cp ~/FILE $script_dir/$theme/FILE"
+else
+    echo -e "\033[1mDry run, no changes made.\033[0m"
 fi
 
 echo -e "\033[1mChecking diff in directories.\033[0m"
-directories=$(find ~/Configuration/$1 -mindepth 2 -type d -exec bash -c "echo {} | sed 's/.*\($1\)\///g'" \;)
-echo "$directories" | xargs -I FILE bash -c "diff -r ~/FILE ~/Configuration/$1/FILE"
+directories=$(find $script_dir/$theme -mindepth 2 -type d -exec bash -c "echo {} | sed 's/.*\($theme\)\///g'" \;)
+echo "$directories" | xargs -I FILE bash -c "diff -qr ~/FILE $script_dir/$theme/FILE"
