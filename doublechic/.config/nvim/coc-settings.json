@@ -1,0 +1,23 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "rmd",
+        "python",
+        "ocaml",
+        "json"
+    ],
+    // python
+    "python.linting.enabled": true,
+    // ocaml
+    "languageserver": {
+      "ocaml-lsp": {
+        "command": "opam",
+        "args": ["config", "exec", "--", "ocamllsp"],
+        "filetypes": ["ocaml", "reason"]
+      }
+    },
+    // explorer
+    "explorer.width": 30,
+    "explorer.previewAction.onHover": false,
+    "explorer.icon.enableVimDevicons": false,
+    "clangd.path": "/usr/bin/clangd"
+}

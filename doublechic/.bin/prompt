@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Use as dmenu (by piping values separated by \n to it)
+# $1 is the text shown in the prompt (defaults as 'dmenu')
+# if $2 is '--run', runs dmenu_run instead
+
+fg=$(colorer -g color7)
+bg=$(colorer -g bg)
+[[ $1 == '' ]] && prompt='dmenu' || prompt=$1
+args="-fn mono-11 -h 40 -nb ${bg} -nf ${fg} -sb ${fg} -sf ${bg} -p ${prompt} -i -b" 
+[[ $2 == '--run' ]] && dmenu_run $args || dmenu $args
+# [[ $2 == '--run' ]] && rofi -show run -theme ~/.config/colorer/out/rofi.rasi || rofi -dmenu -p "$1" -theme ~/.config/colorer/out/rofi.rasi -i

@@ -1,0 +1,2 @@
+#!/bin/bash
+colorer $(ls -1 ~/.config/colorer/colorschemes/ | prompt 'Colorer:')

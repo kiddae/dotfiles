@@ -1,0 +1,22 @@
+#!/bin/bash
+state=$(bspc query -T -n | jq '.client.state' | sed 's/\"//g')
+interval=40
+
+if [[ "$state" == "tiled" ]]; then
+    echo $state
+    case $1 in
+        west) bspc node -s west;;
+        south) bspc node -s south;;
+        north) bspc node -s north;;
+        east) bspc node -s east
+    esac
+fi
+
+if [[ "$state" == "floating" ]]; then
+    case $1 in
+        west) bspc node -v $(( 0 - $interval )) 0;;
+        south) bspc node -v 0 $interval;;
+        north) bspc node -v 0 $(( 0 - $interval ));;
+        east) bspc node -v $interval 0
+    esac
+fi
