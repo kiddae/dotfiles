@@ -1,0 +1,14 @@
+#!/bin/bash
+files=$(find ~/Configuration/$1 -type f -exec bash -c "echo {} | sed 's/.*\($1\)\///g'" \;)
+
+if [ "${2}" == "-n" ]; then
+    echo -e "\033[1mDry run.\033[0m"
+    echo "$files" | xargs -I FILE bash -c "echo cp ~/FILE ~/Configuration/$1/FILE"
+else
+    echo -e "\033[1mCopying files...\033[0m"
+    echo "$files" | xargs -I FILE bash -c "echo '~/FILE -> ~/Configuration/$1/FILE' && cp ~/FILE ~/Configuration/$1/FILE"
+fi
+
+echo -e "\033[1mChecking diff in directories.\033[0m"
+directories=$(find ~/Configuration/$1 -mindepth 2 -type d -exec bash -c "echo {} | sed 's/.*\($1\)\///g'" \;)
+echo "$directories" | xargs -I FILE bash -c "diff -r ~/FILE ~/Configuration/$1/FILE"
