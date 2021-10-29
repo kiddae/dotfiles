@@ -13,6 +13,8 @@ To install the themes,
 
 The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae/wallpapers)
 
+This was made over my older and messier dotfiles repository that you can still access on the `old` branch.
+
 # Screenshots
 
 ## `doublechic`
