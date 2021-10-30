@@ -1,0 +1,5 @@
+#!/bin/bash
+script_dir=$(dirname $0)
+file=$1
+theme=$2
+diff --color=auto "$script_dir/$theme/$file" ~/"$file"
