@@ -15,4 +15,4 @@ fi
 
 echo -e "\033[1mChecking diff in directories.\033[0m"
 directories=$(find $script_dir/$theme -type d -exec bash -c "echo {} | sed 's/.*\($theme\)\///g'" \;)
-echo "$directories" | xargs -I FILE bash -c "diff -qr ~/FILE $script_dir/$theme/FILE"
+echo "$directories" | xargs -I FILE bash -c "diff -qr ~/FILE $script_dir/$theme/FILE | grep Only"
