@@ -40,6 +40,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'thaerkh/vim-indentguides'
 Plug 'jiangmiao/auto-pairs'
+Plug 'karb94/neoscroll.nvim'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tpope/vim-fugitive'
@@ -64,3 +65,4 @@ let bufferline.auto_hide = v:false
 "let bufferline.icons = v:false
 let g:rose_pine_disable_background = v:false
 let g:rose_pine_variant = 'base'
+lua require('neoscroll').setup({easing_function = "sine"})
