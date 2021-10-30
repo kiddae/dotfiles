@@ -12,6 +12,7 @@ done
 d=$'\e[1m'
 t=$'\e[0m'
 v=$'\e[7m'
+i=$'\e[3m'
 
 # Items
 sep=
@@ -43,10 +44,10 @@ shell=$(basename $SHELL)
 tput clear
 cat << EOF
 
-             $d$f1$h  $t$wmname
-   (\ /)     $f3$k  $t$kernel
-   ( $d. .$t)    $f2$sh  $t$shell
-   c($f1"$t)($f1"$t)   $f5$r  $t$resolution
-             $f4$w  $t$wifiname
+             $d$f1$h  $t$i$wmname$t
+   (\ /)     $f3$k  $t$i$kernel$t
+   ( $d. .$t)    $f2$sh  $t$i$shell$t
+   c($f1"$t)($f1"$t)   $f5$r  $t$i$resolution$t
+             $f4$w  $t$i$wifiname$t
 
 EOF
