@@ -23,7 +23,7 @@ The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae
 It can be vary according to the theme, but in general:
 + I use `bspwm` as my window manager, on pair with `sxhkd` to manage keybindings;
 + The terminal emulator will either be `alacritty` or `kitty`.
-+ I edit my files with `neovim`; you have to install [`vim-plug`](https://github.com/junegunn/vim-plug) to get plugins to work.
++ I edit my files with `neovim`; please refer to my [neovim configuration files](https://github.com/kiddae/neovim-dots)
 + `picom` gives me shadows and makes sure that the graphics don't go crazy;
 + My main file manager is `ranger`, or just... you know the command line.
 + Status bar is generally `polybar`
@@ -36,6 +36,7 @@ To make the usage and switching of themes easier, I have included (mostly for me
 
 + `switch_theme` which takes the name of the theme as argument
 + `update_theme`, which copies files from my home directory to the repository and shows diffs per directory. The flag `-n` does a dry-run.
++ `quickdiff <relative filepath> <theme>` shows the diff between the file in the home directory and in the theme directory.
 
 ## ✨ Screenshots
 
