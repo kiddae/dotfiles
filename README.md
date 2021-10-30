@@ -39,7 +39,7 @@ To make the usage and switching of themes easier, I have included (mostly for me
 
 ## ✨ Screenshots
 
-### `doublechic`
+### [`doublechic`](doublechic/)
 
 <details>
   <summary></summary>
