@@ -1,6 +1,8 @@
-# Dotfiles (*・ω・)ﾉ
+# Files that start with a dot (they're very cool). 
 
-***Welcome! These are my dotfiles, the configuration files needed to customize a desktop like mine!***
+***Welcome (*・ω・)ﾉ***
+
+Here are my dotfiles, the configuration files needed to customize a desktop like mine!
 
 ## 📓 Installation/Usage
 
