@@ -13,14 +13,14 @@ while read -r Z; do
 	[[ "$Z" == commit* ]] && ((cno+=1))
 done <<< "$($git log 2> /dev/null)"
 
-$git rev-list --left-right --count origin/master..."$gbranch" >/dev/null 2>&1
+$git rev-list --left-right --count origin/main..."$gbranch" >/dev/null 2>&1
 if [ "$?" == 0 ];then
-	rev=`$git rev-list --left-right --count origin/master..."$gbranch"`;
+	rev=`$git rev-list --left-right --count origin/main..."$gbranch"`;
 	beh=$(cut -f1 <<< $rev )
 	ahe=$(cut -f2 <<< $rev )
 
     echo -e "$($git diff --cached --name-only | wc -l)"\
-        "$($git diff --stat origin/master.. | wc -l)"\
+        "$($git diff --stat origin/main.. | wc -l)"\
         "$($git diff --name-status | wc -l)"\
         "$($git ls-files --others --exclude-standard | wc -l)"\
         "$gbranch"\
