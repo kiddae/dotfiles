@@ -1,8 +1,6 @@
-# Files that start with a dot (they're very cool). 
+# ![banner](banner.png)
 
-***Welcome (*・ω・)ﾉ***
-
-![banner](banner.png)
+# 🌟 Welcome! ଘ(੭˃ᴗ˂)੭
 
 Here are my dotfiles, the configuration files needed to customize a desktop like mine!
 
@@ -37,9 +35,13 @@ To make the usage and switching of themes easier, I have included (mostly for me
 + `switch_theme` which takes the name of the theme as argument
 + `update_theme`, which copies files from my home directory to the repository and shows diffs per directory. The flag `-n` does a dry-run.
 
-## ✨Screenshots
+## ✨ Screenshots
 
 ### `doublechic`
 
-![screenshot1](doublechic/screenshot1.png)
-![screenshot2](doublechic/screenshot2.png)
+<details>
+  <summary></summary>
+  
+  ![screenshot1](doublechic/screenshot1.png)
+  ![screenshot2](doublechic/screenshot2.png)
+</details>
