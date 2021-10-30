@@ -4,6 +4,8 @@
 
 Here are my dotfiles, the configuration files needed to customize a desktop like mine!
 
+This repository is still quite new, I'll progressively add themes I have made in the past and eventually new ones.
+
 ## 📓 Installation/Usage
 
 The themes are wrapped around my colorscheme manager [colorer](https://github.com/kiddae/colorer).
