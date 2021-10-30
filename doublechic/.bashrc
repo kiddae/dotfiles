@@ -112,6 +112,10 @@ export MANWIDTH=999
 
 # github token
 alias git_token="cat ~/Documents/.git_token | xclip"
+
+# fc-list search
+alias fontsearch="fc-list | grep -i"
+
 #!/usr/bin/env bash
 
 

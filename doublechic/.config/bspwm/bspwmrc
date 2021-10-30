@@ -4,7 +4,7 @@ sxhkd &
 
 # wm config
 bspc config border_width 2
-bspc config window_gap 15
+bspc config window_gap 25
 out=0
 # bspc config top_padding $(( $(polybar --dump=height base 2>/dev/null) + $(polybar --dump=offset-y base 2>/dev/null)+ $out + $(bspc config window_gap)))
 bspc config bottom_padding $(( $(polybar --dump=height base 2>/dev/null) + $(polybar --dump=offset-y base 2>/dev/null)+ $out))
