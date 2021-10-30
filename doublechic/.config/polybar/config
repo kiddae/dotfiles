@@ -48,8 +48,8 @@ border-size = 0
 line-size = 0
 line-color = ${colors.color8}
 
-font-0=Victor Mono Nerd Font:style=Medium Italic:size=12;4
-font-1=Victor Mono Nerd Font:style=Bold Italic:size=12;4
+font-0=monospace:style=Medium Italic:size=12;4
+font-1=monospace:style=Bold Italic:size=12;4
 ;font-0=SF Pro Display:style=Regular:size=14;4
 ;font-1=SF Pro Display:style=Bold:size=14;4
 font-2=Material Icons:size=12;5
