@@ -2,6 +2,8 @@
 
 ***Welcome (*・ω・)ﾉ***
 
+![banner](banner.png)
+
 Here are my dotfiles, the configuration files needed to customize a desktop like mine!
 
 ## 📓 Installation/Usage
