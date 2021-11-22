@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# file=/tmp/$(date +%s).png
+# default_dir=~/Pictures/Screenshots
+# 
+# sleep 0.6
+# maim -u $1 $file 
+# 
+# # dir=$(find ~ -type d 2>/dev/null | rofi -dmenu -i -p "Choose a directory" -theme ~/.cache/colorer/rofi.rasi)
+# fg=$(xrdb -query | grep foreground | cut -d':' -f2 | sed 's/	//g')
+# bg=$(xrdb -query | grep background | cut -d':' -f2 | sed 's/	//g')
+# #dir=$(find ~ -type d 2>/dev/null | prompt "Where?")
+# dir=$default_dir
+# 
+# if [[ -n $dir ]]; then
+#     mv $file $dir
+# else
+#     mv $file $default_dir
+# fi
+
+file=~/Pictures/Screenshots/$(date +%s).png
+maim -u $1 $file
+
+xclip -selection clipboard -target image/png -i $file
+
+notify-send "Took a screenshot" "saved to ${file} and copied to clipboard." -i $file
