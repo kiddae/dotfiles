@@ -50,7 +50,7 @@ To make the usage and switching of themes easier, I have included (mostly for me
 
 ![screenshot](lazuli/screenshot.png)
 
-### ['elegant'](elegant/)
+### [`elegant`](elegant/)
 
 ![screenshot1](elegant/screenshot1.png)
 ![screenshot2](elegant/screenshot2.png)
