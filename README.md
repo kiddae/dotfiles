@@ -21,6 +21,7 @@ To install a theme,
 The wallpapers can be found in this mess: [wallpapers](https://github.com/kiddae/wallpapers). Also, consider checking out [ImageColorizer](https://github.com/kiddae/ImageColorizer) :)
 
 It can be vary according to the theme, but in general:
+
 + I use `bspwm` as my window manager, on pair with `sxhkd` to manage keybindings;
 + The terminal emulator will either be `alacritty` or `kitty`.
 + I edit my files with `neovim`; please refer to my [neovim configuration files](https://github.com/kiddae/neovim-dots)
@@ -42,9 +43,9 @@ To make the usage and switching of themes easier, I have included (mostly for me
 
 ### [`doublechic`](doublechic/)
 
-<details>
-  <summary></summary>
-  
-  ![screenshot1](doublechic/screenshot1.png)
-  ![screenshot2](doublechic/screenshot2.png)
-</details>
+![screenshot1](doublechic/screenshot1.png)
+![screenshot2](doublechic/screenshot2.png)
+
+### [`lazuli`](lazuli/)
+
+![screenshot](lazuli/screenshot.png)
