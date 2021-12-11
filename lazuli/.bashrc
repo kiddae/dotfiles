@@ -73,6 +73,9 @@ alias chbartheme="~/.config/polybar/themes/switch_theme"
 # alias ncmpcpp="ncmpcpp-ueberzug"
 alias nc="ncmpcpp"
 
+# random_album
+alias random_album="cat ~/Drive/Musique/Albums.md | grep '\- ' | shuf | head -n1"
+
 # Xresources (for file inclusion)
 alias xrdb="xrdb -I$HOME"
 
@@ -97,8 +100,9 @@ alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-c
 
 # rsync for my USB/Music
 alias usb_sync='rsync -aPu /run/media/me/3A89-86CE/ ~/Documents/School/ && rsync -aPu ~/Documents/School/ /run/media/me/3A89-86CE/'
-# alias music_sync='mount_phone ; rsync -rPu ~/Music/ ~/FTP/Music/ && rsync -rPu ~/FTP/Music/ ~/Music/'
-alias music_sync='cd && adb-sync --delete Music /sdcard'
+# alias music_sync='rsync -rPu /run/media/me/Elements/Music/ phone:/sdcard/Music/ && rsync -rPu phone:/sdcard/Music/ /run/media/me/Elements/Music/'
+alias music_sync='rsync -rPu --delete /run/media/me/Elements/Music/ phone:/sdcard/Music/'
+# alias music_sync='cd && adb-sync --delete Music /sdcard'
 # alias music_sync='cd && adb connect 192.168.1.44 && adb push --sync Music/ /sdcard/ && adb-sync --delete -R Music /sdcard'
 
 # cd + ls
