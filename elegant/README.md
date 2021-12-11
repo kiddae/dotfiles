@@ -7,5 +7,5 @@
 # Some info
 
 + Colorscheme: [`onelight`](https://github.com/kiddae/colorer-colorschemes/blob/main/onedark)
-+ Wallpaper: [link](https://raw.githubusercontent.com/kiddae/wallpapers/main/misc/umbrella.jpg)
++ Wallpaper: [link](https://github.com/kiddae/wallpapers/blob/main/misc/liana-mikah-4RTAF3Z-0zM-unsplash.jpg?raw=true)
 + Font: `Space Mono` and `Agrandir` ([included](.local/share/fonts/Agrandir))
