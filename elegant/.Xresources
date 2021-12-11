@@ -1,0 +1,2 @@
+#include ".config/colorer/out/Xresources"
+Xft.dpi: 96

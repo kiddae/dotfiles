@@ -1,0 +1,9 @@
+#!/bin/sh
+xrdb -merge ~/.cache/colorer/Xresources
+# lock-screen-timer &
+# timemanager &
+# setxkbmap fr
+xsetroot -cursor_name left_ptr
+xset +fp /usr/share/fonts/misc/
+xset fp rehash
+xset b off
