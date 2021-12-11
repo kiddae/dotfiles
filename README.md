@@ -49,3 +49,9 @@ To make the usage and switching of themes easier, I have included (mostly for me
 ### [`lazuli`](lazuli/)
 
 ![screenshot](lazuli/screenshot.png)
+
+### ['elegant'](elegant/)
+
+![screenshot1](elegant/screenshot1.png)
+![screenshot2](elegant/screenshot2.png)
+![screenshot3](elegant/screenshot3.png)
