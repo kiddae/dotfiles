@@ -7,6 +7,6 @@
 fg=$(colorer -g color7)
 bg=$(colorer -g bg)
 [[ $1 == '' ]] && prompt='dmenu' || prompt=$1
-args="-fn mono-11 -h 40 -nb ${bg} -nf ${fg} -sb ${fg} -sf ${bg} -p ${prompt} -i -b" 
+args="-fn Agrandir-16 -h 45 -nb ${bg} -nf ${fg} -sb ${fg} -sf ${bg} -p ${prompt} -i -x 20 -y 20 -w 1880"  
 [[ $2 == '--run' ]] && dmenu_run $args || dmenu $args
 # [[ $2 == '--run' ]] && rofi -show run -theme ~/.config/colorer/out/rofi.rasi || rofi -dmenu -p "$1" -theme ~/.config/colorer/out/rofi.rasi -i
