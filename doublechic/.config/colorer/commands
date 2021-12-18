@@ -1,7 +1,6 @@
 echo "Applying changes"
-colorscheme=$(basename {colorscheme})
-sed -E "s/colorscheme [a-zA-Z]*-?_?[a-zA-Z]*/colorscheme $colorscheme/g" ~/.config/nvim/global.vim -i 
-sed -E "s/'colorscheme': '[a-zA-Z]*-?_?[a-zA-Z]*',$/'colorscheme': '$colorscheme',/g" ~/.config/nvim/plug-config/lightline.vim -i
+sed -E "s/colorscheme .+/colorscheme {vim}/g" ~/.config/nvim/global.vim -i 
+sed -E "s/'colorscheme': '.+',$/'colorscheme': '{lightline}',/g" ~/.config/nvim/plug-config/lightline.vim -i
 echo -ne $(cat ~/.config/colorer/out/sequences) | tee /dev/pts/[0-9]*
 cp {wp} /usr/share/sddm/themes/sugar-candy/Backgrounds/Wall.png
 cp ~/.config/colorer/out/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf
