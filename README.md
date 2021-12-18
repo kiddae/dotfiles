@@ -26,7 +26,7 @@ It can be vary according to the theme, but in general:
 + The terminal emulator will either be `alacritty` or `kitty`.
 + I edit my files with `neovim`; please refer to my [neovim configuration files](https://github.com/kiddae/neovim-dots)
 + `picom` gives me shadows and makes sure that the graphics don't go crazy;
-+ My main file manager is `ranger`, or just... you know the command line.
++ My main file manager is `ranger`, or just... you know, the command line.
 + Status bar is generally `polybar`
 + `dunst` is my notification daemon, I use [this fork](https://github.com/Barbarossa93/dunst) to have double borders.
 + depending on the theme, `rofi` or `dmenu` takes care of my menus and application launchers.
@@ -55,3 +55,7 @@ To make the usage and switching of themes easier, I have included (mostly for me
 ![screenshot1](elegant/screenshot1.png)
 ![screenshot2](elegant/screenshot2.png)
 ![screenshot3](elegant/screenshot3.png)
+
+### [`lain`](lain/)
+
+![screenshot](lain/screenshot.png)
