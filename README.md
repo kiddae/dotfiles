@@ -30,6 +30,7 @@ It can be vary according to the theme, but in general:
 + Status bar is generally `polybar`
 + `dunst` is my notification daemon, I use [this fork](https://github.com/Barbarossa93/dunst) to have double borders.
 + depending on the theme, `rofi` or `dmenu` takes care of my menus and application launchers.
++ [`bashed-on-a-feeling`](https://github.com/yedhink/bashed-on-a-feeling) is used in a big part of my themes (it's great!)
 
 ## 💻 Included scripts
 
