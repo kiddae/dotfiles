@@ -1,0 +1,11 @@
+#!/bin/bash
+play_icon=$2
+pause_icon=$3
+prev_icon=$4
+next_icon=$5
+[[ $(playerctl status -p $1 2>/dev/null) = "Playing" ]] && color=$(polybar --dump=foreground base 2>/dev/null) || color=$(polybar --dump=line-color base 2>/dev/null)
+player=$1
+[[ $(playerctl status -p $1 2>/dev/null) = "Playing" ]] && status=$pause_icon || status=$play_icon
+string=$(echo %{A1:playerctl previous -p $1:}$prev_icon%{A}%{A1:playerctl play-pause -p $1:} $status%{A}%{A1:playerctl next -p $1:} $next_icon%{A}%{-o})
+
+echo $string

@@ -60,3 +60,9 @@ To make the usage and switching of themes easier, I have included (mostly for me
 ### [`lain`](lain/)
 
 ![screenshot](lain/screenshot.png)
+
+### [`hermine`](hermine/)
+
+![screenshot1](hermine/screenshot1.png)
+![screenshot2](hermine/screenshot2.png)
+![screenshot3](hermine/screenshot3.png)
