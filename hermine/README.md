@@ -1,3 +1,6 @@
+# `hermine`
+> Dreamy and weirdly comforting.
+
 # Screenshots
 
 ![screenshot1](screenshot1.png)
@@ -9,4 +12,4 @@
 + Colorscheme: [`nord`](https://github.com/kiddae/colorer-colorschemes/blob/main/nord)
 + Wallpaper: [link](https://raw.githubusercontent.com/kiddae/wallpapers/main/anime/colorized/wallhaven-vg6dqp.jpg)
 + Fonts: `scientifica`, `Cozette`.
-+ Terminal: `alacritty`
++ Shown in the screenshots: `bspwm`, `polybar`, `picom`, `2bspwm` for the double borders, `quodlibet`, `ufetch`, `cava`, `bashtop`, `firefox` and customized MonkeyType, `dunst`, `alacritty` with `bashed-on-a-feeling`, `cl`, `neovim`.
