@@ -62,5 +62,5 @@ strplaypause = "%{A1:playerctl play-pause -p " + \
     player + ":}" + status + "%{A}"
 strnext = "%{A1:playerctl next -p " + player + ":}" + next_icon + "%{A}"
 
-if get("playerctl -l") != "No players found":
+if get("playerctl -l") != "":
     print(strlogo, strartist, strtitle, strprev, strplaypause, strnext)
