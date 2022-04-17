@@ -1,15 +1,14 @@
-# `doublechic`
-> A clean desktop, balanced between eye candy and functionality.
+# `sweet`
+> Soft and sweet, just like candy.
 
 # Screenshots
 
-![screenshot1](screenshot1.png)
-![screenshot2](screenshot2.png)
+![screenshot](screenshot1.png)
 
 # Some info
 
-+ Colorscheme: [`onedark`](https://github.com/kiddae/colorer-colorschemes/blob/main/onedark)
-+ Wallpaper: [umbrella.jpg](https://raw.githubusercontent.com/kiddae/wallpapers/main/misc/umbrella.jpg)
-+ Font: the theme uses `monospace` for every terminal/monospace font so it's easier to change it (here, it's `VictorMono`, you can change it in `./config/fontconfig/fonts.conf` in the aliases section)
-+ Shown in the screenshots: `bspwm`, `polybar`, `kitty`, `neovim`, `bunnyfetch`, `cl`, `gtop`, `firefox` with NightTab, `cava`, `2bspwm` for the double borders, `picom`.
++ Colorscheme: [`everblush`](https://github.com/kiddae/colorer-colorschemes/blob/main/everblush)
++ Wallpaper: [link](https://raw.githubusercontent.com/kiddae/wallpapers/main/music/colorized/4t2qli7sxom61_c_inv_everblush.png)
++ Font: `SF Pro Text`/`SF Pro Display` and `SF Mono`
++ Shown in the screenshots: `bspwm`, `polybar`, `kitty`, `neovim`
 
