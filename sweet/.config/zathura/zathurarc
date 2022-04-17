@@ -1,0 +1,37 @@
+# temporary zathura config
+set recolor "true"
+set font "monospace 9"
+
+set completion-bg "#181f21"
+set completion-fg "#dadada"
+set completion-group-bg "#181f21"
+set completion-group-fg "#8ccf7e"
+set completion-highlight-bg "#dadada"
+set completion-highlight-fg "#181f21"
+
+set recolor-lightcolor "#181f21"
+set recolor-darkcolor "#dadada"
+set default-bg "#181f21"
+
+set inputbar-bg "#181f21"
+set inputbar-fg "#dadada"
+set notification-bg "#181f21"
+set notification-fg "#dadada"
+set notification-error-bg "#e06e6e"
+set notification-error-fg "#dadada"
+set notification-warning-bg "#e06e6e"
+set notification-warning-fg "#dadada"
+set statusbar-bg "#181f21"
+set statusbar-fg "#dadada"
+set index-bg "#181f21"
+set index-fg "#dadada"
+set index-active-bg "#dadada"
+set index-active-fg "#181f21"
+set render-loading-bg "#181f21"
+set render-loading-fg "#dadada"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+map b toggle_statusbar

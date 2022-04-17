@@ -1,0 +1,6 @@
+configuration{
+    font: "SF Pro Text Light 11";
+    location: 2;
+    yoffset: 65;
+    show-icons: false;
+}

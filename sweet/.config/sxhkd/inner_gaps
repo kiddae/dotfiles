@@ -1,0 +1,3 @@
+#!/bin/bash
+gaps=$(bspc config -d focused window_gap)
+[[ $(( $gaps$1 )) -ge 0 ]] && bspc config -d focused window_gap $(( $gaps$1 ))

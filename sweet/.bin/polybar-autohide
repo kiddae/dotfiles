@@ -1,0 +1,64 @@
+#!/usr/bin/env python
+import time
+import subprocess
+import re
+import logging
+import signal
+import sys
+
+DELAY = 10
+SCREEN_HEIGHT = subprocess.check_output(
+    "xdpyinfo | awk '/dimensions/{print $2}' | cut -d'x' -f2", shell=True)
+PERCENT_LIMIT = 15
+BAR_HEIGHT = int(subprocess.check_output(
+    'polybar --dump=height base 2>/dev/null', shell=True)) + int(subprocess.check_output('polybar --dump=offset-y base 2>/dev/null', shell=True)) * 1 + int(subprocess.check_output('polybar --dump=border-size base 2>/dev/null', shell=True)) * 2
+print(BAR_HEIGHT)
+if subprocess.check_output('polybar --dump=bottom base 2>/dev/null', shell=True) == b'true\n':
+    BAR_POS = 'bottom'
+else:
+    BAR_POS = 'top'
+SHOW_CMD = 'xdo show -N Polybar && bspc config {}_padding {}'.format(
+    BAR_POS, BAR_HEIGHT + int(subprocess.check_output('bspc config left_padding', shell=True)))
+HIDE_CMD = 'xdo hide -N Polybar && bspc config bottom_padding $(bspc config left_padding) && bspc config top_padding $(bspc config right_padding)'
+
+logging.basicConfig(level=logging.INFO)
+
+
+def get_y_position():
+    xdotool_output = subprocess.check_output(
+        'xdotool getmouselocation --shell',
+        shell=True).decode('utf-8')
+    return int(re.search(r'Y=(\d{1,})', xdotool_output).groups()[0]) + 1
+
+
+def cleanup(*args):
+    subprocess.call(SHOW_CMD, shell=True)
+    sys.exit(0)
+
+
+signal.signal(signal.SIGINT, cleanup)
+signal.signal(signal.SIGTERM, cleanup)
+
+
+subprocess.call(HIDE_CMD, shell=True)
+hidden = True
+while True:
+    y = get_y_position()
+    if hidden:
+        if BAR_POS == 'bottom':
+            on_edge = y > (1080 - 10)
+        else:
+            on_edge = y < 10
+    else:
+        if BAR_POS == 'bottom':
+            on_edge = y > (1080 - BAR_HEIGHT)
+        else:
+            on_edge = y < BAR_HEIGHT
+    logging.info("Got height %d. On edge: %s", y, str(on_edge))
+    if on_edge and hidden:
+        subprocess.call(SHOW_CMD, shell=True)
+        hidden = False
+    if (not on_edge) and (not hidden):
+        subprocess.call(HIDE_CMD, shell=True)
+        hidden = True
+time.sleep(DELAY)

@@ -1,0 +1,256 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+include-file = ~/.config/colorer/out/polybar
+
+;  _                    
+; | |__   __ _ _ __ ___ 
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+[bar/base]
+enable-ipc=true
+height = 40
+width = 100%:-200
+
+;offset-y = 15
+offset-x = 100
+offset-y = 15
+
+padding = 6
+module-margin = 1
+
+;background = #00000000
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = false
+
+border-color = ${colors.background}
+border-size = 0
+;border-top-size = 10
+
+line-size = 0
+line-color = ${colors.color8}
+
+; font-0=monospace:style=Italic:size=11;4
+; font-1=monospace:style=Bold Italic:size=11;4
+font-2=Material Icons:size=13;4
+font-0=SF Pro Display:style=Light:size=13;3
+font-1=SF Pro Display:style=Black:size=13;3
+font-3=font\-logos:size=9;3
+font-5=IPAGothic:size=11;3
+font-6=Meiryo:size=11;3
+
+wm-restack = bspwm
+override-redirect = false
+
+modules-left = launcher playerctl
+modules-center = bspwm
+modules-right = pulseaudio wlan battery date powermenu
+
+;                      _       _           
+;  _ __ ___   ___   __| |_   _| | ___  ___ 
+; | '_ ` _ \ / _ \ / _` | | | | |/ _ \/ __|
+; | | | | | | (_) | (_| | |_| | |  __/\__ \
+; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
+                                         
+[module/launcher]
+type=custom/script
+; content = ♥
+exec = pgrep rofi >/dev/null && echo "%{F$(colorer -g color8)}♥%{F-}" || echo "%{F$(colorer -g color1)}♥%{F-}"
+tail = true
+content-margin = 1
+click-left=launcher
+content-font = 1
+;The script above is to be found here : https://github.com/kiddae/scripts
+
+[module/battery]
+type=internal/battery
+padding = 2
+
+format-charging = <animation-charging> <label-charging>
+format-low = <animation-low> <label-low>
+format-charging-foreground = ${colors.color2}
+format-low-foreground = ${colors.color2}
+format-full-foreground = ${colors.color2}
+format-discharging-foreground = ${colors.color2}
+
+label-discharging =  %percentage%%
+label-charging = %percentage%%
+label-low = %percentage%%
+label-full =  %percentage%%
+
+animation-low-0 = 
+animation-low-1 = 
+animation-low-framerate = 200
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-framerate = 200
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
+format-margin = 1
+index-sort = true
+
+enable-click = true
+reverse-scroll = false
+enable-scroll = true
+
+; label-focused = %index%
+label-focused = 
+label-focused-font = 2
+label-focused-overline = ${colors.foreground}
+label-focused-foreground = ${colors.color11}
+label-focused-padding = 2
+
+;label-empty = %index%
+label-empty = 
+label-empty-padding = 2
+label-empty-foreground = ${colors.color8}
+
+; label-occupied = %index%
+label-occupied = 
+label-occupied-foreground = ${colors.color8}
+label-occupied-padding = 2
+
+;ws-icon-0 = 1;
+;ws-icon-1 = 2;
+;ws-icon-2 = 3;
+;ws-icon-9 = 10;
+;ws-icon-default = 
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = %{A1:$TERMINAL -e nmtui & disown:}<label-connected>%{A}
+format-connected-prefix = "  "
+format-connected-foreground = ${colors.color7}
+format-connected-margin = 2
+label-connected = %essid%
+
+format-disconnected = %{A1:$TERMINAL -e nmtui & disown:}[NaN]%{A}
+format-disconnected-prefix = "  "
+format-disconnected-margin = 2
+format-disconnected-foreground = ${colors.color8}
+
+[module/date]
+type = internal/date
+interval = 10
+format-margin = 2
+format-overline = ${colors.color8}
+
+time = "%H:%M"
+date = "%d %b"
+
+label = %{A1:urxvt -e calcurse & disown:}%time% | %date%%{A}
+label-padding = 0
+
+[module/pulseaudio]
+type = custom/script
+exec = volume_status
+interval = 0
+format-padding = 2
+format-foreground = ${colors.color1}
+click-left = pactl set-sink-mute @DEFAULT_SINK@ toggle
+scroll-up = chvolume down 5
+scroll-down = chvolume up 5
+
+[module/mpd]
+type = internal/mpd
+label-song-maxlen = 48
+format-paused-overline = ${colors.color8}
+format-playing-overline = ${colors.foreground}
+label-song = %artist%: %title%
+format-online = "%{A1:urxvt -e ncmpcpp & disown:}    <label-song>%{A}"
+
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
+[module/mpd-controls]
+type = internal/mpd
+format-online = "<icon-prev> <toggle> <icon-next>"
+format-playing-overline = ${colors.foreground}
+format-paused-overline = ${colors.color8}
+
+icon-play = 
+icon-pause = 
+icon-prev = 
+icon-next = 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format =  <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-color1 = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+[module/powermenu]
+type = custom/text
+content-padding = 2
+content-foreground = ${colors.color4}
+content = 
+click-left = powermenu
+
+[module/spotify]
+type = custom/script
+format-margin = 1
+format =    <label>
+exec = playerctl metadata --format '{{artist}}: {{title}}'
+tail = true
+interval = 1
+click-left = "playerctl play-pause"
+
+[module/playerctl]
+type = custom/script
+format-margin = 1
+exec = playerctl_status playerctld      40
+;format-prefix = 
+exec-if = [[ "$(playerctl -l)" != "No players found" ]] && echo 1
+tail = true
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
+                      

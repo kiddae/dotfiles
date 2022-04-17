@@ -1,0 +1,24 @@
+#!/bin/bash
+left=$(bspc config ${@:2} left_padding)
+right=$(bspc config ${@:2} right_padding)
+top=$(bspc config ${@:2} top_padding)
+bottom=$(bspc config ${@:2} bottom_padding)
+
+if [[ ${1:0:1} = '=' ]]
+then
+    n_left=${1:1}
+    n_right=${1:1}
+    n_top=${1:1}
+    n_bottom=${1:1}
+else
+    [[ $(($left$1)) -ge 0 ]] && n_left=$(($left$1))
+    [[ $(($right$1)) -ge 0 ]] && n_right=$(($right$1))
+    [[ $(($top$1)) -ge 0 ]] && n_top=$(($top$1))
+    [[ $(($bottom$1)) -ge 0 ]] && n_bottom=$(($bottom$1))
+fi
+
+
+bspc config ${@:2} left_padding $n_left && echo $n_left
+bspc config ${@:2} right_padding $n_right && echo $n_right
+bspc config ${@:2} top_padding $n_top && echo $n_top
+bspc config ${@:2} bottom_padding $n_bottom && echo $n_bottom
