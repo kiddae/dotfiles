@@ -69,4 +69,4 @@ To make the usage and switching of themes easier, I have included (mostly for me
 
 ### [`sweet`](sweet/)
 
-![screenshot](sweeet/screenshot.png)
+![screenshot](sweet/screenshot.png)
