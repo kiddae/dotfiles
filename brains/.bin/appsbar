@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+import subprocess
+
+def get(str):
+    try:
+        return subprocess.check_output(str, shell=True).decode('utf-8').replace('\n', '')
+    except:
+        return ""
+
+highlight = get("colorer -g color7")
+closed = get("colorer -g color8")
+
+apps_icons = ['', '', '', '', '']
+apps_names = ['firefox', 'kitty', 'kitty -e ranger', 'discord', 'kitty -e nvim']
+
+for i in range(len(apps_icons)):
+    format = "%{A1:" + apps_names[i] + ":}" + "%{F" + (highlight if get("pgrep '{}'".format(apps_names[i].split(" ")[-1])) != "" else closed) + "}" + apps_icons[i] + "%{F-}%{A}      "
+    print(format, end="")
+

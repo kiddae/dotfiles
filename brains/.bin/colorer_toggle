@@ -1,0 +1,7 @@
+#!/bin/sh
+current=$(colorer -g colorscheme)
+[ ! -e "$(readlink -f $1)" ] || [ ! -e "$(readlink -f $2)" ] && echo "Colorschemes do not exist." && exit 1
+[  "$(readlink -f $1)" != "$current" ] && [ "$(readlink -f $2)" != "$current" ] && echo "Wrong args, one has to be the current colorscheme: $current" && exit 1
+if [ "$(readlink -f $1)" = "$current" ]; then to="$2"; else to="$1"; fi
+echo $to
+colorer $to

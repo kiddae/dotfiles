@@ -1,0 +1,17 @@
+#!/bin/bash
+volume=$(pamixer --get-volume)
+volume=$(($volume + 0))
+if [[ $volume -lt 33 ]]
+then
+    icon=奄
+elif [[ $volume -lt 66 ]]
+then
+    icon=奔
+else
+    icon=墳
+fi
+if [[ $(pamixer --get-volume-human) = "muted" ]]
+then
+    icon="%{F$(colorer -g color8)}婢%{F-}"
+fi
+echo $icon

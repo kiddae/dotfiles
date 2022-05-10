@@ -1,0 +1,2 @@
+#!/bin/bash
+xdo show -N Polybar; pkill -f polybar-autohide || polybar-autohide &>/dev/null

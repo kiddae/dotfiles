@@ -1,0 +1,7 @@
+configuration{
+    font: "monospace 9";
+    location: 1;
+    yoffset: 35;
+    xoffset: 5;
+    show-icons: false;
+}

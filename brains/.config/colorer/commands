@@ -1,0 +1,23 @@
+echo "Applying changes to files"
+sed -E "s/colorscheme .+/colorscheme {vim}/g" ~/.config/nvim/global.vim -i &
+# sed -E "s/'colorscheme': '.+',$/'colorscheme': '{lightline}',/g" ~/.config/nvim/plug-config/lightline.vim -i
+sed -E "s/let g:ayucolor = \".+\"$/let g:ayucolor = \"{ayu_theme}\"/g" ~/.config/nvim/plugins.vim -i &
+sed -E "s/Net\/ThemeName \".+\"$/Net\/ThemeName \"{gtk}\"/g" ~/.config/xsettingsd/xsettingsd.conf -i &
+echo -ne $(cat ~/.config/colorer/out/sequences) | tee /dev/pts/[0-9]* &
+#cp {wp} /usr/share/sddm/themes/sugar-candy/Backgrounds/Wall.png
+cp {wp} /etc/lightdm/Wall.png &
+cp ~/.config/colorer/out/lightdm-mini-greeter.conf /etc/lightdm/lightdm-mini-greeter.conf &
+cp  ~/.config/colorer/out/dunstrc ~/.config/dunst/dunstrc &
+cp  ~/.config/colorer/out/kitty ~/.config/kitty/colors &
+cp  ~/.config/colorer/out/userChrome.css ~/.mozilla/firefox/c6xdm17d.default-release/chrome/userChrome.css &
+cp  ~/.config/colorer/out/zathurarc ~/.config/zathura/zathurarc &
+echo "Reloading everything"
+xrdb -merge ~/.config/colorer/out/Xresources &
+# pkill -USR1 polybar
+polybar-msg cmd restart &
+feh --bg-tile {wp} -B $(colorer -g bg) 
+pkill -HUP xsettingsd &
+# killall dunst && dunst &
+bspc wm -r &
+# echo "Generating GTK theme..."
+# oomox-cli /opt/oomox/scripted_colors/xresources/xresources-reverse -t ~/.local/share/themes/ -m all -d true &
