@@ -1,0 +1,310 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+include-file = ~/.config/colorer/out/polybar
+
+;  _                    
+; | |__   __ _ _ __ ___ 
+; | '_ \ / _` | '__/ __|
+; | |_) | (_| | |  \__ \
+; |_.__/ \__,_|_|  |___/
+
+[bar/base]
+enable-ipc=true
+height = 25
+width = 100%
+
+;offset-y = 15
+offset-x = 0
+offset-y = 0
+
+padding = 2
+module-margin = 0
+
+;background = #00000000
+background = ${colors.background}
+foreground = ${colors.foreground}
+bottom = true
+fixed-center = true
+
+border-color = ${colors.background}
+border-size = 5
+border-left-size = 0
+border-right-size = 0
+
+line-size = 0
+line-color = ${colors.color8}
+
+; font-0=monospace:style=Italic:size=11;4
+; font-1=monospace:style=Bold Italic:size=11;4
+font-0=SFMono Nerd Font Mono:style=Medium:size=10;2
+font-1=JetBrainsMono Nerd Font:style=Medium:size=10;2
+font-2=JetBrainsMono Nerd Font Mono:style=Medium:size=15;4
+font-3=IPAGothic:size=9;2
+font-4=Meiryo:size=9;2
+
+wm-restack = bspwm
+override-redirect = false
+
+modules-left = launcher sepleft light_dark sepleft memory sepleft 
+modules-center = blockleft bspwm blockright
+modules-right = sepright backlight sepright pulseaudio sepright wlan sepright battery sepright date sepright powermenu
+
+;                      _       _           
+;  _ __ ___   ___   __| |_   _| | ___  ___ 
+; | '_ ` _ \ / _ \ / _` | | | | |/ _ \/ __|
+; | | | | | | (_) | (_| | |_| | |  __/\__ \
+; |_| |_| |_|\___/ \__,_|\__,_|_|\___||___/
+                                         
+[module/launcher]
+type=custom/script
+; content = ♥
+exec = pgrep rofi >/dev/null && echo ♡ || echo ♥
+format = "<label> "
+format-foreground = ${colors.color1}
+interval = 0
+format-margin = 0
+click-left=launcher
+format-font = 2
+;The script above is to be found here : https://github.com/kiddae/scripts
+
+[module/sepleft]
+type=custom/text
+content = ""
+content-padding = 0
+content-font = 3
+content-margin = 1
+content-foreground = ${colors.color8}
+
+[module/sepright]
+type=custom/text
+content = ""
+content-padding = 0
+content-font = 3
+content-margin = 1
+content-foreground = ${colors.color8}
+
+[module/blockleft]
+type=custom/text
+content = ""
+content-padding = 0
+content-font = 3
+content-margin = 0
+content-foreground = ${colors.color8}
+
+[module/blockright]
+type=custom/text
+content = ""
+content-font = 3
+content-padding = 0
+content-margin = 0
+content-foreground = ${colors.color8}
+
+[module/light_dark]
+type=custom/script
+format="<label>" 
+exec=lightdark_switch ~/.config/colorer/colorer-colorschemes/everblush ~/.config/colorer/colorer-colorschemes/ayu-light  
+format-font = 2
+format-margin = 1
+click-left=colorer_toggle ~/.config/colorer/colorer-colorschemes/everblush ~/.config/colorer/colorer-colorschemes/ayu-light
+interval=0
+
+[module/memory]
+type = internal/memory
+format-margin = 0
+format-warn-margin = 0
+format-foreground = ${colors.color6}
+format = " <label>"
+format-font = 1
+format-warn-foreground = ${colors.color1}
+format-warn = " <label-warn>"
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+
+; Default: 90
+; New in version 3.6.0
+warn-percentage = 90
+
+[module/battery]
+type=internal/battery
+
+low-at = 15
+
+format-charging = <animation-charging> <label-charging>
+format-low = <animation-low> <label-low>
+format-discharging = <ramp-capacity> <label-discharging>
+format-charging-foreground = ${colors.color2}
+format-low-foreground = ${colors.color1}
+format-full-foreground = ${colors.color2}
+format-discharging-foreground = ${colors.color2}
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-low = %percentage%%
+label-full =  %percentage%%
+
+animation-low-0 = 
+animation-low-1 = 
+animation-low-framerate = 200
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-7 = 
+animation-charging-8 = 
+animation-charging-9 = 
+animation-charging-framerate = 200
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
+format-padding = 1
+format-background = ${colors.color8}
+index-sort = true
+
+enable-click = true
+reverse-scroll = false
+enable-scroll = true
+
+; label-focused = %index%
+label-focused = ●
+label-focused-font = 2
+label-focused-foreground = ${colors.fg}
+label-focused-padding = 1
+
+;label-empty = %index%
+label-empty = ○
+label-empty-font = 2
+label-empty-padding = 1
+label-empty-foreground = ${colors.background}
+
+; label-occupied = %index%
+label-occupied = ○
+label-occupied-font = 2
+label-occupied-foreground = ${colors.fg}
+label-occupied-padding = 1
+
+; ws-icon-0 = 1;
+; ws-icon-1 = 2;
+; ws-icon-2 = 3;
+; ws-icon-9 = 10;
+; ws-icon-default = 
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = %{A1:$TERMINAL -e nmtui & disown:}<label-connected>%{A}
+format-connected-font = 2
+format-connected-prefix = "直 "
+format-connected-foreground = ${colors.color7}
+format-connected-margin = 0
+label-connected = ✓
+
+format-disconnected = %{A1:$TERMINAL -e nmtui & disown:}<label-disconnected>%{A}
+format-disconnected-font = 2
+format-disconnected-prefix = "睊 "
+format-disconnected-margin = 0
+format-disconnected-foreground = ${colors.color8}
+label-disconnected = ✗
+
+[module/date]
+type = internal/date
+interval = 10
+format-margin = 0
+format-foreground = ${colors.color7}
+
+time = "%H:%M"
+date = "%d/%m"
+
+label = %{A1:$TERMINAL -e calcurse & disown:}%time% %date%%{A}
+label-padding = 0
+
+[module/pulseaudio]
+type = custom/script
+exec = volume_status
+interval = 0
+format = "<label> "
+format-padding = 0
+format-font = 2
+format-foreground = ${colors.color1}
+click-left = pactl set-sink-mute @DEFAULT_SINK@ toggle
+double-click-left = chvolume down 0
+scroll-up = chvolume down 5
+scroll-down = chvolume up 5
+
+[module/backlight]
+type = custom/script
+exec = backlight_status
+interval = 0
+format = "<label> "
+format-padding = 0
+format-font = 2
+format-foreground = ${colors.color3}
+click-left = chbacklight down 0
+scroll-up = chbacklight down 10
+scroll-down = chbacklight up 10
+
+[module/powermenu]
+type = custom/text
+content-padding = 0
+content-foreground = ${colors.color4}
+content = ⏻
+click-left = powermenu
+
+[module/playerctl]
+type = custom/script
+format-margin = 0
+format-foreground = ${colors.color8}
+exec = playerctl_status playerctld      33
+;format-prefix = 
+exec-if = [[ "$(playerctl -l)" != "No players found" ]] && echo 1
+interval = 0
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
+                      

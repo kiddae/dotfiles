@@ -1,0 +1,7 @@
+configuration{
+    font: "SF Mono 10";
+    location: 7;
+    yoffset: -50;
+    xoffset: 10;
+    show-icons: false;
+}
