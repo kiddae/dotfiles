@@ -1,0 +1,7 @@
+#!/bin/sh
+percent_used=$(free | grep Mem | awk '{print ($2-$7)/$2 * 100.0}')
+limit=90
+if (($(echo "$percent_used >= $limit" | bc -l))); then
+    notify-send "Memory usage" "Memory usage exceeds ${limit}%." -u critical
+fi
+

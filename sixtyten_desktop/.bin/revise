@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+from os import system, name
+import random
+import argparse
+
+
+'''Functions'''
+
+
+def random_choice(list):
+    # Choose a random pair (key,value) from a dictionnary
+    val = random.choice(list)
+    return val
+
+
+def init_parser():
+    # Initialise the parse object to take CLI arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'file_path', help="The file to open with the definitions")
+    parser.add_argument(
+        '-r', '--reverse', help="Reverse keys and definitions", action="store_true")
+    parser.add_argument('-l', '--length', default=0, type=int,
+                        help='Length of the test (all of the definitions if not set)')
+    return parser.parse_args()
+
+
+def init_dict():
+    # Initialise a dictionnary with the file specified.
+    dictionnary = list()
+    with open(args.file_path, "r") as file:
+        for line in file:
+            if line[0] != '#':
+                if args.reverse:
+                    key = line.split(":")[0]
+                    val = line.split(":")[1]
+                else:
+                    key = line.split(":")[1]
+                    val = line.split(":")[0]
+                val = val.replace("\n", "")
+                key = key.replace("\n", "")
+                dictionnary.append((key, val))
+    return dictionnary
+
+
+def clear():
+    # Clear the screen on any system
+    if name == 'nt':
+        system('cls')
+    else:
+        system('clear')
+
+
+'''Setup'''
+
+# Parser
+args = init_parser()
+
+
+def game(definitions=init_dict()):
+    random.seed()
+
+# Clear the screen
+    clear()
+
+# Initialise Won/Lost lists
+    won = list()
+    lost = list()
+
+# Go through all of the dictionnary or only a specified number
+    if args.length == 0:
+        length = len(definitions)
+    else:
+        length = args.length
+    count = length
+
+    '''Program'''
+
+# The questions
+    while count > 0:
+        choice = random_choice(definitions)
+        # print(choice)
+        user = input(
+            '\n\033[0mWhat is \033[1m“{}“\033[0m? ({} out of {})\n\033[33m→ '.format(choice[1], length-count+1, length))
+        definitions.remove(choice)
+        if user == choice[0]:
+            won.append(choice)
+        else:
+            lost.append((choice, user))
+            print(
+                '\033[31;1mWrong! It was “{}”!\033[0m'.format(choice[0]))
+        count -= 1
+
+# Print the results
+    print('\n\033[0m===\n')
+
+    if len(lost) == 0:
+        print('\033[1;32;6;7mBravo! You got it all right!\033[0m')
+    else:
+        print('\033[1;32mYou got {} answers right out of {} ({}/20).\033[0m'.format(
+            len(won), len(won)+len(lost), round(len(won)/(len(won)+len(lost)) * 20, 2)))
+
+    print('\n\033[1mYou lost:\033[0m')
+    for i in lost:
+        print(
+            '+ \033[1m{}\033[0m which was \033[1m{}\033[0m. You wrote \033[1m{}\033[0m!'.format(i[0][1], i[0][0], i[1]))
+
+    print('\n\033[1mYou won: \033[0m')
+    for i in won:
+        print('+ \033[1m{}\033[0m which was \033[1m{}\033[0m'.format(i[1], i[0]))
+
+    a = input('Continue? (Y/n)')
+    if a.lower() != 'n':
+        if len(lost) != 0:
+            game(definitions=[i[0] for i in lost])
+        else:
+            print("You had everything right, it's done!")
+
+
+game()
+

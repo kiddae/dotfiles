@@ -1,0 +1,7 @@
+#!/bin/sh
+# $1: dark colorer colorscheme
+# $2: light colorer colorscheme
+# $3: dark switch icon
+# $4: light switch icon
+if [ "$(readlink -f $1)" = "$(colorer -g colorscheme)" ]; then echo $3; else echo $4; fi
+

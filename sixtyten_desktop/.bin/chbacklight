@@ -1,0 +1,13 @@
+#!/bin/bash
+if [[ "$1" = "up" ]]
+then
+    xbacklight -inc $2
+elif [[ "$1" = "down" ]] && [[ $(xbacklight -get | cut -d'.' -f1) -gt 10 ]]
+then
+    xbacklight -dec $2
+else
+    echo "No argument/wrong arguments"
+    exit 1
+fi
+backlight=$(xbacklight -get | cut -d'.' -f1)
+dunstify "Backlight" "Backlight: ${backlight}%" -h int:value:$backlight -h string:x-dunst-stack-tag:backlight-control -t 1000

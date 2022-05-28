@@ -1,0 +1,15 @@
+#!/bin/bash
+brightness="$(xbacklight -get | cut -d '.' -f1)"
+if [[ $brightness -lt 25 ]]
+then
+    icon=
+elif [[ $brightness -lt 50 ]]
+then
+    icon=
+elif [[ $brightness -lt 75 ]]
+then
+    icon=
+else
+    icon=
+fi
+echo $icon
