@@ -100,8 +100,9 @@ alias sddm-test='sddm-greeter --test-mode --theme /usr/share/sddm/themes/sugar-c
 # rsync for my USB/Music
 alias usb_sync='rsync -aPu /run/media/me/3A89-86CE/ ~/Documents/School/ && rsync -aPu ~/Documents/School/ /run/media/me/3A89-86CE/'
 # alias music_sync='mount_phone ; rsync -rPu ~/Music/ ~/FTP/Music/ && rsync -rPu ~/FTP/Music/ ~/Music/'
-alias music_sync='cd && adb-sync --delete Music /sdcard'
+# alias music_sync='cd && adb-sync --delete Music /sdcard'
 # alias music_sync='cd && adb connect 192.168.1.44 && adb push --sync Music/ /sdcard/ && adb-sync --delete -R Music /sdcard'
+alias music_sync='rsync -rPu --delete /run/media/me/Elements/Music/ phone:/sdcard/Music/'
 
 # cd + ls
 function cd {
